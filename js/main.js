@@ -1,48 +1,34 @@
-// Hamburger menu
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('.main-nav');
-if (hamburger && nav) {
-  hamburger.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    hamburger.textContent = isOpen ? '✕' : '☰';
-  });
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.site-header')) {
-      nav.classList.remove('open');
-      hamburger.textContent = '☰';
-    }
-  });
-}
+/* Evolution Golf Academy - shared JS */
 
-// Mobile: toggle dropdown on tap
-document.querySelectorAll('.has-dropdown > a').forEach(a => {
-  a.addEventListener('click', (e) => {
-    if (window.innerWidth <= 900) {
-      e.preventDefault();
-      const dd = a.nextElementSibling;
-      if (dd) dd.classList.toggle('open');
-    }
-  });
+// Duplicate marquee track for seamless loop
+document.querySelectorAll('.marq .track').forEach(function (t) {
+  t.innerHTML += t.innerHTML;
 });
 
-// FAQ accordion
-document.querySelectorAll('.faq-question').forEach(q => {
-  q.addEventListener('click', () => {
-    const item = q.closest('.faq-item');
-    const wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+// FAQ accordion - one open at a time
+document.querySelectorAll('.faqq').forEach(function (q) {
+  q.addEventListener('click', function () {
+    var item = q.closest('.faqitem');
+    var wasOpen = item.classList.contains('open');
+    item.closest('.faq').querySelectorAll('.faqitem').forEach(function (i) {
+      i.classList.remove('open');
+    });
     if (!wasOpen) item.classList.add('open');
   });
 });
 
-// Contact form (demo handler)
-const form = document.querySelector('.contact-form');
-if (form) {
-  form.addEventListener('submit', (e) => {
+// Carousel arrows
+window.scrollCar = function (btn, dir, sel) {
+  var c = btn.closest('.container').querySelector(sel);
+  var step = sel === '.fac-car' ? 380 : c.clientWidth * 0.85;
+  c.scrollBy({ left: step * dir, behavior: 'smooth' });
+};
+
+// Contact form demo handler
+var cf = document.querySelector('.form');
+if (cf) {
+  cf.addEventListener('submit', function (e) {
     e.preventDefault();
-    const btn = form.querySelector('button[type=submit]');
-    btn.textContent = 'Message sent - we\'ll be in touch!';
-    btn.disabled = true;
-    btn.style.background = '#22c55e';
+    alert('Thanks - we will come back to you the same day. To book right now, call 07710 582036.');
   });
 }
