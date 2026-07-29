@@ -3,6 +3,8 @@
    Design system extracted from Trackman Teaching Bay v3
    ========================================================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
 :root{--cream:#f1ece1;--cream-deep:#e8e1d2;--ink:#1f1f1f;--orange:#dc6f1c;--muted:#6b6357;--sans:"DM Sans",-apple-system,sans-serif;--disp:"Oswald",sans-serif;--mono:"JetBrains Mono",monospace}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
