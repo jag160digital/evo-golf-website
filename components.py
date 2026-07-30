@@ -72,7 +72,7 @@ ARR_R = ('<svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M
 # ------------------------------------------------------------------ NAV
 NAV_GROUPS = [
     ("About", [("about.html", "About Evolution Golf Academy"), ("location.html", "Location"),
-               ("meet-team.html", "Meet The Team"), ("faqs.html", "FAQs")]),
+               ("meet-team.html", "Meet The Team")]),
     ("Facilities", [("trackman-range.html", "Trackman Driving Range"),
                     ("trackman-simulator.html", "Trackman Simulator"),
                     ("trackman-teaching-bay.html", "Trackman Teaching Bay"),
@@ -85,7 +85,14 @@ NAV_GROUPS = [
                   ("tpi-screening.html", "TPI Screening")]),
     ("Areas", [("golf-lessons-derby.html", "Golf Lessons Derby"),
                ("golf-lessons-nottingham.html", "Golf Lessons Nottingham"),
-               ("location.html", "Ripley, Derbyshire")]),
+               ("golf-lessons-ripley.html", "Golf Lessons Ripley"),
+               ("golf-lessons-heanor.html", "Golf Lessons Heanor"),
+               ("golf-lessons-alfreton.html", "Golf Lessons Alfreton"),
+               ("golf-lessons-ilkeston.html", "Golf Lessons Ilkeston"),
+               ("golf-lessons-belper.html", "Golf Lessons Belper"),
+               ("golf-lessons-mansfield.html", "Golf Lessons Mansfield"),
+               ("golf-lessons-eastwood.html", "Golf Lessons Eastwood"),
+               ("golf-lessons-chesterfield.html", "Golf Lessons Chesterfield")]),
 ]
 
 
@@ -104,6 +111,7 @@ def nav(cur=None):
 <a class="logo" href="index.html"><img src="{LOGO}" alt="Evolution Golf Academy"></a>
 <div class="links">
 {groups}
+<div class="lk"><a href="faqs.html">FAQs</a></div>
 <div class="lk"><a href="contact.html">Contact</a></div>
 </div>
 <div style="display:flex;align-items:center;gap:12px"><a class="btn navbook" href="{BOOK}" target="_blank" rel="noopener">Book a lesson</a>
@@ -111,7 +119,7 @@ def nav(cur=None):
 </div>
 <div class="mmenu">
 {mob}
-<div class="mgrp"><a href="contact.html">Contact</a></div>
+<div class="mgrp"><a href="faqs.html">FAQs</a><a href="contact.html">Contact</a></div>
 <a class="btn" href="{BOOK}" target="_blank" rel="noopener" style="margin-top:8px">Book a lesson</a>
 </div>
 </div>'''
@@ -358,9 +366,56 @@ def s_form(kick, h2, intro_p, right_html, alt=False):
 </div>''', alt)
 
 
+def s_accred(kick, h2, items, p=None, alt=False):
+    """Partners and accreditations band. items = [(tag, name, desc)]"""
+    body = "\n".join(
+        f'<div class="acard"><div class="tag">{t}</div><b>{n}</b><p>{d}</p></div>'
+        for t, n, d in items)
+    return _sec(_head(kick, h2, p) + f'\n<div class="accred">\n{body}\n</div>', alt)
+
+
+def s_ctable(kick, h2, cols, rows, p=None, alt=False):
+    """Comparison table. cols = (a,b,c), rows = [(a,b,c)]"""
+    head = f'<div class="crow head"><div>{cols[0]}</div><div>{cols[1]}</div><div>{cols[2]}</div></div>'
+    body = "\n".join(
+        f'<div class="crow"><b>{a}</b><div class="mid">{b}</div><p>{c}</p></div>' for a, b, c in rows)
+    return _sec(_head(kick, h2, p) + f'\n<div class="ctable">\n{head}\n{body}\n</div>', alt)
+
+
+def s_ptable(kick, h2, rows, p=None, alt=False):
+    """Simple price list. rows = [(label, price)]"""
+    body = "\n".join(f'<div class="prow"><span>{l}</span><b>{v}</b></div>' for l, v in rows)
+    return _sec(_head(kick, h2, p) + f'\n<div class="ptable">\n{body}\n</div>', alt)
+
+
+def s_lead(kick, h2, p, note, cta="Send me the guide"):
+    """Lead magnet capture block."""
+    return f'''<div class="ctabox-wrap">
+<div class="container">
+<div class="lead">
+<div>
+<span class="kick">● {kick}</span>
+<h2>{h2}</h2>
+<p>{p}</p>
+</div>
+<div>
+<form class="form" onsubmit="return false">
+<div class="g"><label for="lgname">First name</label><input type="text" id="lgname" name="lgname"></div>
+<div class="g"><label for="lgemail">Email address</label><input type="email" id="lgemail" name="lgemail"></div>
+<button type="submit" class="btn" style="width:100%">{cta}</button>
+</form>
+<p class="note">{note}</p>
+</div>
+</div>
+</div>
+</div>'''
+
+
 BUILDERS = {"intro": s_intro, "prose": s_prose, "cards": s_cards, "split": s_split,
             "steps": s_steps, "stats": s_stats, "prices": s_prices, "faq": s_faq,
-            "rel": s_rel, "areas": s_areas, "tgrid": s_tgrid, "team": s_team, "form": s_form}
+            "rel": s_rel, "areas": s_areas, "tgrid": s_tgrid, "team": s_team,
+            "form": s_form, "accred": s_accred, "ctable": s_ctable,
+            "ptable": s_ptable, "lead": s_lead}
 
 
 def hero(kick, l1, l2, para, img, img_alt):

@@ -9,7 +9,7 @@ import html as _html
 import components as C
 
 MODULES = ["content_exemplar", "content_facilities", "content_coaching",
-           "content_core", "content_local"]
+           "content_core", "content_local", "content_locations", "content_team"]
 
 built = []
 for m in MODULES:
