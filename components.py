@@ -149,7 +149,7 @@ FOOTER = f'''<footer class="footer">
 </div></div>
 </div>
 <div class="fbar">
-<span class="c">© 2026 Evolution Golf Academy</span>
+<span class="c">© 2026 Evolution Golf Academy · Ormonde Fields Golf Club, Nottingham Rd, Codnor, Ripley DE5 9RJ · <a href="tel:07710582036" style="color:rgba(241,236,225,.5)">07710 582036</a> · <a href="privacy.html" style="color:rgba(241,236,225,.5)">Privacy</a> · <a href="terms.html" style="color:rgba(241,236,225,.5)">Terms</a></span>
 <div class="socials">
 <a href="https://www.instagram.com/evolutiongolfacademy/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
 <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
@@ -447,6 +447,77 @@ BUILDERS = {"intro": s_intro, "prose": s_prose, "cards": s_cards, "split": s_spl
             "ptable": s_ptable, "lead": s_lead, "pmarq": s_pmarq, "baskets": s_baskets}
 
 
+SITE = "https://jag160digital.github.io/evo-golf-website"
+SAME_AS = ["https://www.instagram.com/evolutiongolfacademy/"]
+
+
+def _esc(s):
+    """Strip tags and escape for use inside a JSON-LD string."""
+    s = re.sub(r"<[^>]+>", "", s)
+    s = (s.replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">")
+          .replace("\\", "\\\\").replace('"', '\\"'))
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def schema(spec, secs_data):
+    """JSON-LD. Kyle Roof's first audit check is whether the address and
+    phone are in schema rather than only in visible text, so the
+    LocalBusiness block ships on every page.
+    Geo coordinates are deliberately omitted - publishing a guessed
+    lat/long is worse than publishing none.
+    """
+    same = ",".join(f'"{u}"' for u in SAME_AS)
+    url = f"{SITE}/{spec['file']}"
+    biz = f'''{{
+"@context":"https://schema.org","@type":["LocalBusiness","SportsActivityLocation"],
+"@id":"{SITE}/#academy","name":"Evolution Golf Academy",
+"description":"{_esc(spec['desc'])}",
+"url":"{SITE}/","telephone":"+447710582036","priceRange":"££",
+"image":"{IMG['range_night']}","logo":"{LOGO}",
+"address":{{"@type":"PostalAddress","streetAddress":"Ormonde Fields Golf Club, Nottingham Road, Codnor","addressLocality":"Ripley","addressRegion":"Derbyshire","postalCode":"DE5 9RJ","addressCountry":"GB"}},
+"openingHoursSpecification":[{{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:00","closes":"20:00"}}],
+"areaServed":[{{"@type":"City","name":"Derby"}},{{"@type":"City","name":"Nottingham"}},{{"@type":"City","name":"Ripley"}},{{"@type":"AdministrativeArea","name":"Derbyshire"}},{{"@type":"AdministrativeArea","name":"Nottinghamshire"}}],
+"sameAs":[{same}],
+"founder":{{"@id":"{SITE}/meet-team.html#will-painter"}},
+"employee":{{"@id":"{SITE}/meet-team.html#will-painter"}}
+}}'''
+
+    # Named author / founder. Kyle: identify the real human behind the content.
+    person = f'''{{
+"@context":"https://schema.org","@type":"Person",
+"@id":"{SITE}/meet-team.html#will-painter","name":"Will Painter",
+"jobTitle":"Advanced PGA Professional and Academy Director",
+"description":"Advanced PGA Professional with over ten years of golf coaching experience, TPI certified and a Trackman specialist. Founded Evolution Golf Academy in 2023.",
+"url":"{SITE}/meet-team.html","image":"{IMG['coach_feedback']}",
+"sameAs":["https://www.instagram.com/willpainter96/"],
+"worksFor":{{"@id":"{SITE}/#academy"}},
+"knowsAbout":["Golf coaching","Trackman launch monitor","TPI movement screening","Custom club fitting"]
+}}'''
+
+    crumbs = [("Home", f"{SITE}/")]
+    if spec["file"] != "index.html":
+        crumbs.append((_esc(spec["hero"]["kick"]), url))
+    items = ",".join(
+        f'{{"@type":"ListItem","position":{i},"name":"{n}","item":"{u}"}}'
+        for i, (n, u) in enumerate(crumbs, 1))
+    crumb = f'{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{items}]}}'
+
+    blocks = [biz, person, crumb]
+
+    # FAQPage from any faq sections on this page
+    qs = []
+    for s in secs_data:
+        if s.get("type") == "faq":
+            qs += list(s.get("qs", []))
+    if qs:
+        ents = ",".join(
+            f'{{"@type":"Question","name":"{_esc(q)}","acceptedAnswer":'
+            f'{{"@type":"Answer","text":"{_esc(a)}"}}}}' for q, a in qs)
+        blocks.append(f'{{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{ents}]}}')
+
+    return "\n".join(f'<script type="application/ld+json">{b}</script>' for b in blocks)
+
+
 def hero(kick, l1, l2, para, img, img_alt):
     return f'''<div class="hero">
 <div class="card">
@@ -482,7 +553,8 @@ def build(spec):
              f'<title>{spec["title"]}</title>',
              f'<meta name="description" content="{spec["desc"]}">',
              f'<link rel="canonical" href="https://jag160digital.github.io/evo-golf-website/{spec["file"]}">',
-             FONTS, '<link rel="stylesheet" href="./css/style.css">', "</head>", "<body>", "",
+             FONTS, '<link rel="stylesheet" href="./css/style.css">',
+             schema(spec, spec["sections"]), "</head>", "<body>", "",
              nav(spec.get("cur")), "",
              hero(h["kick"], h["l1"], h["l2"], h["p"], h["img"], h["alt"]), "",
              marquee(spec["marq"]), ""]

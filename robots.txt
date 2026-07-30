@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jag160digital.github.io/evo-golf-website/sitemap.xml

@@ -176,6 +176,16 @@ PAGES = [
                  ]),
              ], "alt": True},
 
+            {"type": "baskets", "kick": "Golf lessons in Derby and Nottingham",
+             "h2": "Ball Pricing<br><em>No Booking Required</em>",
+             "p": "Walk in seven days a week, 7am to 8pm. Pay for the balls and the Trackman bay costs nothing on top. Club hire included if you have turned up without a set.",
+             "rows": [
+                 ("Small Basket", "30 Balls", "£4.00"),
+                 ("Medium Basket", "60 Balls", "£7.50"),
+                 ("Large Basket", "90 Balls", "£10.00"),
+                 ("Jumbo Basket", "120 Balls", "£12.50"),
+             ]},
+
             {"type": "accred", "kick": "Accreditations",
              "h2": "What Backs Up the Coaching at This <em>Golf Academy?</em>",
              "p": "Three accreditations sit behind everything taught here, and all three are visible in an ordinary hour on the range.",
