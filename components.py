@@ -585,7 +585,9 @@ def build(spec):
              marquee(spec["marq"]), ""]
     parts += secs
     parts += ["", visit(spec.get("visit_kick", "Golf academy near Derby &amp; Nottingham")), "",
-              faccar(skip=spec["file"]), "",
+              # a page that already lists the facilities as cards does not
+              # need the carousel repeating them underneath
+              (faccar(skip=spec["file"]) if spec.get("faccar", True) else ""), "",
               ctabox(*spec["cta"]) if spec.get("cta") else ctabox(), "",
               FOOTER, "", '<script src="./js/main.js"></script>', "</body>", "</html>", ""]
     (ROOT / spec["file"]).write_text("\n".join(parts))

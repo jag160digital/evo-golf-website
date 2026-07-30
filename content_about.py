@@ -38,6 +38,7 @@ PAGES = [{
     "title": "About Evolution Golf Academy | Golf Academy in Derby &amp; Nottingham",
     "desc": "About Evolution Golf Academy, a modern golf academy for Derby and Nottingham at Ormonde Fields Golf Club, Codnor near Ripley. Founded by Academy Director Will Painter.",
     "visit_kick": "pga golf coach in derby and nottingham",
+    "faccar": False,
     "cta": ("Come and <em>see what we do.</em>",
             "Pop in, hit some balls, meet the team and have a proper look round. No pressure and no hard sell, we just love showing golfers from Derby and Nottingham what we have built."),
     "hero": {
@@ -50,16 +51,13 @@ PAGES = [{
     "marq": ["Golf Academy Derby", "Golf Academy Nottingham", "Advanced PGA Professional",
              "TPI Movement Screening", "3D Trackman Swing Analysis", "Codnor, Ripley"],
     "sections": [
-
-        {"type": "pmarq"},
-
-        {"type": "stats", "items": [
+            {"type": "stats", "items": [
             ("2023", "The year we were founded"),
             ("15 yrs", "Playing at an elite level"),
             ("13 hrs", "Open every single day"),
             ("7", "Days a week on the range")]},
 
-        {"type": "split", "img": "lesson_grip",
+            {"type": "split", "img": "lesson_grip",
          "img_alt": "Man in a green sweater and PING hat swinging a golf club indoors at a wooden driving range",
          "kick": "Our story · Golf coaching in Derbyshire",
          "h2": "Founded by <em>Academy Director Will Painter</em>",
@@ -74,7 +72,7 @@ PAGES = [{
          ],
          "btn2": ("Meet the team", "meet-team.html"), "alt": True},
 
-        {"type": "split", "img": "bunker",
+            {"type": "split", "img": "bunker",
          "img_alt": "Golf instructor teaching woman how to hold a golf club on a sand bunker with ball in front",
          "kick": "The turning point",
          "h2": "The answer wasn't the swing, <em>it was the body.</em>",
@@ -90,13 +88,13 @@ PAGES = [{
          ],
          "btn2": ("Book a lesson with Will", "contact.html")},
 
-        {"type": "imgbreak", "img": "trackman_screen",
+            {"type": "imgbreak", "img": "trackman_screen",
          "img_alt": "Trackman launch monitor screen during a golf swing assessment in Derbyshire",
          "kick": "How we can help you improve",
          "h2": "We assess, identify, then <em>build the plan.</em>",
          "p": "Rather than guessing why you are struggling, every journey starts with a PGA Professional Swing Assessment and a TPI Movement Screen."},
 
-        {"type": "prose", "kick": "golf facilities in derby and nottingham",
+            {"type": "prose", "kick": "golf facilities in derby and nottingham",
          "h2": "How we can help you <em>improve</em>",
          "p": "Every golfer is different, which is why every journey at Evolution begins with understanding both your golf swing and how your body moves. Rather than guessing why you are struggling, we assess, identify and build a clear plan for improvement.",
          "blocks": [
@@ -120,7 +118,7 @@ PAGES = [{
              ("p", "By combining your PGA Professional Swing Assessment with your TPI Movement Screen, we build a complete understanding of both your golf swing and your body's ability to support it."),
          ], "alt": True},
 
-        {"type": "cards", "kick": "golf facilities in derby and nottingham",
+            {"type": "cards", "kick": "golf facilities in derby and nottingham",
          "h2": "Your <em>Evolution Plan.</em>",
          "p": "Following your PGA Professional Swing Assessment and TPI Movement Screen, we'll create a personalised plan designed around your goals, your golf swing and how your body moves. Every golfer is different, which means every Evolution Plan is unique. Depending on your assessment, your plan may include one or more of the following services.",
          "cards": [
@@ -142,7 +140,7 @@ PAGES = [{
               "href": "contact.html", "cta": "Explore more"},
          ]},
 
-        {"type": "gal", "kick": "Inside the academy",
+            {"type": "gal", "kick": "Inside the academy",
          "h2": "A look around <em>Evolution.</em>",
          "items": [
              ("bay_night", "Floodlit Trackman bays"),
@@ -153,13 +151,7 @@ PAGES = [{
              ("on_course", "On-course coaching"),
          ], "alt": True},
 
-        {"type": "imgbreak", "img": "range_night",
-         "img_alt": "Evening at the Trackman driving range, Codnor, Ripley",
-         "kick": "What's inside · Facilities in Derby &amp; Nottingham",
-         "h2": "One golf academy,<br><em>six ways to play.</em>",
-         "p": "Range, simulator, teaching bay, fitness suite, grass range and short game area. Everything on one site in Codnor, Ripley."},
-
-        {"type": "cards", "kick": "What's inside · Facilities in Derby &amp; Nottingham",
+            {"type": "cards", "kick": "What's inside · Facilities in Derby &amp; Nottingham",
          "h2": "One golf academy,<br><em>six ways to play.</em>",
          "cards": [
              {"img": "range_night", "alt": "Trackman driving range in Derby and Nottingham",
@@ -186,9 +178,9 @@ PAGES = [{
               "h": "Facility 06 · Short Game Area",
               "p": "Sharpen the part of the game that saves the most shots. A short game area and putting green for chipping, pitching and putting.",
               "href": "short-game.html", "cta": "Short Game Area"},
-         ], "alt": True},
+         ]},
 
-        {"type": "cards", "kick": "Golf lessons, Trackman &amp; custom fitting",
+            {"type": "cards", "kick": "Golf lessons, Trackman &amp; custom fitting",
          "h2": "Beginner coaching services in <em>Derby.</em>",
          "p": "At Evolution, we believe golf should be accessible, enjoyable and welcoming for everyone. Whether you are picking up a golf club for the very first time, returning to the game after a break or introducing your child to golf, our programmes are designed to build confidence, develop skills and help you enjoy the game from day one. Explore our beginner-friendly programmes below and discover the best place to start your golfing journey.",
          "cards": [
@@ -208,6 +200,6 @@ PAGES = [{
               "h": "Get into Golf",
               "p": "A relaxed, welcoming way in for anyone who has never played. Clubs provided, no experience needed and nobody expecting you to know anything.",
               "href": "get-into-golf.html", "cta": "Learn more"},
-         ]},
-    ],
+         ], "alt": True}
+        ],
 }]
