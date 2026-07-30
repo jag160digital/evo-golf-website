@@ -18,6 +18,12 @@ PAGES = [
             "img": "sim",
             "alt": "Trackman golf simulator near Derby and Nottingham at Evolution Golf Academy",
         },
+        "quickbar": [
+            ("clock", "Open daily", "7:00am to 8:00pm"),
+            ("tag", "Off-peak from", "£13.00 per hour"),
+            ("check", "Group friendly", "Up to 4 players per bay"),
+            ("pin", "DE5 9RJ", "Free on-site parking"),
+        ],
         "marq": ["Golf Simulator Derby", "Indoor Golf Nottingham", "Trackman Ball Data",
                  "Play Famous Courses", "Winter Golf Practice", "Ripley, Derbyshire"],
         "sections": [
@@ -218,6 +224,12 @@ PAGES = [
             "img": "over_shoulder",
             "alt": "PGA coach and golfer in the Trackman teaching bay near Derby and Nottingham",
         },
+        "quickbar": [
+            ("check", "1:1 coaching", "Advanced PGA Professional"),
+            ("tag", "Single lesson", "£55 for 60 minutes"),
+            ("clock", "Open daily", "7:00am to 8:00pm"),
+            ("pin", "DE5 9RJ", "Free on-site parking"),
+        ],
         "marq": ["Trackman Teaching Bay", "Golf Lessons Derby", "Advanced PGA Professional",
                  "Video Swing Analysis", "Private Indoor Bay", "Nottingham &amp; Derbyshire"],
         "sections": [

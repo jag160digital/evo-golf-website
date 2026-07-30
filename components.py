@@ -64,6 +64,10 @@ TEL = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=
        '19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 '
        '12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 '
        '2 0 0122 16.92z"/></svg>')
+TAG = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 '
+       '01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>')
+CHECK = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 '
+         '11-5.93-9.14"/><path d="M22 4L12 14.01l-3 3"/></svg>')
 ARR_L = ('<svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9L11 14" stroke="currentColor" '
          'stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
 ARR_R = ('<svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4L12 9L7 14" stroke="currentColor" '
@@ -543,7 +547,15 @@ def schema(spec, secs_data):
     return "\n".join(f'<script type="application/ld+json">{b}</script>' for b in blocks)
 
 
-def hero(kick, l1, l2, para, img, img_alt):
+def hero(kick, l1, l2, para, img, img_alt, chips=None, chips_head=None):
+    ch = ""
+    if chips:
+        hd = (f'<div class="chiphead"><span>{chips_head[0]}</span><span>{chips_head[1]}</span></div>'
+              if chips_head else "")
+        cs = "".join(
+            f'<div class="chip"><span class="lb">{l}</span><span class="v">{v}<i>{u}</i></span></div>'
+            for l, v, u in chips)
+        ch = f'\n<div class="chips" aria-hidden="true">{hd}{cs}</div>'
     return f'''<div class="hero">
 <div class="card">
 <img class="bg" src="{IMG[img]}" alt="{img_alt}">
@@ -553,11 +565,66 @@ def hero(kick, l1, l2, para, img, img_alt):
 <div class="h"><span class="l1">{l1}</span><span class="l2">{l2}</span></div>
 <p>{para}</p>
 <div class="row"><a class="btn cream" href="{BOOK}" target="_blank" rel="noopener">Book a lesson</a><span class="call">or call {PHONE}</span></div>
-</div>
+</div>{ch}
 </div>
 </div>'''
 
 
+QICONS = {"pin": PIN, "clock": CLOCK, "tel": TEL, "tag": TAG, "check": CHECK}
+
+
+def quickbar(items):
+    """Utility strip under the hero. items = [(icon, small_label, bold_value)]"""
+    qs = "\n".join(
+        f'<div class="q">{QICONS[i]}<div><span>{l}</span><b>{v}</b></div></div>'
+        for i, l, v in items)
+    return f'<div class="quickbar">\n<div class="qin">\n{qs}\n</div>\n</div>'
+
+
+def s_datachips(chips, kick=None, h2=None, p=None, caption=None, alt=False, dark=False):
+    """Trackman readout band. chips = [(label, value, unit)]. dark=True renders
+    the band on near-black, the way Trackman presents its own data."""
+    cs = "\n".join(
+        f'<div class="dchip"><span class="lb">{l}</span><span class="v">{v}<i>{u}</i></span></div>'
+        for l, v, u in chips)
+    if kick and h2:
+        head = _head(kick, h2, p) + "\n"
+    elif kick:
+        head = f'<span class="kick" style="color:var(--orange);display:block;margin-bottom:24px">● {kick}</span>\n'
+    else:
+        head = ""
+    cap = f'\n<p class="dcap">{caption}</p>' if caption else ""
+    cls = "sec dark" if dark else ("sec alt" if alt else "sec")
+    return (f'<section class="{cls}">\n<div class="container">\n'
+            + head + f'<div class="datachips">\n{cs}\n</div>' + cap + "\n</div>\n</section>")
+
+
+def s_priceband(kick, h2, rows, th2, trows, p=None, tp=None, note=None, alt=False):
+    """Combined pricing band: ball baskets, bay hire table, one booking CTA.
+    rows = [(name, qty, price)], trows = [(label, price)]"""
+    baskets = "\n".join(
+        f'<div class="bcard {"dark" if i % 2 else "light"}">'
+        f'<b>{n}<br>{q}</b><span class="amt">{v}</span></div>'
+        for i, (n, q, v) in enumerate(rows))
+    table = "\n".join(f'<div class="prow"><span>{l}</span><b>{v}</b></div>' for l, v in trows)
+    tpp = f"\n<p>{tp}</p>" if tp else ""
+    nt = f'\n<p class="pbnote">{note}</p>' if note else ""
+    return _sec(_head(kick, h2, p) + f'''
+<div class="baskets">
+{baskets}
+</div>
+<div class="pbmid">
+<h2>{th2}</h2>{tpp}
+</div>
+<div class="ptable">
+{table}
+</div>
+<div class="pbcta"><a class="btn" href="{BOOK}" target="_blank" rel="noopener">Book a private bay</a><a class="btn outline-ink" href="https://www.google.com/maps/place/Evolution+Golf+Academy" target="_blank" rel="noopener">Get directions</a></div>{nt}''', alt)
+
+
+
+
+BUILDERS.update({"datachips": s_datachips, "priceband": s_priceband})
 
 
 def marquee(phrases):
@@ -579,9 +646,12 @@ def build(spec):
              f'<meta name="description" content="{spec["desc"]}">',
              f'<link rel="canonical" href="https://jag160digital.github.io/evo-golf-website/{spec["file"]}">',
              FONTS, '<link rel="stylesheet" href="./css/style.css">',
-             schema(spec, spec["sections"]), "</head>", "<body>", "",
+             schema(spec, spec["sections"]), "</head>",
+             f'<body class="{spec.get("cls", "v2")}">', "",
              nav(spec.get("cur")), "",
-             hero(h["kick"], h["l1"], h["l2"], h["p"], h["img"], h["alt"]), "",
+             hero(h["kick"], h["l1"], h["l2"], h["p"], h["img"], h["alt"],
+                  h.get("chips"), h.get("chips_head")), "",
+             (quickbar(spec["quickbar"]) if spec.get("quickbar") else ""), "",
              marquee(spec["marq"]), ""]
     parts += secs
     parts += ["", visit(spec.get("visit_kick", "Golf academy near Derby &amp; Nottingham")), "",

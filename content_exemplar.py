@@ -7,6 +7,7 @@ with keyword-rich anchor text, 8+ H2s phrased as real search queries.
 PAGES = [{
     "file": "trackman-range.html",
     "cur": "trackman-range.html",
+    "cls": "v2",
     "title": "Trackman Driving Range Derby &amp; Nottingham | Covered Floodlit Bays | Evolution Golf Academy",
     "desc": "Trackman driving range near Derby and Nottingham. Covered floodlit bays with ball speed, carry, spin and shot shape on every shot. Walk in, no booking, open 7am to 8pm daily.",
     "visit_kick": "Trackman driving range near Derby &amp; Nottingham",
@@ -18,7 +19,15 @@ PAGES = [{
         "p": "The <strong>Trackman driving range</strong> at Evolution Golf Academy gives golfers from Derby, Nottingham and across Derbyshire tour-level ball data on every single shot. Covered, floodlit bays mean you can practise all year round, and you never need to book.",
         "img": "range_night",
         "alt": "Trackman driving range near Derby and Nottingham at Evolution Golf Academy",
+        "chips": [("Carry", "148", "yds"), ("Ball speed", "112", "mph"), ("Smash factor", "1.37", "")],
+        "chips_head": ("Session", "7 iron · 18 shots"),
     },
+    "quickbar": [
+        ("check", "Walk in", "No booking needed"),
+        ("clock", "Open daily", "7:00am to 8:00pm"),
+        ("pin", "DE5 9RJ", "Free on-site parking"),
+        ("tag", "Baskets from", "£4.00 for 30 balls"),
+    ],
     "marq": ["Trackman Driving Range Derby", "Driving Range Nottingham", "Ball Speed &amp; Carry Data",
              "Covered Floodlit Bays", "Open 7 Days a Week", "Golf Practice Derbyshire"],
     "sections": [
@@ -37,7 +46,14 @@ PAGES = [{
              ("p", "It also removes a very common problem: golfers grooving a fault. Without data it is entirely possible to spend a winter hitting two hundred balls a week and get worse, because you are reinforcing the same compensation every time. Numbers catch that early."),
          ]},
 
-            {"type": "stats", "items": [("1", "PGA Pro"), ("2+", "Trackman Simulators"), ("7", "Trackman Range Bays")], "alt": True},
+            {"type": "datachips", "kick": "Live from a range bay",
+         "chips": [
+             ("Ball speed", "112", "mph"), ("Club speed", "82", "mph"),
+             ("Carry", "148", "yds"), ("Spin rate", "6,400", "rpm"),
+             ("Launch angle", "17.8", "°"), ("Smash factor", "1.37", ""),
+         ],
+         "caption": "A sample seven iron from a range bay session. Your own numbers appear on the bay screen about a second after impact.",
+         "dark": True},
 
             {"type": "prose", "kick": "Spacious bays, relaxed atmosphere",
          "h2": "What Makes the Trackman Range at Evolution Golf Academy <em>Different?</em>",
@@ -68,6 +84,40 @@ PAGES = [{
               "p": "The range runs first come, first served. No app, no membership, no phone call needed. Turn up, pick up a basket and hit balls."},
          ], "alt": True},
 
+            {"type": "priceband", "kick": "Golf lessons in Derby and Nottingham",
+         "h2": "Ball Pricing<br><em>No Booking Required</em>",
+         "p": "Pay for the balls and use the Trackman bay for nothing. Seven days a week, and club hire is included at no extra cost if you have turned up without a set.",
+         "rows": [
+             ("Small Basket", "30 Balls", "£4.00"),
+             ("Medium Basket", "60 Balls", "£7.50"),
+             ("Large Basket", "90 Balls", "£10.00"),
+             ("Jumbo Basket", "120 Balls", "£12.50"),
+         ],
+         "th2": "What Does a Private <em>Trackman Bay Cost?</em>",
+         "tp": "If you want the bay to yourself with full club and ball data plus video, that is booked separately by the hour.",
+         "trows": [
+             ("Private Trackman range bay", "£15.00 per hour"),
+             ("Trackman simulator, off-peak", "from £13.00 per hour"),
+             ("Trackman simulator, peak", "£25.00 per hour up to 4 players"),
+         ],
+         "note": "Members get priority booking and better rates on the range and simulator bays. See <a href=\"memberships.html\">memberships</a> for details."},
+
+            {"type": "steps", "kick": "How to use the range",
+         "h2": "How Do I Use the <em>Trackman Driving Range?</em>",
+         "p": "There is nothing complicated about it, and you do not need to know anything about launch monitors before you arrive.",
+         "steps": [
+             ("Turn up, no booking needed",
+              "The range is walk-in every day from 7am to 8pm. Park on site for free at Ormonde Fields Golf Club and come to the range. Bays are first come, first served."),
+             ("Pick up a basket",
+              "Baskets run from £4.00 for 30 balls up to £12.50 for 120 balls. The bigger baskets work out cheaper per ball, so if you are planning a full session the 90 or 120 is the sensible buy."),
+             ("Take any free bay",
+              "Every bay is Trackman-equipped, so there is no better or worse bay to aim for. The screen switches on and starts tracking as soon as you begin hitting."),
+             ("Hit shots and read the numbers",
+              "Your data appears shot by shot. If you are new to it, ignore everything except carry distance to begin with and build up from there."),
+             ("Add a coach when you want one",
+              "If the numbers raise a question you cannot answer, book a session in the <a href=\"trackman-teaching-bay.html\">Trackman teaching bay</a> with a PGA Professional and get it explained."),
+         ], "alt": True},
+
             {"type": "accred", "kick": "Accredited and certified",
          "h2": "Who Accredits the <em>Trackman Range?</em>",
          "p": "The technology and the coaching behind it are both certified rather than self-declared.",
@@ -93,41 +143,6 @@ PAGES = [{
              "<b>Fifteen minutes from Derby</b> and twenty five from Nottingham on the A610",
          ],
          "btn2": ("See golf lessons", "1-1-lessons.html"), "alt": True},
-
-            {"type": "steps", "kick": "How to use the range",
-         "h2": "How Do I Use the <em>Trackman Driving Range?</em>",
-         "p": "There is nothing complicated about it, and you do not need to know anything about launch monitors before you arrive.",
-         "steps": [
-             ("Turn up, no booking needed",
-              "The range is walk-in every day from 7am to 8pm. Park on site for free at Ormonde Fields Golf Club and come to the range. Bays are first come, first served."),
-             ("Pick up a basket",
-              "Baskets run from £4.00 for 30 balls up to £12.50 for 120 balls. The bigger baskets work out cheaper per ball, so if you are planning a full session the 90 or 120 is the sensible buy."),
-             ("Take any free bay",
-              "Every bay is Trackman-equipped, so there is no better or worse bay to aim for. The screen switches on and starts tracking as soon as you begin hitting."),
-             ("Hit shots and read the numbers",
-              "Your data appears shot by shot. If you are new to it, ignore everything except carry distance to begin with and build up from there."),
-             ("Add a coach when you want one",
-              "If the numbers raise a question you cannot answer, book a session in the <a href=\"trackman-teaching-bay.html\">Trackman teaching bay</a> with a PGA Professional and get it explained."),
-         ]},
-
-            {"type": "baskets", "kick": "Golf lessons in Derby and Nottingham",
-         "h2": "Ball Pricing<br><em>No Booking Required</em>",
-         "p": "Pay for the balls and use the Trackman bay for nothing. Seven days a week, and club hire is included at no extra cost if you have turned up without a set.",
-         "rows": [
-             ("Small Basket", "30 Balls", "£4.00"),
-             ("Medium Basket", "60 Balls", "£7.50"),
-             ("Large Basket", "90 Balls", "£10.00"),
-             ("Jumbo Basket", "120 Balls", "£12.50"),
-         ], "alt": True},
-
-            {"type": "ptable", "kick": "Private bay hire",
-         "h2": "What Does a Private <em>Trackman Bay Cost?</em>",
-         "p": "If you want the bay to yourself with full club and ball data plus video, that is booked separately by the hour.",
-         "rows": [
-             ("Private Trackman range bay", "£15.00 per hour"),
-             ("Trackman simulator, off-peak", "from £13.00 per hour"),
-             ("Trackman simulator, peak", "£25.00 per hour up to 4 players"),
-         ]},
 
             {"type": "imgbreak", "img": "range_night",
              "img_alt": "Every shot, measured. at Evolution Golf Academy",
