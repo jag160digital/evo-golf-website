@@ -380,3 +380,14 @@ img{display:block;max-width:100%}
 .lead input{width:100%;padding:14px 16px;border:1px solid rgba(241,236,225,.25);border-radius:12px;background:rgba(241,236,225,.06);color:var(--cream);font-family:var(--sans);font-size:15px}
 .lead input:focus{outline:none;border-color:var(--orange)}
 @media(max-width:900px){.accred{grid-template-columns:1fr}.crow{grid-template-columns:1fr;gap:6px}.crow.head{display:none}.lead{grid-template-columns:1fr;padding:40px 26px;gap:32px}}
+
+/* ── ball pricing cards (alternating white / orange) ── */
+.baskets{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.bcard{border-radius:18px;padding:34px 30px;min-height:268px;display:flex;flex-direction:column;justify-content:space-between}
+.bcard.light{background:#fff;border:1.5px solid rgba(31,31,31,.10)}
+.bcard.dark{background:var(--orange)}
+.bcard b{font-family:var(--disp);font-weight:600;font-size:clamp(22px,2.1vw,29px);line-height:1.12;letter-spacing:.01em;display:block}
+.bcard .amt{font-family:var(--disp);font-weight:500;font-size:clamp(28px,2.6vw,36px);line-height:1;letter-spacing:.01em;margin-top:30px;display:block}
+.bcard.light b,.bcard.light .amt{color:var(--ink)}
+.bcard.dark b,.bcard.dark .amt{color:#fff;font-style:italic}
+@media(max-width:900px){.baskets{grid-template-columns:1fr 1fr;gap:12px}.bcard{min-height:200px;padding:24px 22px}}

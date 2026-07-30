@@ -385,6 +385,16 @@ def s_pmarq():
             + row(PMARQ_A, "a") + "\n" + row(PMARQ_B, "b") + "\n</div>")
 
 
+def s_baskets(kick, h2, rows, p=None, alt=False):
+    """Ball pricing cards, alternating white and orange.
+    rows = [(name, qty, price)]"""
+    body = "\n".join(
+        f'<div class="bcard {"dark" if i % 2 else "light"}">'
+        f'<b>{n}<br>{q}</b><span class="amt">{v}</span></div>'
+        for i, (n, q, v) in enumerate(rows))
+    return _sec(_head(kick, h2, p) + f'\n<div class="baskets">\n{body}\n</div>', alt)
+
+
 def s_accred(kick, h2, items, p=None, alt=False):
     """Partners and accreditations band. items = [(tag, name, desc)]"""
     body = "\n".join(
@@ -434,7 +444,7 @@ BUILDERS = {"intro": s_intro, "prose": s_prose, "cards": s_cards, "split": s_spl
             "steps": s_steps, "stats": s_stats, "prices": s_prices, "faq": s_faq,
             "rel": s_rel, "areas": s_areas, "tgrid": s_tgrid, "team": s_team,
             "form": s_form, "accred": s_accred, "ctable": s_ctable,
-            "ptable": s_ptable, "lead": s_lead, "pmarq": s_pmarq}
+            "ptable": s_ptable, "lead": s_lead, "pmarq": s_pmarq, "baskets": s_baskets}
 
 
 def hero(kick, l1, l2, para, img, img_alt):

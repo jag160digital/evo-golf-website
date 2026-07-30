@@ -88,11 +88,13 @@ academy is built on.
   coaching, OnForm platform, playing lesson, TPI screening, lesson range balls
 - **TPI Screening £75** - 16 tests, Trackman analysis, swing-body connection
 
-### Range baskets
-- 30 balls **£4.00** · 60 balls **£7.50** · 90 balls **£10.00** · 120 balls **£12.50**
-  - CONFLICT: the home page lists £4 / £7 / £9 / £11. The dedicated Trackman
-    Range page lists £4 / £7.50 / £10 / £12.50. Using the dedicated page.
-    NEEDS CONFIRMING.
+### Range baskets - CONFIRMED BY CLIENT 30 Jul
+- Small Basket, 30 balls **£4.00**
+- Medium Basket, 60 balls **£7.50**
+- Large Basket, 90 balls **£10.00**
+- Jumbo Basket, 120 balls **£12.50**
+- No booking required. Confirmed from a screenshot of the live pricing
+  block, so the home page figures (£4 / £7 / £9 / £11) are the stale ones.
 - No booking required
 
 ### Trackman Simulator

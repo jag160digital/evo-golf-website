@@ -108,16 +108,24 @@ PAGES = [{
               "If the numbers raise a question you cannot answer, book a session in the <a href=\"trackman-teaching-bay.html\">Trackman teaching bay</a> with a PGA Professional and get it explained."),
          ]},
 
-            {"type": "ptable", "kick": "Range basket prices",
-         "h2": "How Much Does the Trackman Driving Range <em>Cost?</em>",
-         "p": "Pay for the balls, use the Trackman bay for nothing. No booking required, seven days a week, and club hire is included at no extra cost if you have arrived without a set.",
+            {"type": "baskets", "kick": "Golf lessons in Derby and Nottingham",
+         "h2": "Ball Pricing<br><em>No Booking Required</em>",
+         "p": "Pay for the balls and use the Trackman bay for nothing. Seven days a week, and club hire is included at no extra cost if you have turned up without a set.",
          "rows": [
-             ("30 balls", "£4.00"),
-             ("60 balls", "£7.50"),
-             ("90 balls", "£10.00"),
-             ("120 balls", "£12.50"),
-             ("Private Trackman range bay", "£15.00 per hour"),
+             ("Small Basket", "30 Balls", "£4.00"),
+             ("Medium Basket", "60 Balls", "£7.50"),
+             ("Large Basket", "90 Balls", "£10.00"),
+             ("Jumbo Basket", "120 Balls", "£12.50"),
          ], "alt": True},
+
+            {"type": "ptable", "kick": "Private bay hire",
+         "h2": "What Does a Private <em>Trackman Bay Cost?</em>",
+         "p": "If you want the bay to yourself with full club and ball data plus video, that is booked separately by the hour.",
+         "rows": [
+             ("Private Trackman range bay", "£15.00 per hour"),
+             ("Trackman simulator, off-peak", "from £13.00 per hour"),
+             ("Trackman simulator, peak", "£25.00 per hour up to 4 players"),
+         ]},
 
             {"type": "prose", "kick": "Getting the most from a session",
          "h2": "How Should You Practise on a <em>Trackman Range?</em>",
