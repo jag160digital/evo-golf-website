@@ -25,6 +25,8 @@ PAGES = [
         "marq": ["1:1 Golf Lessons Derby", "Golf Lessons Nottingham", "PGA Professional Coaching",
                  "Trackman &amp; Video Analysis", "Full 60 Minute Sessions", "Open 7 Days a Week"],
         "sections": [
+            {"type": "pmarq"},
+
             {"type": "prose", "kick": "One to one PGA coaching",
              "h2": "What Happens in a <em>1:1 Golf Lesson?</em>",
              "blocks": [
@@ -148,6 +150,12 @@ PAGES = [
                  ("Private Trackman Range Bay - ball data, club data, video analysis", "£15 per hour"),
              ], "alt": True},
 
+            {"type": "imgbreak", "img": "over_shoulder",
+             "img_alt": "Your swing, measured. at Evolution Golf Academy",
+             "kick": "One to one coaching",
+             "h2": "Your swing, <em>measured.</em>",
+             "p": "Trackman data and video on every shot, so what changed is a number rather than an opinion."},
+
             {"type": "prose", "kick": "Getting value from coaching",
              "h2": "How Often Should You Have <em>Golf Lessons?</em>",
              "blocks": [
@@ -210,7 +218,7 @@ PAGES = [
                   "Then coaching it harder is wasted money. A <a href=\"tpi-screening.html\">TPI movement screening</a> tests hip and thoracic rotation, shoulder mobility, balance and stability, and shows exactly which physical restriction is producing your fault. The fix then lives in the <a href=\"golf-fitness.html\">golf fitness suite</a> alongside the coaching."),
                  ("Can I book lessons at weekends or in the evening?",
                   "Yes. The academy is open 7am to 8pm every day of the week, including weekends, and the teaching bays are covered, heated and floodlit. Early mornings before work and evenings after it are the busiest slots, so book those a little further ahead."),
-             ], "alt": True},
+             ], "alt": True}
         ],
     },
 
@@ -233,6 +241,8 @@ PAGES = [
         "marq": ["Beginner Golf Lessons Derby", "Golf for Beginners Nottingham", "Clubs Provided",
                  "No Experience Needed", "PGA Coaching", "Derbyshire Golf Academy"],
         "sections": [
+            {"type": "pmarq"},
+
             {"type": "prose", "kick": "Golf lessons for complete beginners",
              "h2": "What Do <em>Beginner Golf Lessons</em> Include?",
              "blocks": [
@@ -312,6 +322,12 @@ PAGES = [
                   "p": "Walk-in practice on the Trackman range between lessons, 7am to 8pm daily. No booking needed, club hire included, and open to everyone."},
              ]},
 
+            {"type": "imgbreak", "img": "beginner",
+             "img_alt": "Everyone starts somewhere. at Evolution Golf Academy",
+             "kick": "Beginner golf lessons",
+             "h2": "Everyone starts <em>somewhere.</em>",
+             "p": "No experience assumed, clubs provided, and nobody expecting you to know what a lie angle is."},
+
             {"type": "prose", "kick": "Honest answers",
              "h2": "How Long Does It Take to <em>Learn Golf?</em>",
              "blocks": [
@@ -374,7 +390,7 @@ PAGES = [
                   "Almost certainly not. Golf accommodates a wide range of physical ability, and the swing can be built around what your body will actually do. A <a href=\"tpi-screening.html\">TPI movement screening</a> establishes that starting point precisely, rather than assuming you should be able to make a tour-length backswing."),
                  ("Where are you and how do I get there from Nottingham?",
                   "Evolution Golf Academy is at Ormonde Fields Golf Club, Nottingham Road, Codnor, Ripley DE5 9RJ, about twenty minutes from Nottingham and fifteen from Derby along the A610. Parking is free. Full directions are on the <a href=\"location.html\">location page</a>."),
-             ], "alt": True},
+             ], "alt": True}
         ],
     },
 
@@ -397,6 +413,8 @@ PAGES = [
         "marq": ["Monthly Golf Coaching Derby", "Golf Programme Nottingham", "£60 Per Month",
                  "Trackman Progress Tracking", "PGA Professional Coaching", "Practice Plans Included"],
         "sections": [
+            {"type": "pmarq"},
+
             {"type": "prose", "kick": "Structured coaching, not one-offs",
              "h2": "What Is a <em>Monthly Golf Coaching Programme?</em>",
              "blocks": [
@@ -493,6 +511,12 @@ PAGES = [
                   "p": "A physical screen that shows which restrictions are limiting your swing, so the coaching plan is built around your actual body."},
              ]},
 
+            {"type": "imgbreak", "img": "coach_feedback",
+             "img_alt": "Coaching with a plan attached. at Evolution Golf Academy",
+             "kick": "Monthly programme",
+             "h2": "Coaching with a <em>plan attached.</em>",
+             "p": "Structured sessions, OnForm support between them, and a route rather than a one-off."},
+
             {"type": "prose", "kick": "Measuring improvement",
              "h2": "How Do You <em>Track Progress</em> in Golf Coaching?",
              "blocks": [
@@ -555,7 +579,7 @@ PAGES = [
                   "Ball striking usually improves first, then dispersion, then scoring. Handicap moves last because it also depends on short game, decision making and how often you play. Golfers who follow their practice plan and play regularly see meaningful movement across a season. Golfers who attend sessions and do nothing in between see much less, and we would rather say so plainly."),
                  ("Can I do the programme through the winter?",
                   "Yes, and winter is when it pays best. The teaching bays and range bays are covered, heated where relevant and floodlit until 8pm, and the <a href=\"trackman-simulator.html\">Trackman simulator</a> is available when the weather is genuinely unpleasant. Golfers who keep coaching through winter start the season ahead of those who do not."),
-             ], "alt": True},
+             ], "alt": True}
         ],
     },
 
@@ -578,6 +602,8 @@ PAGES = [
         "marq": ["Get Into Golf Derby", "Beginner Golf Nottingham", "Clubs Provided",
                  "Group Sessions", "No Experience Needed", "Ripley, Derbyshire"],
         "sections": [
+            {"type": "pmarq"},
+
             {"type": "prose", "kick": "The friendliest way in",
              "h2": "What Is <em>Get Into Golf?</em>",
              "blocks": [
@@ -656,6 +682,12 @@ PAGES = [
                   "p": "One to one with an Advanced PGA Professional when you want faster progress or have a specific thing you would like fixed."},
              ]},
 
+            {"type": "imgbreak", "img": "on_course",
+             "img_alt": "The friendliest way in. at Evolution Golf Academy",
+             "kick": "Get into golf",
+             "h2": "The friendliest way <em>in.</em>",
+             "p": "A relaxed group format for people who have never held a club."},
+
             {"type": "prose", "kick": "Honest answers",
              "h2": "Is Golf <em>Worth Taking Up?</em>",
              "blocks": [
@@ -724,7 +756,7 @@ PAGES = [
                   "Yes to both, and the academy is used to it. If you would prefer to learn among other women, the <a href=\"ladies-academy.html\">ladies academy</a> caters for every ability from first-timers upwards. If you would rather a mixed group, Get Into Golf is exactly that."),
                  ("Where are you and is parking free?",
                   "Ormonde Fields Golf Club, Nottingham Road, Codnor, Ripley DE5 9RJ. Parking is free and there is plenty of it. We are about fifteen minutes from Derby and twenty from Nottingham on the A610, and open 7am to 8pm seven days a week."),
-             ], "alt": True},
+             ], "alt": True}
         ],
     },
 
@@ -747,6 +779,8 @@ PAGES = [
         "marq": ["Junior Golf Lessons Derby", "Kids Golf Nottingham", "Ages 6 to 16",
                  "PGA Junior Coaching", "Clubs Provided", "Ripley, Derbyshire"],
         "sections": [
+            {"type": "pmarq"},
+
             {"type": "prose", "kick": "Junior coaching with Will Painter, Advanced PGA Professional",
              "h2": "What Age Should a Child <em>Start Golf Lessons?</em>",
              "blocks": [
@@ -826,6 +860,12 @@ PAGES = [
                   "p": "One to one with an Advanced PGA Professional, useful for a specific fault or for a junior preparing for a competition."},
              ]},
 
+            {"type": "imgbreak", "img": "junior",
+             "img_alt": "Ages six to sixteen. at Evolution Golf Academy",
+             "kick": "Junior academy",
+             "h2": "Ages six <em>to sixteen.</em>",
+             "p": "Friendly group lessons every week in term time, clubs provided."},
+
             {"type": "prose", "kick": "For parents",
              "h2": "What Do Parents <em>Need to Know?</em>",
              "blocks": [
@@ -888,7 +928,7 @@ PAGES = [
                   "Yes, once they can make contact reliably and understand basic etiquette. Ormonde Fields Golf Club is on the same site, so it is a short walk from the academy to the first tee. We take juniors out for a few holes at a time rather than a full eighteen to begin with."),
                  ("Can I have lessons at the same time as my child?",
                   "Often, yes, depending on coach availability. Plenty of parents book their own <a href=\"monthly-programme.html\">monthly coaching</a> or a <a href=\"beginner-coaching.html\">beginner lesson</a> to run alongside their child's session. Ring 07710 582036 and we will try to line the times up."),
-             ], "alt": True},
+             ], "alt": True}
         ],
     },
 
@@ -911,6 +951,8 @@ PAGES = [
         "marq": ["Ladies Golf Lessons Derby", "Womens Golf Nottingham", "All Abilities Welcome",
                  "PGA Professional Coaching", "Clubs Provided", "Ripley, Derbyshire"],
         "sections": [
+            {"type": "pmarq"},
+
             {"type": "prose", "kick": "Coaching for women, all abilities",
              "h2": "What Are <em>Ladies Golf Lessons</em> Like Here?",
              "blocks": [
@@ -990,6 +1032,12 @@ PAGES = [
                   "p": "A physical movement screen showing which restrictions are shaping your swing, with an exercise plan built from the results."},
              ]},
 
+            {"type": "imgbreak", "img": "ladies",
+             "img_alt": "Women-only, all abilities. at Evolution Golf Academy",
+             "kick": "Ladies academy",
+             "h2": "Women-only, <em>all abilities.</em>",
+             "p": "A relaxed, welcoming space to learn, from complete first-timers to club golfers."},
+
             {"type": "prose", "kick": "Straight answers",
              "h2": "Questions Women <em>Ask Most Often.</em>",
              "blocks": [
@@ -1052,7 +1100,7 @@ PAGES = [
                   "Open 7am to 8pm, seven days a week, including weekends. The range bays and teaching bays are covered and floodlit, so a session at half past six in November is no different to one in June. Evening slots are popular, so book those a little further ahead."),
                  ("How far is the academy from Derby and Nottingham?",
                   "Roughly fifteen minutes from Derby and twenty from Nottingham, both on the A610. We are at Ormonde Fields Golf Club, Nottingham Road, Codnor, Ripley DE5 9RJ, with free parking on site. Full directions are on the <a href=\"location.html\">location page</a>."),
-             ], "alt": True},
+             ], "alt": True}
         ],
     },
 
@@ -1075,6 +1123,8 @@ PAGES = [
         "marq": ["TPI Screening Derby", "Golf Movement Screen Nottingham", "Titleist Performance Institute",
                  "Custom Club Fitting", "Trackman Data", "Ripley, Derbyshire"],
         "sections": [
+            {"type": "pmarq"},
+
             {"type": "prose", "kick": "Titleist Performance Institute screening",
              "h2": "What Is <em>TPI Screening?</em>",
              "blocks": [
@@ -1199,6 +1249,12 @@ PAGES = [
                   "p": "Ongoing coaching with your physical plan and swing plan tracked together across the season, and re-tests built into the year."},
              ]},
 
+            {"type": "imgbreak", "img": "tpi",
+             "img_alt": "Sixteen tests, one picture. at Evolution Golf Academy",
+             "kick": "TPI screening",
+             "h2": "Sixteen tests, <em>one picture.</em>",
+             "p": "How your body actually moves, and what that means for your golf swing."},
+
             {"type": "prose", "kick": "Who benefits",
              "h2": "Who Should Have a <em>TPI Screening?</em>",
              "blocks": [
@@ -1261,7 +1317,7 @@ PAGES = [
                   "Frequently more worthwhile than for a low handicapper, because higher handicap golfers are more often playing clubs that fit somebody else entirely. A shaft that is too stiff or a lie angle that is two degrees out will produce a fault the golfer then spends years trying to coach away. Measuring it takes an hour."),
                  ("Do screening and fitting need booking in advance?",
                   "Yes, both do, because they use the private bay and a set block of time. Call 07710 582036 or use the <a href=\"contact.html\">contact page</a>. The <a href=\"trackman-range.html\">Trackman driving range</a> is the only thing here that is walk-in, open 7am to 8pm every day."),
-             ], "alt": True},
+             ], "alt": True}
         ],
     },
 ]

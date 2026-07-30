@@ -391,3 +391,34 @@ img{display:block;max-width:100%}
 .bcard.light b,.bcard.light .amt{color:var(--ink)}
 .bcard.dark b,.bcard.dark .amt{color:#fff;font-style:italic}
 @media(max-width:900px){.baskets{grid-template-columns:1fr 1fr;gap:12px}.bcard{min-height:200px;padding:24px 22px}}
+
+/* ── image gallery grid ── */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.gal.three{grid-template-columns:repeat(3,1fr)}
+.gal figure{margin:0;border-radius:16px;overflow:hidden;position:relative;height:280px}
+.gal.three figure{height:340px}
+.gal figure:first-child{grid-column:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:20px 22px;color:var(--cream);
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  background:linear-gradient(180deg,rgba(31,31,31,0) 0%,rgba(31,31,31,.78) 100%)}
+
+/* ── full-bleed image break with overlaid headline ── */
+.imgbreak{position:relative;margin:10px;border-radius:22px;overflow:hidden;min-height:52vh;
+  display:flex;align-items:flex-end;background:var(--ink)}
+.imgbreak img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.imgbreak .shade{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(31,31,31,.15) 0%,rgba(31,31,31,.05) 45%,rgba(31,31,31,.75) 100%)}
+.imgbreak .in2{position:relative;z-index:2;padding:0 64px 56px;max-width:900px}
+.imgbreak .kick{color:var(--orange);display:block;margin-bottom:16px}
+.imgbreak h2{font-family:var(--disp);font-weight:500;font-size:clamp(32px,4.2vw,58px);
+  line-height:1.06;letter-spacing:.01em;color:var(--cream)}
+.imgbreak h2 em{font-style:italic;color:var(--orange)}
+.imgbreak p{color:rgba(241,236,225,.85);font-size:16.5px;line-height:1.7;max-width:620px;margin-top:18px}
+@media(max-width:900px){
+  .gal,.gal.three{grid-template-columns:1fr 1fr;gap:10px}
+  .gal figure,.gal.three figure{height:170px}
+  .gal figure:first-child{grid-column:span 2;height:220px}
+  .imgbreak{min-height:44vh}.imgbreak .in2{padding:0 24px 34px}
+}

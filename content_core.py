@@ -521,6 +521,7 @@ PAGES = [
         "marq": ["Nottingham Rd, Codnor", "Ripley DE5 9RJ", "15 Minutes From Derby",
                  "25 Minutes From Nottingham", "Free On-Site Parking", "Open 7am to 8pm"],
         "sections": [
+            {"type": "pmarq"},
 
             {"type": "prose", "kick": "Where we are",
              "h2": "Where Is Evolution Golf Academy <em>Located?</em>",
@@ -580,6 +581,12 @@ PAGES = [
                   "p": "Sharpen the part of the game that saves the most shots. A short game area and putting green for chipping, pitching and putting.",
                   "href": "short-game.html", "cta": "Short game"},
              ], "alt": True},
+
+            {"type": "imgbreak", "img": "range_night",
+             "img_alt": "Codnor, Ripley, DE5 9RJ. at Evolution Golf Academy",
+             "kick": "Visit the academy",
+             "h2": "Codnor, Ripley, <em>DE5 9RJ.</em>",
+             "p": "On the A610 between Derby and Nottingham, with free parking on site."},
 
             {"type": "prose", "kick": "Opening hours and parking",
              "h2": "When Is the Golf Academy <em>Open?</em>",
@@ -667,7 +674,7 @@ PAGES = [
                   "Around fifteen minutes from Derby city centre and twenty five from Nottingham, both largely on the A610. From the M1 at Junction 26 it is roughly twelve minutes. Golfers regularly travel in from Belper, Alfreton, Heanor, Ilkeston, Eastwood and Hucknall too, all of which are inside half an hour on a normal evening."),
                  ("Is there anywhere to get food or a drink on site?",
                   "Ormonde Fields Golf Club has a clubhouse on the same site, so there is somewhere to sit down with a coffee before or after a session. It is a genuinely useful thing on a winter morning, and it makes the academy workable for a group who want to combine a <a href=\"trackman-simulator.html\">simulator booking</a> with a couple of hours that are not spent standing outdoors."),
-             ]},
+             ]}
         ],
     },
 
@@ -831,6 +838,8 @@ PAGES = [
         "marq": ["Book Golf Lessons Derby", "Golf Lessons Nottingham", "07710 582036",
                  "Open 7am to 8pm", "Ripley DE5 9RJ", "Advanced PGA Professional"],
         "sections": [
+            {"type": "pmarq"},
+
             {"type": "form",
              "kick": "Book golf lessons near Derby and Nottingham",
              "h2": "How Do You Book a Golf Lesson at <em>Evolution Golf Academy?</em>",
@@ -853,6 +862,12 @@ PAGES = [
                            "<li>Nothing is charged until you confirm a booking</li></ul>"
                            "<h3>Booking online is fastest</h3>"
                            "<p>If you already know what you want, the online booking system shows live availability and confirms instantly, which is quicker than waiting on a reply. Use the enquiry form instead when you are not sure what to book, and read the <a href=\"meet-team.html\">coaching team page</a> if you want to know who you will be working with first.</p></div>"},
+
+            {"type": "imgbreak", "img": "lesson_grip",
+             "img_alt": "Come and have a look. at Evolution Golf Academy",
+             "kick": "Get in touch",
+             "h2": "Come and <em>have a look.</em>",
+             "p": "No pressure and no hard sell. Call 07710 582036 or send a message."},
 
             {"type": "prose", "kick": "Choosing what to book",
              "h2": "Which Golf Lesson or Service Should You <em>Book First?</em>",

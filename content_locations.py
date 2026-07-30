@@ -355,6 +355,8 @@ def location_page(row):
                  "TPI Screening", f"Junior Lessons {L}", f"Golf Academy Near {L}"],
         "sections": [
 
+            {"type": "pmarq"},
+
             {"type": "prose", "kick": f"The academy that {L} golfers drive to",
              "h2": f"Where Can You Get <em>Golf Lessons in {L}?</em>",
              "blocks": intro_blocks},
@@ -408,6 +410,12 @@ def location_page(row):
                   "p": "Structured coaching with regular reviews and support between lessons. Built for golfers committed to improving.",
                   "href": "monthly-programme.html", "cta": "Monthly programme"},
              ], "alt": True},
+
+            {"type": "imgbreak", "img": "range_night",
+             "img_alt": f"Trackman driving range a short drive from {L}",
+             "kick": f"Coming from {L}?",
+             "h2": f"{dist} from <em>{L}.</em>",
+             "p": f"Free parking directly outside the range and teaching studio, open 7am to 8pm seven days a week."},
 
             {"type": "steps", "kick": f"Coming from {L}?",
              "h2": f"How Do You Get Here <em>From {L}?</em>",

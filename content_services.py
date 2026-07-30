@@ -44,6 +44,7 @@ PAGES = [
         "marq": ["Golf Membership Derby", "Trackman Membership", "Priority Booking",
                  "Better Rates", "Golf Academy Nottingham", "Membership Derbyshire"],
         "sections": [
+            {"type": "pmarq"},
 
             {"type": "prose", "kick": "Membership at Evolution",
              "h2": "What Does <em>Golf Academy Membership</em> Include?",
@@ -78,6 +79,12 @@ PAGES = [
                   "p": "Membership sits alongside coaching rather than replacing it. Plenty of golfers pair it with the monthly programme so lessons and practice both run on a regular rhythm.",
                   "href": "monthly-programme.html", "cta": "Monthly programme"},
              ], "alt": True},
+
+            {"type": "imgbreak", "img": "bay_indoor",
+             "img_alt": "Priority booking, better rates. at Evolution Golf Academy",
+             "kick": "Membership",
+             "h2": "Priority booking, <em>better rates.</em>",
+             "p": "Never required for anything. Worth it if you are here often enough."},
 
             {"type": "prose", "kick": "Working out whether it is worth it",
              "h2": "Is Golf Membership Worth It <em>Near Derby?</em>",
@@ -152,7 +159,7 @@ PAGES = [
                  ("monthly-programme.html", "Monthly Programme", "Structured ongoing coaching at £60 a month with a plan between sessions.", "Monthly coaching"),
                  ("golf-fitness.html", "Golf Fitness Suite", "TPI-informed mobility, strength and speed work built around your swing.", "Golf fitness"),
                  ("contact.html", "Contact the Academy", "Call 07710 582036 or send a message. Answered within a working day.", "Get in touch"),
-             ]},
+             ]}
         ],
     },
 
@@ -175,6 +182,7 @@ PAGES = [
         "marq": ["Trackman Tournaments", "Simulator League Night", "Indoor Golf Competition",
                  "Closest to the Pin", "Long Drive Challenge", "Golf Derby &amp; Nottingham"],
         "sections": [
+            {"type": "pmarq"},
 
             {"type": "prose", "kick": "Competitive golf indoors",
              "h2": "What Are <em>Trackman Tournaments?</em>",
@@ -225,6 +233,12 @@ PAGES = [
              ],
              "btn2": ("Ask what is on", "contact.html")},
 
+            {"type": "imgbreak", "img": "bay_night",
+             "img_alt": "Competition that the weather cannot cancel. at Evolution Golf Academy",
+             "kick": "Trackman tournaments",
+             "h2": "Competition that <em>the weather cannot cancel.</em>",
+             "p": "League nights, closest to the pin and long drive, scored by radar."},
+
             {"type": "prose", "kick": "Getting involved",
              "h2": "How Do You Enter a <em>Trackman Tournament?</em>",
              "blocks": [
@@ -270,7 +284,7 @@ PAGES = [
                  ("1-1-lessons.html", "1:1 Golf Lessons", "An hour with a PGA Professional, Trackman data and video throughout.", "Golf lessons"),
                  ("junior-academy.html", "Junior Academy", "Weekly group coaching in term time for ages six to sixteen.", "Juniors"),
                  ("contact.html", "Contact the Academy", "Call 07710 582036 to ask what is running and when.", "Get in touch"),
-             ]},
+             ]}
         ],
     },
 
@@ -293,6 +307,13 @@ PAGES = [
         "marq": ["SwingFit Derby", "TPI Movement Screening", "Golf Specific Fitness",
                  "Swing Speed Training", "Injury Prevention", "Golf Fitness Nottingham"],
         "sections": [
+            {"type": "pmarq"},
+
+            {"type": "imgbreak", "img": "tpi",
+             "img_alt": "Screen first, then train. at Evolution Golf Academy",
+             "kick": "SwingFit",
+             "h2": "Screen first, <em>then train.</em>",
+             "p": "The order matters more than the exercises."},
 
             {"type": "prose", "kick": "The movement side of golf",
              "h2": "What Is <em>SwingFit?</em>",
@@ -385,7 +406,7 @@ PAGES = [
                  ("monthly-programme.html", "Monthly Programme", "Structured ongoing coaching with a plan between sessions.", "Monthly coaching"),
                  ("meet-team.html", "Meet Your Coach", "Will Painter, and the thinking that led to the academy being built this way.", "Your coach"),
                  ("trackman-range.html", "Trackman Driving Range", "Where speed and strike changes get measured on the way through.", "Driving range"),
-             ]},
+             ]}
         ],
     },
 ]

@@ -21,6 +21,7 @@ PAGES = [
         "marq": ["Golf Simulator Derby", "Indoor Golf Nottingham", "Trackman Ball Data",
                  "Play Famous Courses", "Winter Golf Practice", "Ripley, Derbyshire"],
         "sections": [
+            {"type": "pmarq"},
 
             {"type": "prose", "kick": "Indoor golf near Derby &amp; Nottingham",
              "h2": "What Is a Trackman <em>Golf Simulator?</em>",
@@ -130,6 +131,12 @@ PAGES = [
                  ("1:1 golf lesson, per hour", "£55.00"),
              ]},
 
+            {"type": "imgbreak", "img": "sim",
+             "img_alt": "Any course, any weather. at Evolution Golf Academy",
+             "kick": "Trackman simulator",
+             "h2": "Any course, <em>any weather.</em>",
+             "p": "Two private simulators and a course library that does not care what February is doing."},
+
             {"type": "prose", "kick": "Simulator prices",
              "h2": "Which Simulator Price Tier <em>Applies to Me?</em>",
              "blocks": [
@@ -191,7 +198,7 @@ PAGES = [
                   "Yes. League nights run in the simulator bays and they are a straightforward way to keep competitive golf going through the winter, playing famous courses against other members of the academy rather than against the weather. Ring 07710 582036 to find out which night the current league runs on and whether there is a space."),
                  ("Can juniors use the golf simulator?",
                   "Yes, and it suits them well. The pace is quick, the scoring is visible and the weather is irrelevant. Juniors should be supervised by an adult in the bay. Structured coaching for younger golfers runs through the <a href=\"junior-academy.html\">Junior Academy</a> rather than as open bay time."),
-             ], "alt": True},
+             ], "alt": True}
         ],
     },
 
@@ -214,6 +221,7 @@ PAGES = [
         "marq": ["Trackman Teaching Bay", "Golf Lessons Derby", "Advanced PGA Professional",
                  "Video Swing Analysis", "Private Indoor Bay", "Nottingham &amp; Derbyshire"],
         "sections": [
+            {"type": "pmarq"},
 
             {"type": "prose", "kick": "Private coaching bay in Derbyshire",
              "h2": "What Is a <em>Trackman Teaching Bay?</em>",
@@ -277,6 +285,12 @@ PAGES = [
                  ("You leave with a plan and the video",
                   "What to practise, how to practise it and how you will know it is working. The swing videos are sent to you afterwards. Follow-up work happens on the <a href=\"trackman-range.html\">Trackman range</a> or in the <a href=\"short-game.html\">short game area</a>."),
              ]},
+
+            {"type": "imgbreak", "img": "over_shoulder",
+             "img_alt": "Quiet, private, fully tracked. at Evolution Golf Academy",
+             "kick": "Trackman teaching bay",
+             "h2": "Quiet, private, <em>fully tracked.</em>",
+             "p": "Trackman data, video analysis, mirrors and training aids, with no audience."},
 
             {"type": "prose", "kick": "Who books the teaching bay",
              "h2": "Who Are Teaching Bay Lessons <em>For?</em>",
@@ -360,7 +374,7 @@ PAGES = [
                   "It is fully indoors and heated, and it runs 7am to 8pm every day of the year, weather permitting nothing at all. Winter is the busiest period for exactly that reason. Outdoor work moves to the <a href=\"grass-range.html\">grass driving range</a> in the drier months when a coach wants real turf."),
                  ("Who will coach me?",
                   "Will Painter, Advanced PGA Professional, who leads the coaching at the academy. That means the same person sees your swing every session rather than whoever is free, and your Trackman history carries over from one lesson to the next. Read more on <a href=\"meet-team.html\">Meet the Team</a>."),
-             ], "alt": True},
+             ], "alt": True}
         ],
     },
 
@@ -383,6 +397,7 @@ PAGES = [
         "marq": ["Golf Fitness Derby", "TPI Certified", "Mobility &amp; Stability",
                  "Clubhead Speed Training", "Injury Prevention", "Nottingham &amp; Derbyshire"],
         "sections": [
+            {"type": "pmarq"},
 
             {"type": "prose", "kick": "Golf specific training in Derbyshire",
              "h2": "What Is <em>Golf Fitness?</em>",
@@ -446,6 +461,12 @@ PAGES = [
                  ("Fold it into your coaching",
                   "Physical work and technical work should be pointed at the same target. Golfers on the <a href=\"monthly-programme.html\">monthly coaching programme</a> get both reviewed together rather than treated as two separate hobbies."),
              ]},
+
+            {"type": "imgbreak", "img": "team",
+             "img_alt": "Train the body, free the swing. at Evolution Golf Academy",
+             "kick": "Golf fitness suite",
+             "h2": "Train the body, <em>free the swing.</em>",
+             "p": "TPI informed mobility, strength and speed work built around what your screen actually shows."},
 
             {"type": "prose", "kick": "Who it suits",
              "h2": "Who Is <em>Golf Fitness For?</em>",
@@ -519,7 +540,7 @@ PAGES = [
                   "No. We assess movement in relation to the golf swing and train it. We do not diagnose or treat injuries. If something hurts, see a GP or physiotherapist first, then bring the screening in afterwards to build back sensibly. The two work together well, and we are happy to work alongside a clinician."),
                  ("Can juniors and ladies do golf fitness?",
                   "Yes. Juniors are screened as part of the <a href=\"junior-academy.html\">Junior Academy</a>, with movement work suited to their stage of growth and no loading. The <a href=\"ladies-academy.html\">Ladies Academy</a> includes mobility and stability work in its sessions, and any individual screening can be booked separately."),
-             ], "alt": True},
+             ], "alt": True}
         ],
     },
 
@@ -542,6 +563,8 @@ PAGES = [
         "marq": ["Grass Driving Range Ripley", "Real Turf Practice", "Honest Strike Feedback",
                  "Low Point Control", "Derbyshire Golf Academy", "15 Minutes From Derby"],
         "sections": [
+            {"type": "pmarq"},
+
             {"type": "prose", "kick": "Real turf practice in Derbyshire",
              "h2": "What Is a <em>Grass Driving Range?</em>",
              "blocks": [
@@ -634,6 +657,12 @@ PAGES = [
                   "When the ground is too wet or the light has gone, the covered <a href=\"trackman-range.html\">Trackman bays</a> are floodlit until 8pm every day, and the <a href=\"trackman-simulator.html\">golf simulator</a> is booked by the hour."),
              ]},
 
+            {"type": "imgbreak", "img": "student_swing",
+             "img_alt": "Real turf, real feedback. at Evolution Golf Academy",
+             "kick": "Grass driving range",
+             "h2": "Real turf, <em>real feedback.</em>",
+             "p": "Mats forgive a fat shot. Grass tells you the truth about your strike."},
+
             {"type": "prose", "kick": "Seasons and weather",
              "h2": "When Is the <em>Grass Range Open?</em>",
              "blocks": [
@@ -718,6 +747,8 @@ PAGES = [
         "marq": ["Short Game Area Derbyshire", "Chipping &amp; Pitching", "Bunker Practice",
                  "Putting Green", "PGA Short Game Coaching", "Ripley, Near Derby"],
         "sections": [
+            {"type": "pmarq"},
+
             {"type": "prose", "kick": "Inside 100 yards, near Derby &amp; Nottingham",
              "h2": "What Is a <em>Short Game Practice Area?</em>",
              "blocks": [
@@ -813,6 +844,12 @@ PAGES = [
                  ("Finish with a test, not a drill",
                   "Nine random shots, one attempt each, scored up and down or not. Random beats blocked practice because golf is random. Record the score and try to beat it next week, the same way you would on the <a href=\"trackman-range.html\">Trackman range</a>."),
              ]},
+
+            {"type": "imgbreak", "img": "putting",
+             "img_alt": "Where scores are saved. at Evolution Golf Academy",
+             "kick": "Short game area",
+             "h2": "Where scores <em>are saved.</em>",
+             "p": "Chipping, pitching, bunker play and putting, on a variety of real lies."},
 
             {"type": "prose", "kick": "Putting, in more detail",
              "h2": "What Is the Best Way to <em>Practise Putting?</em>",

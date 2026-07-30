@@ -395,6 +395,31 @@ def s_baskets(kick, h2, rows, p=None, alt=False):
     return _sec(_head(kick, h2, p) + f'\n<div class="baskets">\n{body}\n</div>', alt)
 
 
+def s_gal(items, kick=None, h2=None, p=None, alt=False, three=False):
+    """Image grid. items = [(img_key, caption)] - caption may be None."""
+    figs = "\n".join(
+        f'<figure><img src="{IMG[k]}" alt="{c or ""}" loading="lazy">'
+        + (f"<figcaption>{c}</figcaption>" if c else "") + "</figure>"
+        for k, c in items)
+    head = _head(kick, h2, p) + "\n" if (kick and h2) else ""
+    cls = "gal three" if three else "gal"
+    return _sec(head + f'<div class="{cls}">\n{figs}\n</div>', alt)
+
+
+def s_imgbreak(img, img_alt, kick, h2, p=None):
+    """Full-bleed image with an overlaid headline. Breaks up long reads."""
+    para = f"<p>{p}</p>" if p else ""
+    return (
+        '<div class="imgbreak">\n'
+        f'<img src="{IMG[img]}" alt="{img_alt}">\n'
+        '<div class="shade"></div>\n'
+        '<div class="in2">\n'
+        f'<span class="kick">● {kick}</span>\n'
+        f'<h2>{h2}</h2>\n'
+        f'{para}\n'
+        '</div>\n</div>')
+
+
 def s_accred(kick, h2, items, p=None, alt=False):
     """Partners and accreditations band. items = [(tag, name, desc)]"""
     body = "\n".join(
@@ -444,7 +469,7 @@ BUILDERS = {"intro": s_intro, "prose": s_prose, "cards": s_cards, "split": s_spl
             "steps": s_steps, "stats": s_stats, "prices": s_prices, "faq": s_faq,
             "rel": s_rel, "areas": s_areas, "tgrid": s_tgrid, "team": s_team,
             "form": s_form, "accred": s_accred, "ctable": s_ctable,
-            "ptable": s_ptable, "lead": s_lead, "pmarq": s_pmarq, "baskets": s_baskets}
+            "ptable": s_ptable, "lead": s_lead, "pmarq": s_pmarq, "baskets": s_baskets, "gal": s_gal, "imgbreak": s_imgbreak}
 
 
 SITE = "https://jag160digital.github.io/evo-golf-website"

@@ -46,6 +46,8 @@ PAGES = [
         "marq": ["Golf Coach Derby", "Advanced PGA Professional", "Golf Coach Nottingham",
                  "TPI Certified Coaching", "Trackman Experts", "Golf Coaching Derbyshire"],
         "sections": [
+            {"type": "pmarq"},
+
             {"type": "prose", "kick": "Why the academy exists",
              "h2": "What Makes a Good <em>Golf Coach?</em>",
              "blocks": [
@@ -64,6 +66,12 @@ PAGES = [
                  {"img": "coach_feedback", "name": "Will Painter",
                   "role": "PGA Professional · TPI Certified · Trackman Expert", "bio": WILL_BIO},
              ], "alt": True},
+
+            {"type": "imgbreak", "img": "coach_feedback",
+             "img_alt": "Coaching built around you. at Evolution Golf Academy",
+             "kick": "Your coach",
+             "h2": "Coaching built <em>around you.</em>",
+             "p": "Every session shaped by your body, your goals and what the numbers actually say."},
 
             {"type": "prose", "kick": "How Will coaches",
              "h2": "What Makes His Coaching <em>Different?</em>",

@@ -22,6 +22,8 @@ PAGES = [{
     "marq": ["Trackman Driving Range Derby", "Driving Range Nottingham", "Ball Speed &amp; Carry Data",
              "Covered Floodlit Bays", "Open 7 Days a Week", "Golf Practice Derbyshire"],
     "sections": [
+            {"type": "pmarq"},
+
             {"type": "prose", "kick": "Trackman range near Derby &amp; Nottingham",
          "h2": "What Is a Trackman <em>Driving Range?</em>",
          "blocks": [
@@ -126,6 +128,12 @@ PAGES = [{
              ("Trackman simulator, off-peak", "from £13.00 per hour"),
              ("Trackman simulator, peak", "£25.00 per hour up to 4 players"),
          ]},
+
+            {"type": "imgbreak", "img": "range_night",
+             "img_alt": "Every shot, measured. at Evolution Golf Academy",
+             "kick": "Trackman driving range",
+             "h2": "Every shot, <em>measured.</em>",
+             "p": "Covered floodlit bays with live ball and club data, seven days a week."},
 
             {"type": "prose", "kick": "Getting the most from a session",
          "h2": "How Should You Practise on a <em>Trackman Range?</em>",
