@@ -95,7 +95,6 @@ academy is built on.
 - Jumbo Basket, 120 balls **£12.50**
 - No booking required. Confirmed from a screenshot of the live pricing
   block, so the home page figures (£4 / £7 / £9 / £11) are the stale ones.
-- No booking required
 
 ### Trackman Simulator
 - **Off-peak** (Mon-Fri 8:00am-2:00pm): 1 player £13/hr · 2 players £17
