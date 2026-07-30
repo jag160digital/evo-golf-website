@@ -19,7 +19,7 @@ SEO rules locked in by the template:
 # ── the Locations collection ────────────────────────────────────────
 ROWS = [
     {"location": "Derby", "area": "Derbyshire", "nearest": "Codnor",
-     "distance": "20 minutes", "slug": "golf-lessons-derby"},
+     "distance": "15 minutes", "slug": "golf-lessons-derby"},
     {"location": "Nottingham", "area": "Nottinghamshire", "nearest": "Codnor",
      "distance": "25 minutes", "slug": "golf-lessons-nottingham"},
     {"location": "Ripley", "area": "Derbyshire", "nearest": "Codnor",
@@ -47,13 +47,13 @@ UNIQUE = {
  "road": "the A610",
  "intro": [
   "Derby is not short of places to hit a golf ball. It is short of places to actually learn. Most options are either a members' club with a waiting list and a dress code, or a strip of mats with no coaching attached and nobody watching.",
-  "Evolution Golf Academy sits deliberately between the two. It is a full performance facility with Advanced PGA Professional coaching, Trackman on every bay and no membership requirement whatsoever, roughly <strong>20 minutes from Derby city centre</strong> on the A610 through Ripley.",
+  "Evolution Golf Academy sits deliberately between the two. It is a full performance facility with Advanced PGA Professional coaching, Trackman on every bay and no membership requirement whatsoever, roughly <strong>15 minutes from Derby city centre</strong> on the A610 through Ripley.",
   "For most Derby golfers that journey is shorter than crossing the city at rush hour, and there is free parking at the end of it rather than a multi-storey and a ten minute walk with a golf bag.",
  ],
  "why_h3": "Why Do Derby Golfers Drive Out to Codnor?",
  "why": "Because the coaching here is measured rather than guessed at. Every bay carries Trackman, so when your coach changes something you both watch the numbers move or fail to. Derby has ranges. What it does not have is a Trackman Official Performance Centre where an Advanced PGA Professional coaches from live launch data.",
  "routes": [
-  ("From Derby city centre", "Head north east and join the A610 towards Ripley and Codnor. Stay on it past Ripley and the academy is on Nottingham Road at Ormonde Fields Golf Club. Around 20 minutes in normal traffic."),
+  ("From Derby city centre", "Head north east and join the A610 towards Ripley and Codnor. Stay on it past Ripley and the academy is on Nottingham Road at Ormonde Fields Golf Club. Around 15 minutes in normal traffic."),
   ("From Allestree, Oakwood and Chaddesden", "You start on the right side of the city. Pick up the A38 or A61 north and cut across to the A610 at Ripley. Usually a little quicker than from the centre."),
   ("From Spondon, Borrowash and Long Eaton", "Head north through Ilkeston and Heanor and join the A610 at Codnor, which avoids Derby city traffic altogether."),
   ("From Mickleover and the south west", "Ring road round to the A38 north, then across to Ripley. Allow a bit longer at peak times."),
@@ -445,7 +445,7 @@ def location_page(row):
              "p": f"Common questions from golfers travelling from {L} and the wider {A} area.",
              "qs": [
                  (f"How long does it take to drive from {L}?",
-                  f"Around {dist} via {u['road']}, with free on-site parking when you arrive. The academy is at Ormonde Fields Golf Club, Nottingham Road, {near}, Ripley DE5 9RL."),
+                  f"Around {dist} via {u['road']}, with free on-site parking when you arrive. The academy is at Ormonde Fields Golf Club, Nottingham Road, {near}, Ripley DE5 9RJ."),
                  ("Do I need to be a member to book a lesson?",
                   f"No. Lessons and range time are open to everyone in {A}, member or not. Membership is optional and simply gives priority booking and better rates."),
                  (f"Are golf clubs provided for beginners from {L}?",

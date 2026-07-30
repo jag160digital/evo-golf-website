@@ -114,7 +114,7 @@ PAGES = [
              "p": "Booking takes about a minute, and you do not need to know a single thing about your own swing beforehand.",
              "steps": [
                  ("Choose a coach and a time",
-                  "Book online or ring 07710 582036. If you are unsure who to see, describe what you are struggling with and we will match you to the right golf instructor rather than the next name on the list."),
+                  "Book online or ring 07710 582036. If you are unsure what to book, describe what you are struggling with and we will match the session to that rather than selling you the longest block."),
                  ("Arrive ten minutes early",
                   "Parking is free on site at Ormonde Fields Golf Club, Nottingham Road, Codnor. Ten minutes gives you time to find the bay and loosen up instead of swinging cold at your first shot."),
                  ("Talk before you swing",
@@ -138,6 +138,16 @@ PAGES = [
                   "p": "A full physical screen showing how your body is limiting your swing, with an exercise plan built from your own results."},
              ]},
 
+            {"type": "ptable", "kick": "The full coaching price list",
+             "h2": "What Does <em>Golf Coaching Cost</em> at the Academy?",
+             "p": "Everything you can book around a 1:1 lesson, in one place. Prices are the same whether or not you are a member.",
+             "rows": [
+                 ("Single Lesson - 60 minutes, Trackman and video analysis included", "£55"),
+                 ("Monthly Programme - most popular", "£60 per month"),
+                 ("TPI Screening - 16 tests, Trackman analysis, swing-body connection", "£75"),
+                 ("Private Trackman Range Bay - ball data, club data, video analysis", "£15 per hour"),
+             ], "alt": True},
+
             {"type": "prose", "kick": "Getting value from coaching",
              "h2": "How Often Should You Have <em>Golf Lessons?</em>",
              "blocks": [
@@ -151,6 +161,15 @@ PAGES = [
                  ("p", "It helps enormously, though far less of it is needed than most people fear. Two focused twenty minute sessions will beat one aimless two hour bucket every time. Your plan names the drill, the number of balls and what a good repetition looks like, and the <a href=\"trackman-range.html\">Trackman driving range</a> is walk-in from 7am to 8pm so it can be squeezed around work."),
                  ("p", "If your body is what stops you making the movement rather than your understanding of it, that becomes obvious quickly. In that case a <a href=\"tpi-screening.html\">TPI screening</a> and some structured work in the <a href=\"golf-fitness.html\">golf fitness suite</a> will do more for your <strong>swing mechanics</strong> than another hour of instruction ever could."),
              ], "alt": True},
+
+            {"type": "tgrid", "kick": "Google reviews",
+             "h2": "What Do Golfers Say About <em>Lessons With Will?</em>",
+             "p": "Real reviews from golfers who have had 1:1 golf lessons at the academy in Ripley.",
+             "items": [
+                 ("I had a lesson with Will. He was attentive and planned an approach to how I could improve. After some practice the planned improvements paid off. Highly recommended.", "Ian L."),
+                 ("Golf coaching with Will was a great experience. He helped progress my game using their Trackman technology and the driving range facilities to practice what I had been taught.", "Irene B."),
+                 ("Will gave me good advice and made adjustments to my swing. Huge improvement in just one lesson, best £50 I have ever spent.", "Reece F."),
+             ]},
 
             {"type": "rel", "kick": "Explore the academy",
              "h2": "What Else Can I Book at the <em>Golf Academy?</em>",
@@ -221,7 +240,9 @@ PAGES = [
                  ("p", "The order rarely changes, because it works. Grip first, since almost every fault a new golfer develops is a grip fault wearing a disguise. Then posture and stance, then aim and alignment, then a small swing with a wedge. Only when the ball is coming off the middle of the face at half speed do we lengthen the swing, and only then does the driver come out of the bag. Golfers who start with a driver spend two years undoing what they learn in that first fortnight."),
                  ("h3", "Do I Need Any Experience or Equipment to Start?"),
                  ("p", "None at all. Clubs are provided for beginner sessions, so you can turn up in trainers with nothing in your hands and start learning. That also means you avoid the classic beginner mistake of spending £600 on a set before anyone has watched you swing. Once you know whether golf is for you, your coach can advise on what to buy, and brand neutral <a href=\"tpi-screening.html\">custom fitting with Trackman</a> is there when you are ready, so you can buy from us or anywhere you like."),
-                 ("p", "Wear something you can turn in and shoes with a bit of grip. Golf shoes are useful eventually but not on day one. There is no dress code at the academy that is going to catch anybody out, which is a reasonable thing to worry about and worth saying plainly."),
+                 ("h3", "What Should I Bring to My First Golf Lesson?"),
+                 ("p", "For your first lesson, we recommend bringing your golf clubs, comfortable athletic wear, and a positive attitude. If you don't have clubs, we can provide them for you."),
+                 ("p", "Wear something you can turn in and shoes with a bit of grip. Golf shoes are useful eventually but not on day one. There is no dress code at the academy that is going to catch anybody out, which is a reasonable thing to worry about and worth saying plainly. Club hire on the <a href=\"trackman-range.html\">Trackman driving range</a> and the <a href=\"trackman-simulator.html\">Trackman simulators</a> is included at no extra cost, so practising between lessons costs you nothing more than a basket of balls."),
                  ("h3", "Where Do Beginner Lessons Take Place?"),
                  ("p", "Usually in the covered <a href=\"trackman-teaching-bay.html\">Trackman teaching bay</a>, which is private, indoors and out of the wind. That matters for new golfers more than for anybody else, because learning in front of a row of low handicappers on an open range is nobody's idea of a relaxing hour. Later on, sessions move out to the <a href=\"trackman-range.html\">Trackman driving range</a> and the <a href=\"short-game.html\">short game area</a> once you would rather see the ball fly."),
                  ("p", "Beginner coaching is available one to one at £55 an hour, or as part of the <a href=\"monthly-programme.html\">monthly coaching programme</a> at £60 a month if you want a steady run of sessions rather than a single lesson. If the idea of a private lesson feels like too much attention, <a href=\"get-into-golf.html\">Get Into Golf</a> runs as a relaxed group where everyone present is equally new."),
@@ -267,7 +288,7 @@ PAGES = [
              "p": "Sixty minutes, start to finish, so you know exactly what you are walking into.",
              "steps": [
                  ("Arrive and meet your coach",
-                  "Free parking on site at Ormonde Fields Golf Club in Codnor. Your coach meets you at the bay, and the first five minutes are a chat about why you want to play, not a test of anything."),
+                  "Free parking on site at Ormonde Fields Golf Club in Codnor. Will Painter, PGA Professional &middot; TPI Certified &middot; Trackman Expert, meets you at the bay, and the first five minutes are a chat about why you want to play, not a test of anything."),
                  ("Get clubs in your hands",
                   "If you have no equipment, clubs are provided and your coach picks something suitable. A seven iron or a wedge to begin with, because both are far easier to strike than a driver."),
                  ("Grip, stance, aim",
@@ -304,6 +325,15 @@ PAGES = [
                  ("p", "No, and this comes up constantly. Golf is one of the few sports where people take it up in their fifties and sixties and still improve for years. If mobility is a concern, a <a href=\"tpi-screening.html\">TPI screening</a> shows what your body can currently do, and the swing is then built to suit you rather than to suit a tour player. Work in the <a href=\"golf-fitness.html\">golf fitness suite</a> can widen those limits over time."),
                  ("p", "Beginners come to the academy from Derby, Nottingham, Ripley, Heanor, Alfreton and across Derbyshire and Nottinghamshire, and a fair number arrive having been given a set of clubs they have never used. That is a perfectly reasonable way to begin. If you would rather see the whole picture first, the <a href=\"faqs.html\">FAQs page</a> answers most of the practical questions people ask before booking."),
              ], "alt": True},
+
+            {"type": "tgrid", "kick": "Google reviews",
+             "h2": "What Do <em>New Golfers</em> Say About Starting Here?",
+             "p": "Real reviews from golfers who took their first lessons with Will at the academy in Ripley.",
+             "items": [
+                 ("Great first lesson with Will. Felt very comfortable and definitely happy with the results.", "Kelsey"),
+                 ("Great place to start your golfing journey. The Trackman facilities are excellent.", "Lisa H."),
+                 ("Another great lesson with Will today. Very knowledgeable talking through all the different strategies of chipping.", "Harry"),
+             ]},
 
             {"type": "rel", "kick": "Where to go next",
              "h2": "What Else Suits a <em>New Golfer?</em>",
@@ -398,6 +428,25 @@ PAGES = [
                   "p": "Footage from every session is retained, so a change you cannot feel any more can still be seen. This is what proves progress when the scorecard is being unhelpful."},
              ]},
 
+            {"type": "prose", "kick": "Everything included for £60 a month",
+             "h2": "What Is <em>Included in the Monthly Programme?</em>",
+             "blocks": [
+                 ("p", "The <strong>monthly golf coaching programme</strong> is £60 a month and it is the most popular way to be coached at the academy. Five things are included every month, and none of them are extras you get talked into once you are signed up."),
+                 ("ul", [
+                     "<b>1 Hour PGA Coaching</b> - a full hour with Will Painter, PGA Professional &middot; TPI Certified &middot; Trackman Expert, in the private <a href=\"trackman-teaching-bay.html\">Trackman teaching bay</a>",
+                     "<b>OnForm Platform</b> - video, drills and coach feedback in your pocket between sessions",
+                     "<b>Playing Lesson</b> - coaching out on the course, where strategy and nerves cost more shots than technique",
+                     "<b>TPI Screening</b> - the movement screen included, so the plan is built around the body making the swing",
+                     "<b>Lesson Range Balls</b> - balls for your coaching sessions included, with club hire on the <a href=\"trackman-range.html\">range</a> at no extra cost",
+                 ]),
+                 ("h3", "What Is OnForm and Why Does It Matter?"),
+                 ("p", "OnForm is the video coaching platform your programme runs through, and it is the part that changes how quickly people improve. You film a swing on your phone at the range, it lands with your coach, and it comes back drawn on with a voice note explaining what to do next. The point of it is simple: <strong>keep improving between lessons, not just during them</strong>."),
+                 ("p", "That matters because the gap between sessions is where most golf coaching quietly falls apart. The feel of a change fades inside a couple of days, and by week three most golfers are rehearsing something subtly different to what they were shown. Having your coach look at a swing on the Tuesday of week two stops a fortnight of practice going into the wrong movement."),
+                 ("h3", "How Does the Programme Fit the Evolution Plan?"),
+                 ("p", "The Evolution Plan is the four-strand framework the whole academy is built on, and the monthly programme is how most golfers work through it. The first strand is <b>Advanced PGA Professional Coaching</b>, which is there to build lasting improvement through structured coaching with an Advanced PGA Professional, regular reviews and a clear pathway to achieving your golfing goals. That is the spine of the programme."),
+                 ("p", "The second strand is the <b>TPI Golf Movement Programme</b>, which improves your mobility, stability and movement quality with golf-specific exercises designed to help your body support lasting swing changes. Your included <a href=\"tpi-screening.html\">TPI screening</a> is what sets that going. The third and fourth strands, <b>Strength &amp; Conditioning</b> and <b>Physiotherapy</b>, sit alongside for golfers who need them, developing strength, power and resilience through golf-specific training, and assessing and treating pain, injuries and movement restrictions that may be limiting your golf. Work in the <a href=\"golf-fitness.html\">golf fitness suite</a> is where the physical strands get done."),
+             ], "alt": True},
+
             {"type": "split", "img": "student_swing",
              "img_alt": "Golfer practising between coaching sessions at the driving range in Derbyshire",
              "kick": "Who it is for",
@@ -457,6 +506,15 @@ PAGES = [
                  ("p", "Yes to both. Golf goes quiet for some people over winter and busy for others, and the programme should fit your year rather than the other way round. The plan is matched to your goals as they move, so a winter block on technique and a spring block on scoring are the same coach with a different aim. Will Painter, <a href=\"meet-team.html\">Advanced PGA Professional</a>, teaches the sessions throughout, which is why a change made in November is still being tracked in May."),
                  ("p", "Golfers travel to the programme from Derby, Nottingham, Ripley, Heanor, Belper and across Derbyshire and Nottinghamshire. Sessions run seven days a week from 7am to 8pm, and every facility on site is covered or floodlit, so a monthly plan does not quietly stop working in November."),
              ], "alt": True},
+
+            {"type": "tgrid", "kick": "Google reviews",
+             "h2": "What Do Golfers Say About <em>Coaching With Will?</em>",
+             "p": "Real reviews from golfers being coached at the academy in Ripley.",
+             "items": [
+                 ("Golf coaching with Will was a great experience. He helped progress my game using their Trackman technology and the driving range facilities to practice what I had been taught.", "Irene B."),
+                 ("I had a lesson with Will. He was attentive and planned an approach to how I could improve. After some practice the planned improvements paid off. Highly recommended.", "Ian L."),
+                 ("Another great lesson with Will today. Very knowledgeable talking through all the different strategies of chipping.", "Harry"),
+             ]},
 
             {"type": "rel", "kick": "Explore the academy",
              "h2": "What Else Supports a <em>Coaching Programme?</em>",
@@ -523,7 +581,8 @@ PAGES = [
             {"type": "prose", "kick": "The friendliest way in",
              "h2": "What Is <em>Get Into Golf?</em>",
              "blocks": [
-                 ("p", "<strong>Get Into Golf</strong> is a group starting point for adults who have never played, or who played a handful of times years ago and would like another attempt without any pressure. It runs with an Advanced PGA Professional, clubs are provided, and the format is deliberately sociable. Everybody in the group is at the same stage, which removes the single biggest thing that puts new golfers off."),
+                 ("p", "<strong>Get Into Golf</strong> is the relaxed, welcoming entry point into the game. Clubs are provided, no experience is needed and nothing is assumed about what you already know. If you have never held a golf club in your life, this is the session written for you."),
+                 ("p", "It is a group starting point for adults who have never played, or who played a handful of times years ago and would like another attempt without any pressure. It runs with an Advanced PGA Professional, clubs are provided, and the format is deliberately sociable. Everybody in the group is at the same stage, which removes the single biggest thing that puts new golfers off."),
                  ("p", "Golf has an image problem, and a lot of it is deserved. People assume they need expensive equipment, a membership, the right clothes and a working knowledge of etiquette before they are allowed near a ball. None of that is required here. Evolution Golf Academy is a coaching academy, open to the public, seven days a week from 7am to 8pm, and the range and short game area are open to anyone who turns up."),
                  ("h3", "Is a Group Better Than a One to One Lesson?"),
                  ("p", "For a nervous beginner, often yes. A group is cheaper, more relaxed, and there is a pleasant kind of cover in not being the only person hitting a bad shot. You also learn from watching other people make the same mistakes, which is more useful than it sounds. A one to one session is faster and more targeted, so plenty of people start in a group and move to <a href=\"1-1-lessons.html\">1:1 golf lessons</a> once the nerves have gone."),
@@ -611,6 +670,21 @@ PAGES = [
                  ("p", "Beginners come to us from Derby, Nottingham, Ripley, Codnor, Heanor and across Derbyshire and Nottinghamshire, largely because the A610 makes the academy easy to reach and parking is free. If you have questions before booking anything, the <a href=\"contact.html\">contact page</a> and the <a href=\"faqs.html\">FAQs</a> cover most of them."),
              ], "alt": True},
 
+            {"type": "tgrid", "kick": "Google reviews",
+             "h2": "What Do People Say About <em>Starting Golf Here?</em>",
+             "p": "Real reviews from golfers who began at the academy in Ripley.",
+             "items": [
+                 ("Great place to start your golfing journey. The Trackman facilities are excellent.", "Lisa H."),
+                 ("Great first lesson with Will. Felt very comfortable and definitely happy with the results.", "Kelsey"),
+                 ("Great range, balls are in very good nick, Trackman too, plus a nice little chipping area.", "Steve G."),
+             ]},
+
+            {"type": "lead", "kick": "Free practice guide",
+             "h2": "The practice secret better golfers <em>won't tell you.</em>",
+             "p": "Most golfers beat balls for an hour and improve nothing. Grab the free guide and steal the exact 3-stage routine that builds skill faster, plus 8 tips that quietly shave shots off your card.",
+             "note": "We'll only use your details to send the guide and occasional coaching tips. Unsubscribe anytime.",
+             "cta": "Send me the guide"},
+
             {"type": "rel", "kick": "Where to next",
              "h2": "What Should a <em>New Golfer Try Next?</em>",
              "p": "Everything below is at Ormonde Fields Golf Club in Codnor, Ripley, and open to the public.",
@@ -676,14 +750,16 @@ PAGES = [
             {"type": "prose", "kick": "Junior coaching with Will Painter, Advanced PGA Professional",
              "h2": "What Age Should a Child <em>Start Golf Lessons?</em>",
              "blocks": [
+                 ("p", "A start full of fun. Friendly group golf lessons for ages 6 to 16, clubs provided, every week in term time."),
                  ("p", "<strong>Junior golf lessons</strong> at Evolution Golf Academy run from age 6 to 16, and six is a genuine starting age rather than a marketing one. At that age sessions are mostly about coordination, balance and making contact with a moving target, delivered as games. Children who start at six are not being groomed for a tour card, they are learning to swing something with their hands while staying balanced, which happens to be useful for every sport."),
                  ("p", "That said, there is no right age and no window that closes. Plenty of children start at eleven or twelve after trying other sports, and teenagers who take it up at fourteen can improve very quickly because they are strong enough to hit the ball a long way and old enough to concentrate for a full hour. What matters far more than starting age is whether your child enjoys the sessions enough to come back."),
                  ("h3", "Who Coaches the Junior Academy?"),
-                 ("p", "Will Painter, Advanced PGA Professional, Head Coach and Academy Director. He leads the junior academy for ages 6 to 16 and coaches adults as well, which is worth knowing if you fancy learning alongside your child. Junior coaching is a distinct skill set: holding the attention of a nine year old for an hour while still teaching a functional grip is a different job to coaching a mid handicapper, and Advanced status is exactly the sort of qualification that covers both ends of that."),
+                 ("p", "Will Painter, PGA Professional &middot; TPI Certified &middot; Trackman Expert, and Academy Director. He is the only coach at the academy, he leads every junior group himself, and he coaches adults as well, which is worth knowing if you fancy learning alongside your child. Junior coaching is a distinct skill set: holding the attention of a nine year old for an hour while still teaching a functional grip is a different job to coaching a mid handicapper."),
                  ("p", "Because Will takes the sessions himself, the coach who saw your child in September is the coach who sees them in March, and nothing has to be re-explained. He works to PGA standards on safeguarding and conduct, and you can read his full background on the <a href=\"meet-team.html\">meet the team</a> page. Behind the coaching sit TPI certified principles and Trackman expertise, used sparingly with the younger ones and in full with the older ones."),
-                 ("h3", "Group Sessions or Individual Lessons?"),
-                 ("p", "Most children do better in a group, at least to begin with. Golf can be a solitary sport and a group gives it the social element that keeps children turning up, plus a bit of friendly competition that drives effort more effectively than any coach can. Groups are also considerably cheaper, which matters when you are not yet sure whether the interest will last."),
-                 ("p", "Individual coaching makes sense for children who are already committed, who play in competitions, or who are working on something specific. Some parents book a <a href=\"1-1-lessons.html\">1:1 lesson</a> occasionally alongside regular group sessions, which is a sensible balance. Ring 07710 582036 to talk it through with us before booking anything."),
+                 ("h3", "How Are <em>Junior Golf Lessons</em> Structured?"),
+                 ("p", "As friendly <strong>group golf lessons, every week in term time</strong>. That is the whole shape of the junior academy and it is deliberate. A weekly slot at the same time, with the same group and the same coach, is what turns golf into a habit for a child rather than a thing they did twice last spring. Term time keeps it lined up with the school year, so nobody is trying to get a nine year old to a golf lesson on the second Tuesday of the summer holidays."),
+                 ("p", "The group format does most of the heavy lifting. Golf can be a solitary sport, and a group gives it the social element that keeps children turning up, plus a bit of friendly competition that drives effort more effectively than any coach can. Groups are also considerably cheaper than individual coaching, which matters when you are not yet sure whether the interest will last. Children are grouped by age and stage rather than lumped in together, and clubs are provided throughout."),
+                 ("p", "If a keen junior wants extra work on something specific ahead of a competition, a <a href=\"1-1-lessons.html\">1:1 golf lesson</a> can be booked separately alongside the weekly group. That is an addition to the junior academy rather than a replacement for it. Ring 07710 582036 to find out which group has space and what time it runs."),
              ]},
 
             {"type": "cards", "kick": "How junior sessions run",
@@ -739,7 +815,7 @@ PAGES = [
 
             {"type": "prices", "kick": "Junior coaching prices",
              "h2": "How Much Are <em>Junior Golf Lessons?</em>",
-             "p": "Group junior sessions are the usual starting point. Ring 07710 582036 for current junior group pricing and available times.",
+             "p": "The junior academy itself runs as a weekly group lesson in term time. Ring 07710 582036 for current junior group pricing and available times. Everything below is what a family can add around it.",
              "cards": [
                  {"amt": "£4", "per": "from, per basket", "h": "Range Practice",
                   "p": "Walk-in practice for juniors with a parent, 7am to 8pm daily. Covered and floodlit, so an after-school half hour works all winter."},
@@ -763,6 +839,15 @@ PAGES = [
                  ("p", "A good number do, and it makes practice between sessions far easier to arrange. Adults can book <a href=\"1-1-lessons.html\">1:1 golf lessons</a>, join the <a href=\"monthly-programme.html\">monthly programme</a>, or start from nothing with <a href=\"beginner-coaching.html\">beginner coaching</a>. Mothers who would rather learn among other women can look at the <a href=\"ladies-academy.html\">ladies academy</a>, and <a href=\"get-into-golf.html\">Get Into Golf</a> is the relaxed group option for anybody starting cold."),
                  ("p", "Families travel to the junior academy from Derby, Nottingham, Ripley, Codnor, Heanor and across Derbyshire and Nottinghamshire. The site is fifteen minutes from Derby and twenty from Nottingham on the A610, parking is free, and there is somewhere warm to sit while you wait. Directions are on the <a href=\"location.html\">location page</a>."),
              ], "alt": True},
+
+            {"type": "tgrid", "kick": "Google reviews",
+             "h2": "What Do Families Say About <em>Lessons With Will?</em>",
+             "p": "Real reviews from golfers coached at the academy in Ripley. Parents often book alongside their child.",
+             "items": [
+                 ("Great first lesson with Will. Felt very comfortable and definitely happy with the results.", "Kelsey"),
+                 ("I had a lesson with Will. He was attentive and planned an approach to how I could improve. After some practice the planned improvements paid off. Highly recommended.", "Ian L."),
+                 ("Great place to start your golfing journey. The Trackman facilities are excellent.", "Lisa H."),
+             ]},
 
             {"type": "rel", "kick": "Explore the academy",
              "h2": "What Else Is Here for <em>Families?</em>",
@@ -791,16 +876,16 @@ PAGES = [
                   "No. Clubs are provided for junior sessions at no extra cost, which avoids buying a set that gets outgrown within a year. Junior clubs should be fitted to height rather than age, and cut-down adult clubs teach a compensated swing because they are too heavy. Ask us before you buy anything."),
                  ("Is my child too young to start golf?",
                   "If they are six or over, no. At that age the session is coordination and fun rather than technique, and any child who can hold a club and follow simple instructions will get something out of it. Under six, it is usually better to wait, though a parent and child half hour on the <a href=\"trackman-range.html\">range</a> costs £4 and does no harm."),
-                 ("Are your junior coaches DBS checked?",
-                  "Yes. All coaching staff are PGA Professionals working to PGA safeguarding standards, including DBS checks. Sessions are supervised throughout, juniors are spaced safely apart when swinging, and parents are welcome to stay and watch from the seating area."),
-                 ("Should my child do group or individual lessons?",
-                  "Group sessions suit most children, because the social side and friendly competition keep them coming back, and they cost less. Individual <a href=\"1-1-lessons.html\">1:1 lessons</a> suit committed juniors, competition players or anybody working on a specific problem. A mix of both is a common and sensible arrangement."),
+                 ("Is your junior coach DBS checked?",
+                  "Yes. Will Painter is an Advanced PGA Professional working to PGA safeguarding standards, including DBS checks. Sessions are supervised throughout, juniors are spaced safely apart when swinging, and parents are welcome to stay and watch from the seating area."),
+                 ("How often does the junior academy run?",
+                  "Every week in term time, as a friendly group lesson at the same slot each week. That weekly rhythm is what builds the habit, and it keeps the coaching lined up with the school year. A keen junior can add an occasional <a href=\"1-1-lessons.html\">1:1 golf lesson</a> alongside the group, but the group session is the academy itself."),
                  ("What should my child wear?",
                   "Trainers and comfortable clothes they can move in. Golf shoes and golf clothing are unnecessary for range and academy sessions. If they progress to playing on the course, a collared shirt is the usual expectation, but nothing in the junior academy requires special kit."),
                  ("What if my child does not enjoy it?",
                   "Then they should stop, and we would rather you tried a session and found out than committed to a term first. Children who are pushed into golf rarely stay in golf. If the group format is the issue rather than the sport, a single one to one session sometimes changes the picture completely."),
                  ("Do juniors play on the actual golf course?",
-                  "Yes, once they can make contact reliably and understand basic etiquette. Ormonde Fields Golf Club is on the same site, so it is a short walk from the academy to the first tee. Coaches take juniors out for a few holes at a time rather than a full eighteen to begin with."),
+                  "Yes, once they can make contact reliably and understand basic etiquette. Ormonde Fields Golf Club is on the same site, so it is a short walk from the academy to the first tee. We take juniors out for a few holes at a time rather than a full eighteen to begin with."),
                  ("Can I have lessons at the same time as my child?",
                   "Often, yes, depending on coach availability. Plenty of parents book their own <a href=\"monthly-programme.html\">monthly coaching</a> or a <a href=\"beginner-coaching.html\">beginner lesson</a> to run alongside their child's session. Ring 07710 582036 and we will try to line the times up."),
              ], "alt": True},
@@ -829,7 +914,9 @@ PAGES = [
             {"type": "prose", "kick": "Coaching for women, all abilities",
              "h2": "What Are <em>Ladies Golf Lessons</em> Like Here?",
              "blocks": [
-                 ("p", "<strong>Ladies golf lessons</strong> at the academy are the same standard of PGA coaching we give anybody else, taught by the same coaches, using the same Trackman data. The difference is context rather than content. Women taking up golf face a set of specific obstacles, most of them social rather than technical, and it is worth naming them rather than pretending they do not exist."),
+                 ("p", "A relaxed, welcoming space to learn. Friendly women-only golf lessons, from complete first-timers to club golfers."),
+                 ("p", "The women-only part is the point, and it is worth saying plainly rather than burying it. Ladies academy sessions are for women only. No mixed group, no row of men waiting behind you and no working out whether you are allowed to be there. It is a genuine difference rather than a marketing line, and it is the single reason most of the women coached here booked in the first place."),
+                 ("p", "<strong>Ladies golf lessons</strong> at the academy are the same standard of Advanced PGA Professional coaching we give anybody else, taught by the same coach, using the same Trackman data. The difference is context rather than content. Women taking up golf face a set of specific obstacles, most of them social rather than technical, and it is worth naming them rather than pretending they do not exist."),
                  ("p", "The obstacles are these. Golf clubs can feel closed, particularly if you do not already know a member. Equipment shops frequently assume a woman wants the shortest, lightest, pinkest set on the rack regardless of her height or swing speed. And there is a persistent, tiresome assumption that women want a gentler version of golf. We do not coach a gentler version of golf. We coach golf, and we start wherever you actually are."),
                  ("h3", "Do I Need Any Experience to Book?"),
                  ("p", "None. A significant share of the women we coach have never hit a golf ball, and clubs are provided so you can begin owning nothing. Equally, plenty of our ladies play off single figures and come in to work on wedge distance control or driver dispersion. Both are ordinary bookings here and neither gets a different quality of attention."),
@@ -863,7 +950,7 @@ PAGES = [
              "h2": "How Do I Get <em>Onto a Golf Course?</em>",
              "paras": [
                  "This is where a lot of women stall, and it is almost never about the swing. It is not knowing how a tee time works, whether you are playing too slowly, where to stand, or what happens when you top one off the first in front of people. Every one of those is answerable, and answering them is part of the coaching rather than an extra.",
-                 "Coaches take golfers out onto Ormonde Fields once contact is reliable, usually three or four holes rather than a full round. You learn pace of play, <strong>course management</strong>, the handful of etiquette points that genuinely matter, and how to keep a card. After that, playing with strangers stops being daunting.",
+                 "We take golfers out onto Ormonde Fields once contact is reliable, usually three or four holes rather than a full round. You learn pace of play, <strong>course management</strong>, the handful of etiquette points that genuinely matter, and how to keep a card. After that, playing with strangers stops being daunting.",
              ],
              "ticks": [
                  "<b>All abilities</b> - complete beginners through to single figure handicaps",
@@ -879,7 +966,7 @@ PAGES = [
              "p": "Five straightforward steps, and you can stop at any of them without anybody chasing you.",
              "steps": [
                  ("Ring or book online",
-                  "Call 07710 582036 or book a session online. Say what stage you are at, including if that stage is nothing at all, and we will match you to the right coach."),
+                  "Call 07710 582036 or book a session online. Say what stage you are at, including if that stage is nothing at all, and we will match the session to it."),
                  ("Turn up in trainers",
                   "No golf clothing needed and no equipment required for a first session. Free parking on site at Ormonde Fields Golf Club, Nottingham Road, Codnor."),
                  ("Have your swing measured",
@@ -907,7 +994,7 @@ PAGES = [
              "h2": "Questions Women <em>Ask Most Often.</em>",
              "blocks": [
                  ("h3", "Will I Be the Only Woman There?"),
-                 ("p", "No. The academy coaches a good number of women across one to one lessons, group sessions and the monthly programme, and the range is used by women on their own every single day. If you would specifically prefer to learn among other women, say so when you book and we will point you at a suitable group rather than leaving you to work it out."),
+                 ("p", "No, because ladies academy group sessions are women-only. Everybody in the room is a woman and the abilities run from complete first-timers to club golfers, so there is no version of this where you are the odd one out. The academy also coaches plenty of women in one to one lessons and on the <a href=\"monthly-programme.html\">monthly programme</a>, and the range is used by women on their own every single day."),
                  ("h3", "Do I Need Womens Clubs?"),
                  ("p", "You need clubs that fit you, which is a different question. Standard womens sets are built for an average that many women are not: too short for taller players, too light for stronger ones, too flexible for faster swings. A brand neutral fitting session on Trackman measures your actual swing speed and delivery, and the spec comes from that, so you can buy from us or anywhere you like. See <a href=\"tpi-screening.html\">custom fitting</a> for what that involves."),
                  ("h3", "How Do I Add Distance?"),
@@ -916,6 +1003,15 @@ PAGES = [
                  ("p", "Yes, and it makes the practice happen. Two people booking together tend to keep going where one drifts off. Couples often start on <a href=\"get-into-golf.html\">Get Into Golf</a> together, and mothers frequently book their own session alongside their child's <a href=\"junior-academy.html\">junior academy</a> slot so the trip does double duty."),
                  ("p", "Women travel to the academy from Derby, Nottingham, Ripley, Belper, Heanor and across Derbyshire and Nottinghamshire, largely because it is fifteen minutes from Derby on the A610 with free parking. If you would rather ask something before booking, the <a href=\"contact.html\">contact page</a> gets you a straight answer, and the <a href=\"faqs.html\">FAQs</a> cover the practical detail."),
              ], "alt": True},
+
+            {"type": "tgrid", "kick": "Google reviews",
+             "h2": "What Do Women Say About <em>Golf Lessons With Will?</em>",
+             "p": "Real reviews from golfers coached at the academy in Ripley.",
+             "items": [
+                 ("Golf coaching with Will was a great experience. He helped progress my game using their Trackman technology and the driving range facilities to practice what I had been taught.", "Irene B."),
+                 ("Great first lesson with Will. Felt very comfortable and definitely happy with the results.", "Kelsey"),
+                 ("Great place to start your golfing journey. The Trackman facilities are excellent.", "Lisa H."),
+             ]},
 
             {"type": "rel", "kick": "Explore the academy",
              "h2": "What Else Might <em>Suit You?</em>",
@@ -944,8 +1040,8 @@ PAGES = [
                   "No. Evolution Golf Academy is a coaching academy, open to the public, on the site of Ormonde Fields Golf Club. There is no committee and no waiting list, and you do not need to be a member to book. Membership exists if you want priority booking and better rates. You can take lessons, practise on the <a href=\"trackman-range.html\">Trackman range</a> and use the short game area without belonging to anything."),
                  ("How much do ladies golf lessons cost?",
                   "£55 for a sixty minute 1:1 lesson with an Advanced PGA Professional, including Trackman and video. The <a href=\"monthly-programme.html\">monthly coaching programme</a> is £60 a month and works out better if you intend to have lessons regularly. Range baskets start from £4 and need no booking."),
-                 ("Are there group sessions for women?",
-                  "Yes. <a href=\"get-into-golf.html\">Get Into Golf</a> runs as a relaxed group for complete beginners, and we can point you to sessions with other women when you book. Groups are cheaper, more sociable and less intense than one to one work, which suits a lot of people starting out."),
+                 ("Are the ladies academy sessions women-only?",
+                  "Yes. Ladies academy group lessons are women-only, and they run for every ability from complete first-timers to club golfers. If you would rather learn in a mixed group, <a href=\"get-into-golf.html\">Get Into Golf</a> is the relaxed mixed option for complete beginners. Groups of either sort are cheaper, more sociable and less intense than one to one work."),
                  ("What should I wear for a golf lesson?",
                   "Comfortable clothing you can rotate in and trainers with some grip. No golf shoes and no golf clothing needed for a range or bay session. If you go out onto the course later, a collared top is the usual expectation at most clubs, but that has no bearing on a lesson here."),
                  ("Do I need to buy womens golf clubs?",
@@ -982,15 +1078,62 @@ PAGES = [
             {"type": "prose", "kick": "Titleist Performance Institute screening",
              "h2": "What Is <em>TPI Screening?</em>",
              "blocks": [
+                 ("p", "Sometimes it's the body, not the swing. Sixteen gentle TPI tests show us how your movement shapes your game."),
                  ("p", "<strong>TPI screening</strong> is a structured physical assessment developed by the Titleist Performance Institute, used by the majority of tour players' support teams. It takes your body through a sequence of movement tests and grades each one, producing a clear picture of what you can and cannot currently do. The point is not fitness for its own sake. The point is that your swing is limited by your body long before it is limited by your understanding."),
                  ("p", "That connection is the whole idea behind TPI. There is no single correct golf swing, but there is a correct swing for your body, and a golfer who cannot separate their upper body from their lower body will not produce a tour-style transition no matter how many lessons they buy. Screening finds the restriction first, so coaching stops trying to fix something that is physically unavailable."),
                  ("h3", "What Does the Screen Actually Test?"),
-                 ("p", "Around a dozen movements, covering hip mobility and internal rotation, thoracic spine rotation, shoulder mobility, hamstring and hip flexor length, ankle mobility, core stability, balance and the ability to dissociate the upper body from the lower. Each test is graded and the results are written down rather than remembered, so they can be re-tested in three months and compared."),
+                 ("p", "Sixteen tests, covering hip mobility and internal rotation, thoracic spine rotation, shoulder mobility, hamstring and hip flexor length, ankle mobility, core stability, balance and the ability to dissociate the upper body from the lower. Each test is graded and the results are written down rather than remembered, so they can be re-tested in three months and compared."),
                  ("p", "It takes around an hour and involves no golf swings for much of it. You will be asked to squat, rotate, reach and balance, all in ordinary clothes. Nothing is strenuous and nothing requires any existing fitness. Golfers regularly discover that the shoulder turn they have been chasing for two years is unavailable because their thoracic spine will not rotate, which is a far more useful thing to know than another swing tip."),
                  ("h3", "Which Swing Faults Come From the Body?"),
                  ("p", "A great many of the common ones. <strong>Early extension</strong>, where the hips push towards the ball through impact, is frequently a hip mobility or glute activation problem rather than a technique fault. Loss of posture in the backswing often traces to limited thoracic rotation. Casting and early release regularly come from poor core stability or wrist mobility. Sway and slide usually indicate weak lower body stability. In each case, coaching the symptom without addressing the cause produces a change that lasts about a fortnight."),
                  ("p", "That is why screening pairs so directly with coaching. Golfers on the <a href=\"monthly-programme.html\">monthly programme</a> often start with a screen, because it tells the coach what the plan can realistically ask for, and it stops six weeks being spent on a movement the golfer's body was never going to make."),
              ]},
+
+            {"type": "stats", "items": [("16", "TPI Movement Tests"), ("£75", "One Off Screening"), ("1", "Hour, Ordinary Clothes")]},
+
+            {"type": "accred", "kick": "Accredited screening",
+             "h2": "Who Is Our <em>TPI Screening Accredited By?</em>",
+             "p": "The screen is not something invented here. It is a recognised protocol, run by a certified coach, inside a facility held to two further standards.",
+             "items": [
+                 ("TPI", "Titleist Performance Institute", "Movement and biomechanics specialists"),
+                 ("PGA", "PGA Qualified Coaches", "Members of The Professional Golfers' Association"),
+                 ("Trackman", "Official Performance Centre", "Radar-tracked range and sim suites"),
+             ], "alt": True},
+
+            {"type": "prose", "kick": "The turning point",
+             "h2": "Why Does the Academy <em>Screen the Body First?</em>",
+             "blocks": [
+                 ("p", "The answer wasn't the swing, it was the body. That sentence is the reason Evolution Golf Academy exists at all. Will Painter's own playing career stalled, not because he did not understand what he was trying to do with the club, but because his body simply wasn't capable of consistently producing the movements he was trying to make. Years of coaching had been aimed at a position his hips and thoracic spine were never going to let him reach."),
+                 ("p", "Fixing mobility, stability and movement quality alongside the coaching is what changed that, and it is what the whole academy is now built on. It is also why a <strong>TPI screening</strong> is not sold here as an add-on for tour hopefuls. It is the assessment that tells a coach whether the next six months of lessons are going to work."),
+                 ("h3", "Step 2 - The TPI Movement Screen"),
+                 ("p", "Assessment at the academy runs in two steps. Step 1 is the PGA Professional golf swing assessment, using Trackman, video analysis, 3D data and coaching experience. Step 2 is the <strong>TPI movement screen</strong>, and it identifies:"),
+                 ("ul", [
+                     "mobility or stability restrictions affecting your swing",
+                     "movement patterns limiting your performance",
+                     "physical limitations preventing swing changes",
+                     "areas that could increase power, consistency and efficiency",
+                     "whether further support from a fitness professional or physiotherapist would help",
+                 ]),
+                 ("p", "Put the two steps side by side and the argument usually settles itself. If Step 1 says your club is coming in from the inside and Step 2 says your lead hip will not rotate internally, you have your answer, and it is not another hour of <a href=\"1-1-lessons.html\">1:1 golf lessons</a> spent trying to feel a position. Screening is carried out by Will Painter, PGA Professional &middot; TPI Certified &middot; Trackman Expert, and he is the only coach at the academy."),
+             ]},
+
+            {"type": "cards", "kick": "The Evolution Plan",
+             "h2": "What Happens <em>After Your TPI Screening?</em>",
+             "p": "Your results feed into the Evolution Plan, the four strands the academy uses to build lasting improvement. Most golfers need two of them. Some need all four.",
+             "cards": [
+                 {"img": "coach_feedback", "alt": "Advanced PGA Professional golf coaching near Derby and Nottingham",
+                  "h": "Advanced PGA Professional Coaching",
+                  "p": "Build lasting improvement through structured coaching with an Advanced PGA Professional, regular reviews and a clear pathway to achieving your golfing goals."},
+                 {"img": "tpi", "alt": "TPI golf movement programme in Derbyshire",
+                  "h": "TPI Golf Movement Programme",
+                  "p": "Improve your mobility, stability and movement quality with golf-specific exercises designed to help your body support lasting swing changes."},
+                 {"img": "team", "alt": "Golf specific strength and conditioning near Nottingham",
+                  "h": "Strength &amp; Conditioning",
+                  "p": "Develop strength, power and resilience through golf-specific training to improve performance and reduce the risk of injury."},
+                 {"img": "putting", "alt": "Physiotherapy support for golfers in Derbyshire",
+                  "h": "Physiotherapy",
+                  "p": "Assess and treat pain, injuries and movement restrictions that may be limiting your golf, helping you move and perform with greater confidence."},
+             ], "alt": True},
 
             {"type": "cards", "kick": "What the screen produces",
              "h2": "What Do You Get From a <em>TPI Assessment?</em>",
@@ -998,7 +1141,7 @@ PAGES = [
              "cards": [
                  {"img": "tpi", "alt": "TPI movement screening assessment at a golf academy in Derbyshire",
                   "h": "A Full Movement Screen",
-                  "p": "Around a dozen graded tests covering mobility, stability, balance and dissociation. Roughly an hour, in ordinary clothes, with no fitness required to take part."},
+                  "p": "Sixteen graded tests covering mobility, stability, balance and dissociation. Roughly an hour, in ordinary clothes, with no fitness required to take part."},
                  {"img": "coach_feedback", "alt": "Reviewing a TPI screening report with an Advanced PGA Professional",
                   "h": "A Written Report",
                   "p": "Your results, graded and explained, with each restriction linked to the swing characteristic it tends to produce. You keep it, so progress can be measured against it."},
@@ -1015,7 +1158,7 @@ PAGES = [
              "kick": "Brand neutral custom fitting on Trackman",
              "h2": "What Is <em>Custom Club Fitting</em> on Trackman?",
              "paras": [
-                 "The other half of the equipment question. Once we know what your body does, it is worth knowing whether your clubs suit the swing that body produces. Custom fitting at the academy is carried out by our fitters using Trackman rather than guesswork or a static lie board, and fittings are brand neutral, so you can buy from us or anywhere you like.",
+                 "The other half of the equipment question. Once we know what your body does, it is worth knowing whether your clubs suit the swing that body produces. Custom fitting at the academy is carried out on Trackman rather than by guesswork or a static lie board, and fittings are brand neutral, so you can buy from us or anywhere you like.",
                  "A fitting covers shaft weight and flex, club length, lie angle, loft, grip size and head model, plus <strong>gapping</strong> across the set so you do not have two clubs that both carry 150 yards and nothing that covers 175. You leave with a full written spec document, and there is no obligation whatsoever to buy the clubs from us.",
              ],
              "ticks": [
@@ -1070,6 +1213,15 @@ PAGES = [
                  ("p", "Golfers come for screening and fitting from Derby, Nottingham, Ripley, Belper, Heanor and across Derbyshire and Nottinghamshire. The academy is fifteen minutes from Derby and twenty from Nottingham on the A610, open 7am to 8pm daily, with free parking. Both screening and fitting need booking in advance, unlike the walk-in <a href=\"trackman-range.html\">Trackman range</a>."),
              ], "alt": True},
 
+            {"type": "tgrid", "kick": "Google reviews",
+             "h2": "What Do Golfers Say About <em>Coaching Here?</em>",
+             "p": "Real reviews from golfers screened and coached at the academy in Ripley.",
+             "items": [
+                 ("Will gave me good advice and made adjustments to my swing. Huge improvement in just one lesson, best £50 I have ever spent.", "Reece F."),
+                 ("I had a lesson with Will. He was attentive and planned an approach to how I could improve. After some practice the planned improvements paid off. Highly recommended.", "Ian L."),
+                 ("Golf coaching with Will was a great experience. He helped progress my game using their Trackman technology and the driving range facilities to practice what I had been taught.", "Irene B."),
+             ]},
+
             {"type": "rel", "kick": "Explore the academy",
              "h2": "What Works Alongside <em>TPI Screening?</em>",
              "p": "Everything below is on the same site at Ormonde Fields Golf Club, Codnor, Ripley.",
@@ -1092,7 +1244,7 @@ PAGES = [
              "h2": "TPI Screening &amp; Custom Fitting - <em>FAQs.</em>",
              "qs": [
                  ("How much is a TPI screening near Derby?",
-                  "£75 for the full Titleist Performance Institute movement screen, which includes the assessment itself, a written report grading every test and a corrective exercise plan built around your own restrictions. It takes about an hour and needs booking in advance. You do not need to be a member to book it."),
+                  "£75 for the full Titleist Performance Institute movement screen, which is 16 tests plus Trackman analysis of the swing-body connection. That includes the assessment itself, a written report grading every test and a corrective exercise plan built around your own restrictions. It takes about an hour and needs booking in advance. You do not need to be a member to book it."),
                  ("Do I need to be fit to have a TPI screen?",
                   "No, and being unfit is a reason to have one rather than a reason to avoid it. The tests are ordinary movements like squatting, rotating and balancing, done in normal clothes at your own pace. Nothing is strenuous and you will not be asked to do anything beyond your current ability."),
                  ("What is the difference between TPI screening and a golf lesson?",
@@ -1102,7 +1254,7 @@ PAGES = [
                  ("How often should I be re-screened?",
                   "Every eight to twelve weeks while you are actively working on a corrective plan, so the same tests can be re-graded and compared. After that, once or twice a year is plenty unless something changes, such as an injury, a lay-off or a noticeable loss of distance."),
                  ("What does a custom club fitting involve?",
-                  "A brand neutral session on Trackman with our fitters, measuring your delivery and ball data across different heads, shafts and specifications. It covers shaft weight and flex, length, lie angle, loft, grip size and gapping across the set. You get a full written spec document at the end."),
+                  "A brand neutral session on Trackman, measuring your delivery and ball data across different heads, shafts and specifications. It covers shaft weight and flex, length, lie angle, loft, grip size and gapping across the set. You get a full written spec document at the end."),
                  ("Do I have to buy clubs from you after a fitting?",
                   "No. There is no obligation at all. The fitting is the product and the spec document is yours to take wherever you like. Plenty of golfers use it to buy second hand with confidence, or to check whether the set they already own can be adjusted rather than replaced."),
                  ("Is custom fitting worth it for a high handicapper?",

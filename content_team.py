@@ -149,9 +149,9 @@ PAGES = [
             {"type": "tgrid", "kick": "Reviews",
              "h2": "What Golfers Say About Coaching <em>at Evolution.</em>",
              "items": [
-                 ("Great first lesson with Will. Felt very comfortable and definitely happy with the results.", "Kelsey"),
-                 ("Another great lesson with Will today. Very knowledgeable talking through all the different strategies of chipping.", "Harry"),
-                 ("After a comprehensive test of a variety of shafts and swing weights I now have complete confidence in my clubs.", "Lee"),
+                 ("I had a lesson with Will. He was attentive and planned an approach to how I could improve. After some practice the planned improvements paid off. Highly recommended.", "Ian L."),
+                 ("Golf coaching with Will was a great experience. He helped progress my game using their Trackman technology and the driving range facilities to practice what I had been taught.", "Irene B."),
+                 ("Will gave me good advice and made adjustments to my swing. Huge improvement in just one lesson, best £50 I have ever spent.", "Reece F."),
              ], "alt": True},
 
             {"type": "rel", "kick": "Where to next",
@@ -185,7 +185,7 @@ PAGES = [
                  ("How quickly will you reply to an enquiry?",
                   "Within a working day. If you would rather not wait, call 07710 582036 and you can usually get booked in there and then."),
                  ("Where are you based?",
-                  "Ormonde Fields Golf Club, Nottingham Road, Codnor, Ripley DE5 9RL. Around 20 minutes from <a href=\"golf-lessons-derby.html\">Derby</a> and 25 from <a href=\"golf-lessons-nottingham.html\">Nottingham</a>, with free parking on site."),
+                  "Ormonde Fields Golf Club, Nottingham Road, Codnor, Ripley DE5 9RJ. Around 20 minutes from <a href=\"golf-lessons-derby.html\">Derby</a> and 25 from <a href=\"golf-lessons-nottingham.html\">Nottingham</a>, with free parking on site."),
              ]},
         ],
     },

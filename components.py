@@ -137,7 +137,7 @@ FOOTER = f'''<footer class="footer">
 <div><div class="h">● Facilities</div><div class="col"><a href="trackman-range.html">Trackman Driving Range</a><a href="trackman-simulator.html">Trackman Simulator</a><a href="trackman-teaching-bay.html">Teaching Bay</a><a href="golf-fitness.html">Golf Fitness Suite</a><a href="grass-range.html">Grass Driving Range</a><a href="short-game.html">Short Game Area</a></div></div>
 <div><div class="h">● Coaching</div><div class="col"><a href="1-1-lessons.html">1:1 Golf Lessons</a><a href="beginner-coaching.html">Beginner Coaching</a><a href="monthly-programme.html">Monthly Programme</a><a href="get-into-golf.html">Get Into Golf</a><a href="junior-academy.html">Junior Academy</a><a href="ladies-academy.html">Ladies Academy</a><a href="tpi-screening.html">TPI Screening</a></div></div>
 <div><div class="h">● Visit</div><div class="col">
-<div class="vline">{PIN}<span>Nottingham Rd, Codnor,<br>Ripley DE5 9RL</span></div>
+<div class="vline">{PIN}<span>Nottingham Rd, Codnor,<br>Ripley DE5 9RJ</span></div>
 <div class="vline">{TEL}<span>{PHONE}</span></div>
 <div class="vline">{CLOCK}<span>Mon to Sun · 7am to 8pm</span></div>
 <a href="golf-lessons-derby.html">Golf Lessons Derby</a><a href="golf-lessons-nottingham.html">Golf Lessons Nottingham</a><a href="faqs.html">FAQs</a><a href="contact.html">Contact</a>
@@ -162,12 +162,12 @@ def visit(kick="Golf academy near Derby &amp; Nottingham"):
 <div>
 <span class="kick">● {kick}</span>
 <h2>Nottingham Rd, <em>Codnor, Ripley.</em></h2>
-<div class="line">{PIN}Ormonde Fields Golf Club, Nottingham Road, Codnor, DE5 9RL</div>
+<div class="line">{PIN}Ormonde Fields Golf Club, Nottingham Road, Codnor, DE5 9RJ</div>
 <div class="line">{CLOCK}Mon to Sun · 7:00am to 8:00pm</div>
 <div class="line">{TEL}{PHONE}</div>
 <div class="row"><a class="btn" href="https://www.google.com/maps/place/Evolution+Golf+Academy" target="_blank" rel="noopener">Get directions</a><a class="btn ink" href="contact.html">Contact us</a></div>
 </div>
-<div class="map"><iframe src="https://www.google.com/maps?q=Evolution+Golf+Academy,+Nottingham+Road,+Codnor,+Ripley+DE5+9RL&output=embed" loading="lazy" title="Map to Evolution Golf Academy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<div class="map"><iframe src="https://www.google.com/maps?q=Evolution+Golf+Academy,+Nottingham+Road,+Codnor,+Ripley+DE5+9RJ&output=embed" loading="lazy" title="Map to Evolution Golf Academy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 </div>
 </div>
 </section>'''
@@ -339,9 +339,8 @@ def s_team(kick, h2, people, p=None, alt=False):
 
 
 def s_form(kick, h2, intro_p, right_html, alt=False):
-    opts = ["1:1 Golf Lessons", "Beginner Coaching", "Monthly Programme", "Get Into Golf",
-            "Junior Academy", "Ladies Academy", "TPI Screening", "Custom Club Fitting",
-            "Trackman Driving Range", "Trackman Simulator", "Other"]
+    opts = ["Trackman Range", "Junior academy", "Trackman Simulator", "Membership",
+            "Golf Lessons", "Something else"]
     o = "".join(f'<option>{x}</option>' for x in opts)
     return _sec(f'''<div class="fgrid2">
 <div>
@@ -357,7 +356,7 @@ def s_form(kick, h2, intro_p, right_html, alt=False):
 <div class="g"><label for="email">Email address</label><input type="email" id="email" name="email" required></div>
 <div class="g"><label for="phone">Phone number</label><input type="tel" id="phone" name="phone"></div>
 </div>
-<div class="g"><label for="service">What are you interested in</label><select id="service" name="service"><option value="">Please choose</option>{o}</select></div>
+<div class="g"><label for="service">What can we help with</label><select id="service" name="service"><option value="">Please choose</option>{o}</select></div>
 <div class="g"><label for="msg">Anything else we should know</label><textarea id="msg" name="msg" placeholder="Your experience level, preferred days and times, any questions"></textarea></div>
 <button type="submit" class="btn" style="width:100%">Send message</button>
 </form>
