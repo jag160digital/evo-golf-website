@@ -22,7 +22,7 @@ PAGES = [{
     "marq": ["Trackman Driving Range Derby", "Driving Range Nottingham", "Ball Speed &amp; Carry Data",
              "Covered Floodlit Bays", "Open 7 Days a Week", "Golf Practice Derbyshire"],
     "sections": [
-        {"type": "prose", "kick": "Trackman range near Derby &amp; Nottingham",
+            {"type": "prose", "kick": "Trackman range near Derby &amp; Nottingham",
          "h2": "What Is a Trackman <em>Driving Range?</em>",
          "blocks": [
              ("p", "A <strong>Trackman driving range</strong> is a driving range where every bay is fitted with Trackman dual-radar tracking, the same launch monitor technology used on the PGA Tour and by the majority of the world's leading coaches. Instead of hitting a bucket of balls into a field and squinting to see roughly where they finished, you get a precise set of numbers for every shot you hit, displayed on a screen in front of you within about a second of impact."),
@@ -35,7 +35,9 @@ PAGES = [{
              ("p", "It also removes a very common problem: golfers grooving a fault. Without data it is entirely possible to spend a winter hitting two hundred balls a week and get worse, because you are reinforcing the same compensation every time. Numbers catch that early."),
          ]},
 
-        {"type": "prose", "kick": "Spacious bays, relaxed atmosphere",
+            {"type": "stats", "items": [("1", "PGA Pro"), ("2+", "Trackman Simulators"), ("7", "Trackman Range Bays")], "alt": True},
+
+            {"type": "prose", "kick": "Spacious bays, relaxed atmosphere",
          "h2": "What Makes the Trackman Range at Evolution Golf Academy <em>Different?</em>",
          "blocks": [
              ("p", "Come experience a Trackman range with tour proven technology in a relaxed environment with our spacious bays for you to play, practice and play games. With our floodlight you can practice all year round."),
@@ -44,9 +46,9 @@ PAGES = [{
              ("p", "Practice with purpose. Play with friends. Enjoy the experience. Every shot is tracked in real time, providing instant feedback on distances, accuracy and ball flight, while interactive games, virtual golf courses and practice modes make every visit engaging for golfers of all ages and abilities."),
              ("p", "That mix is deliberate. A serious golfer can spend an hour on gapping and dispersion in one bay while a family two bays along works through a closest-to-the-pin game, and neither gets in the other's way. Seven bays, all floodlit, all Trackman-equipped, fifteen minutes from Derby city centre and twenty five minutes from Nottingham on the A610."),
              ("p", "Club hire is included at no extra cost, so nobody needs to buy equipment before finding out whether they enjoy it. If you would rather have someone show you what the numbers mean, a <a href=\"1-1-lessons.html\">1:1 golf lesson</a> in the <a href=\"trackman-teaching-bay.html\">Trackman teaching bay</a> is the next step."),
-         ], "alt": True},
+         ]},
 
-        {"type": "cards", "kick": "What you get in every bay",
+            {"type": "cards", "kick": "What you get in every bay",
          "h2": "What Does the Trackman Range at Our <em>Derbyshire Academy</em> Include?",
          "p": "Every bay on the range is Trackman-equipped, covered and floodlit, so the experience is the same in July as it is in January.",
          "cards": [
@@ -62,18 +64,18 @@ PAGES = [{
              {"img": "student_swing", "alt": "Golfer using the walk-in Trackman driving range near Derby",
               "h": "Walk In, No Booking",
               "p": "The range runs first come, first served. No app, no membership, no phone call needed. Turn up, pick up a basket and hit balls."},
-         ]},
+         ], "alt": True},
 
-        {"type": "accred", "kick": "Accredited and certified",
+            {"type": "accred", "kick": "Accredited and certified",
          "h2": "Who Accredits the <em>Trackman Range?</em>",
          "p": "The technology and the coaching behind it are both certified rather than self-declared.",
          "items": [
              ("Trackman", "Official Performance Centre", "Radar-tracked range and sim suites"),
              ("PGA", "PGA Qualified Coaches", "Members of The Professional Golfers' Association"),
              ("TPI", "Titleist Performance Institute", "Movement and biomechanics specialists"),
-         ], "alt": True},
+         ]},
 
-        {"type": "split", "img": "over_shoulder",
+            {"type": "split", "img": "over_shoulder",
          "img_alt": "PGA coach reviewing Trackman data with a golfer near Derby",
          "kick": "Why golfers travel here to practise",
          "h2": "Why Practise at a Trackman Range <em>Near Derby?</em>",
@@ -88,9 +90,9 @@ PAGES = [{
              "<b>PGA coaches on site</b> - turn a practice session into a <a href=\"1-1-lessons.html\">golf lesson</a> whenever you want",
              "<b>Fifteen minutes from Derby</b> and twenty five from Nottingham on the A610",
          ],
-         "btn2": ("See golf lessons", "1-1-lessons.html")},
+         "btn2": ("See golf lessons", "1-1-lessons.html"), "alt": True},
 
-        {"type": "steps", "kick": "How to use the range", "alt": True,
+            {"type": "steps", "kick": "How to use the range",
          "h2": "How Do I Use the <em>Trackman Driving Range?</em>",
          "p": "There is nothing complicated about it, and you do not need to know anything about launch monitors before you arrive.",
          "steps": [
@@ -106,7 +108,7 @@ PAGES = [{
               "If the numbers raise a question you cannot answer, book a session in the <a href=\"trackman-teaching-bay.html\">Trackman teaching bay</a> with a PGA Professional and get it explained."),
          ]},
 
-        {"type": "ptable", "kick": "Range basket prices",
+            {"type": "ptable", "kick": "Range basket prices",
          "h2": "How Much Does the Trackman Driving Range <em>Cost?</em>",
          "p": "Pay for the balls, use the Trackman bay for nothing. No booking required, seven days a week, and club hire is included at no extra cost if you have arrived without a set.",
          "rows": [
@@ -115,9 +117,9 @@ PAGES = [{
              ("90 balls", "£10.00"),
              ("120 balls", "£12.50"),
              ("Private Trackman range bay", "£15.00 per hour"),
-         ]},
+         ], "alt": True},
 
-        {"type": "prose", "kick": "Getting the most from a session",
+            {"type": "prose", "kick": "Getting the most from a session",
          "h2": "How Should You Practise on a <em>Trackman Range?</em>",
          "blocks": [
              ("h3", "Know Your Carry Distances First"),
@@ -129,20 +131,18 @@ PAGES = [{
              ("h3", "Do Not Chase Every Number at Once"),
              ("p", "Trackman reports a lot of data and it is easy to get overwhelmed. Pick one metric to work on per session. If you are fighting a slice, watch club path and face angle and ignore everything else. If you want more distance, watch smash factor before you worry about clubhead speed, because striking the middle of the face is worth more than swinging harder."),
              ("p", "If you would rather have someone structure that for you, our coaches build practice plans as part of the <a href=\"monthly-programme.html\">monthly coaching programme</a>, so you arrive at the range knowing exactly what you are working on."),
-         ], "alt": True},
+         ]},
 
-        {"type": "stats", "items": [("1", "PGA Pro"), ("2+", "Trackman Simulators"), ("7", "Trackman Range Bays")]},
-
-        {"type": "tgrid", "kick": "What golfers say", "alt": True,
+            {"type": "tgrid", "kick": "What golfers say",
          "h2": "What Do Golfers Say About the <em>Trackman Range?</em>",
          "p": "Reviews left by golfers who practise here, unedited.",
          "items": [
              ("The practice facilities here are second to none. I couldn't of been more impressed, the grass range is an amazing touch and the track man bays are top notch as well, mats are perfect not worn, balls aren't battered, great value for money, definitely my go to practice facility now.", "Ciaran W."),
              ("Great range, balls are in very good nick, Trackman too, plus a nice little chipping area.", "Steve G."),
              ("Great place to start your golfing journey. The Trackman facilities are excellent.", "Lisa H."),
-         ]},
+         ], "alt": True},
 
-        {"type": "rel", "kick": "Explore the academy",
+            {"type": "rel", "kick": "Explore the academy",
          "h2": "What Else Is at Our <em>Golf Academy?</em>",
          "p": "The Trackman range is one part of the site. Everything below is on the same premises in Codnor, Ripley.",
          "links": [
@@ -160,7 +160,7 @@ PAGES = [{
               "TPI-informed mobility, strength and speed work built around the demands of the golf swing.", "Golf fitness"),
          ]},
 
-        {"type": "faq", "kick": "Common questions",
+            {"type": "faq", "kick": "Common questions",
          "h2": "Trackman Driving Range Derby &amp; Nottingham - <em>FAQs.</em>",
          "qs": [
              ("Do I need to book the Trackman driving range?",
@@ -181,6 +181,6 @@ PAGES = [{
               "Yes. Lessons normally run in the private <a href=\"trackman-teaching-bay.html\">Trackman teaching bay</a>, which is quieter and set up with video and training aids, but coaching can take place on the main range where that suits the work better."),
              ("Is there an outdoor grass range as well?",
               "Yes. The <a href=\"grass-range.html\">grass driving range</a> runs through the drier months for golfers who want real turf interaction. The covered Trackman bays are the year-round option."),
-         ], "alt": True},
-    ],
+         ], "alt": True}
+        ],
 }]

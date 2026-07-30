@@ -542,7 +542,6 @@ PAGES = [
         "marq": ["Grass Driving Range Ripley", "Real Turf Practice", "Honest Strike Feedback",
                  "Low Point Control", "Derbyshire Golf Academy", "15 Minutes From Derby"],
         "sections": [
-
             {"type": "prose", "kick": "Real turf practice in Derbyshire",
              "h2": "What Is a <em>Grass Driving Range?</em>",
              "blocks": [
@@ -556,7 +555,9 @@ PAGES = [
                  ("p", "That is why coaching moves outdoors when the weather allows. A <a href=\"1-1-lessons.html\">golf lesson</a> on strike is far more productive on turf, and the Trackman data from a grass shot reflects a real contact rather than a mat-assisted one."),
              ]},
 
-            {"type": "prose", "kick": "Realistic practice in Derbyshire", "alt": True,
+            {"type": "stats", "items": [("1", "PGA Pro"), ("2+", "Trackman Simulators"), ("7", "Trackman Range Bays")], "alt": True},
+
+            {"type": "prose", "kick": "Realistic practice in Derbyshire",
              "h2": "Practice that prepares you for the <em>course.</em>",
              "p": "Our spacious grass driving range offers one of the most realistic practice environments available, helping you prepare for the golf course with confidence.",
              "blocks": [
@@ -580,7 +581,7 @@ PAGES = [
                   "Accurate Trackman data and video analysis help identify exactly what needs improving"),
                  ("Shot Making &amp; Feel", "Grass Driving Range",
                   "Develop confidence hitting from natural turf and learn how your swing interacts with the ground"),
-             ]},
+             ], "alt": True},
 
             {"type": "cards", "kick": "What the grass range gives you",
              "h2": "What Does the Grass Range at Our <em>Derbyshire Academy</em> Offer?",
@@ -646,9 +647,7 @@ PAGES = [
                  ("p", "If your iron striking is the weak point, yes. An hour on grass in June will tell you more about your contact than a winter of mats. Pair it with the <a href=\"short-game.html\">short game area</a> and you have half of a genuinely useful practice morning, with the covered <a href=\"trackman-simulator.html\">simulator and indoor bays</a> covering the rest."),
              ], "alt": True},
 
-            {"type": "stats", "items": [("1", "PGA Pro"), ("2+", "Trackman Simulators"), ("7", "Trackman Range Bays")]},
-
-            {"type": "tgrid", "kick": "What golfers say", "alt": True,
+            {"type": "tgrid", "kick": "What golfers say",
              "h2": "What Do Golfers Say About the <em>Grass Range?</em>",
              "p": "Google reviews from golfers who practise on the turf and in the covered bays.",
              "items": [
@@ -673,7 +672,7 @@ PAGES = [
                   "Private indoor bay with Trackman, video analysis, mirrors and training aids.", "Teaching bay"),
                  ("location.html", "Find Us in Ripley",
                   "Nottingham Road, Codnor, Ripley DE5 9RJ. Fifteen minutes from Derby, twenty five from Nottingham.", "Location"),
-             ]},
+             ], "alt": True},
 
             {"type": "faq", "kick": "Common questions",
              "h2": "Grass Driving Range Ripley - <em>FAQs.</em>",
@@ -696,7 +695,7 @@ PAGES = [
                   "Golf shoes or trainers with reasonable grip, and something you do not mind getting muddy at the edges of the season. Spikes are fine. Bear in mind you are outdoors in Derbyshire, so waterproofs live in the bag from about September onwards regardless of the forecast."),
                  ("Is there somewhere to practise short game as well?",
                   "Yes, the <a href=\"short-game.html\">short game practice area</a> is on the same site and covers chipping, pitching, bunker play and putting. Golfers who combine an hour on the grass range with an hour on the short game area tend to see their scores move faster than those who only hit full shots."),
-             ], "alt": True},
+             ]}
         ],
     },
 
@@ -719,7 +718,6 @@ PAGES = [
         "marq": ["Short Game Area Derbyshire", "Chipping &amp; Pitching", "Bunker Practice",
                  "Putting Green", "PGA Short Game Coaching", "Ripley, Near Derby"],
         "sections": [
-
             {"type": "prose", "kick": "Inside 100 yards, near Derby &amp; Nottingham",
              "h2": "What Is a <em>Short Game Practice Area?</em>",
              "blocks": [
@@ -733,7 +731,9 @@ PAGES = [
                  ("p", "It is also the part of golf least dependent on physical ability, which is why it rewards practice so reliably. You do not need speed, flexibility or a new driver. You need repetitions and honest feedback, both of which are free once you are here. If you want the technique checked first, that is a <a href=\"1-1-lessons.html\">lesson with an Advanced PGA Professional</a>."),
              ]},
 
-            {"type": "prose", "kick": "Varied lies and a practice bunker", "alt": True,
+            {"type": "stats", "items": [("1", "PGA Pro"), ("2+", "Trackman Simulators"), ("7", "Trackman Range Bays")], "alt": True},
+
+            {"type": "prose", "kick": "Varied lies and a practice bunker",
              "h2": "Why Does the <em>Short Game Area</em> Matter So Much?",
              "p": "Lower scores are built around the greens. Our short game area offers a variety of different lies, along with a practice bunker, allowing you to develop every aspect of your short game in realistic conditions.",
              "blocks": [
@@ -761,7 +761,7 @@ PAGES = [
                   "Maximum height and minimum roll, for the moments when the flag is close and there is nothing to run the ball into."),
                  ("Bunker Shot", "Greenside sand",
                   "Splashes the ball out on a cushion of sand rather than striking it, practised for real in our own practice bunker."),
-             ]},
+             ], "alt": True},
 
             {"type": "cards", "kick": "Four skills, one area",
              "h2": "What Can You Practise in the <em>Short Game Area?</em>",
@@ -827,9 +827,7 @@ PAGES = [
                  ("p", "Aim, eye position and face angle at impact are worth a single lesson, because they are almost impossible to self-diagnose and they undermine everything else. A short game session in the <a href=\"trackman-teaching-bay.html\">teaching bay</a> or out on the green with a coach settles it, and golfers on the <a href=\"monthly-programme.html\">monthly coaching programme</a> get it reviewed as a matter of routine."),
              ], "alt": True},
 
-            {"type": "stats", "items": [("1", "PGA Pro"), ("2+", "Trackman Simulators"), ("7", "Trackman Range Bays")]},
-
-            {"type": "tgrid", "kick": "What golfers say", "alt": True,
+            {"type": "tgrid", "kick": "What golfers say",
              "h2": "What Do Golfers Say About the <em>Short Game Area?</em>",
              "p": "Google reviews from golfers who use the chipping and putting facilities.",
              "items": [
@@ -854,7 +852,7 @@ PAGES = [
                   "Continuous coaching at £60 a month, including structured short game practice plans.", "Monthly coaching"),
                  ("beginner-coaching.html", "Beginner Coaching",
                   "New golfers often start around the green, where the swing is short and the wins are quick.", "Beginner golf"),
-             ]},
+             ], "alt": True},
 
             {"type": "faq", "kick": "Common questions",
              "h2": "Short Game Practice Area Derbyshire - <em>FAQs.</em>",
@@ -877,7 +875,7 @@ PAGES = [
                   "Your wedges, your putter, a sand wedge with reasonable bounce if you have one, and a handful of your own golf balls. A towel and a couple of tees are useful for marking landing spots. Golf shoes or trainers with grip are sensible on wet grass."),
                  ("Where is the short game area?",
                   "On the same site as everything else, at Ormonde Fields Golf Club, Nottingham Road, Codnor, Ripley DE5 9RJ. That is around 15 minutes from Derby and 25 from Nottingham on the A610, with free parking. See <a href=\"location.html\">our location page</a> for directions."),
-             ], "alt": True},
+             ]}
         ],
     },
 ]

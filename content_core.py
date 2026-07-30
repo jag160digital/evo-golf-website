@@ -24,6 +24,7 @@ PAGES = [
         "marq": ["Golf Academy Derby", "Golf Lessons Nottingham", "Trackman Performance Centre",
                  "PGA Professional Coaching", "Open 7 Days a Week", "Ripley, Derbyshire"],
         "sections": [
+            {"type": "pmarq"},
 
             {"type": "prose", "kick": "Golf academy Derby, Nottingham and the East Midlands",
              "h2": "Everyone's <em>welcome here.</em>",
@@ -44,26 +45,8 @@ PAGES = [
                  ]),
              ]},
 
-            {"type": "prose", "kick": "A golf academy for Derby, Nottingham and Derbyshire",
-             "h2": "What Is a Golf Academy and How Is It Different From a <em>Golf Club?</em>",
-             "blocks": [
-                 ("p", "A golf club sells you access to a course. A <strong>golf academy sells you improvement</strong>. Evolution Golf Academy sits on the grounds of Ormonde Fields Golf Club on Nottingham Road in Codnor, Ripley, and everything on the site exists for a single purpose: to send you home a better golfer than you arrived. Everything here is open to the public, so you do not need to be a member to book anything. Membership exists if you want it, and it gives you priority booking and better rates, but nothing on the site is locked behind it."),
-                 ("p", "That matters around Derby and Nottingham because serious coaching and serious practice technology have traditionally been locked behind private clubs. If you wanted <a href=\"1-1-lessons.html\">one to one golf lessons</a> with an Advanced PGA Professional and a launch monitor pointed at your swing, you generally had to know somebody, join something, or drive for the best part of an hour. We built this academy so that the drive is fifteen minutes from Derby and twenty five from Nottingham, the parking is free, and the answer to \"can I come tomorrow\" is usually yes."),
-                 ("h3", "Who Is the Golf Academy For?"),
-                 ("p", "This <strong>golf academy in Derbyshire</strong> is for complete beginners who have never held a club. Children aged six to sixteen in the <a href=\"junior-academy.html\">junior academy</a>. Women starting out or coming back through the <a href=\"ladies-academy.html\">ladies academy</a>. Mid handicappers who have shot the same score for three seasons and cannot work out why. Single figure players chasing the last two shots before a club championship. The facilities are identical for all of them. What changes is what the coach does with them once you are in the bay."),
-                 ("h3", "What Is Actually on the Site?"),
-                 ("p", "Seven Trackman-equipped bays on the <a href=\"trackman-range.html\">Trackman driving range</a>, two or more indoor <a href=\"trackman-simulator.html\">golf simulators</a>, a private <a href=\"trackman-teaching-bay.html\">Trackman teaching bay</a> for lessons and video analysis, a <a href=\"grass-range.html\">grass driving range</a> for the drier months, a <a href=\"short-game.html\">short game area</a> covering chipping, pitching, bunker play and putting, and a <a href=\"golf-fitness.html\">golf fitness suite</a> for mobility, strength and speed work. Custom club fitting runs on Trackman data and our fittings are brand neutral, so you can buy from us or anywhere you like."),
-                 ("h3", "Do I Need to Be Any Good Before I Come?"),
-                 ("p", "No, and the most common thing we hear from first-time callers on 07710 582036 is that they want to get a bit better before they book a lesson. That is roughly equivalent to tidying the house before the cleaner arrives. <a href=\"get-into-golf.html\">Get Into Golf</a> and structured <a href=\"beginner-coaching.html\">beginner coaching</a> exist precisely for golfers who feel that way, and nobody here has ever raised an eyebrow at a bad swing. We have all made them. You do not need your own clubs either: we can lend you a set for lessons, and the range and simulators include club hire at no extra cost."),
-                 ("ul", [
-                     "Open to the public, with no membership needed to book anything",
-                     "Membership is optional and adds priority booking and better rates",
-                     "Club hire included at no extra cost on the range and simulators",
-                     "Open 7am to 8pm, seven days a week, all year round",
-                     "Free parking on site at Ormonde Fields Golf Club",
-                     "Fifteen minutes from Derby, twenty five from Nottingham on the A610",
-                 ]),
-             ]},
+            {"type": "stats", "items": [("1", "PGA Pro"), ("2+", "Trackman Simulators"),
+                                        ("7", "Trackman Range Bays")], "alt": True},
 
             {"type": "cards", "kick": "Everything on one site in Codnor",
              "h2": "What Facilities Does the <em>Golf Academy</em> Have?",
@@ -112,9 +95,6 @@ PAGES = [
              ],
              "btn2": ("Meet the coach", "meet-team.html"), "alt": True},
 
-            {"type": "stats", "items": [("1", "PGA Pro"), ("2+", "Trackman Simulators"),
-                                        ("7", "Trackman Range Bays")]},
-
             {"type": "cards", "kick": "Coaching at Evolution Golf Academy",
              "h2": "What Golf Coaching Can You <em>Book Here?</em>",
              "p": "Six ways in, all taught on the same site in Codnor, all using the same Trackman data.",
@@ -143,7 +123,7 @@ PAGES = [
                   "h": "Ladies Coaching",
                   "p": "A relaxed, welcoming space to learn. Friendly women-only golf lessons, from complete first-timers to club golfers.",
                   "href": "ladies-academy.html", "cta": "Ladies golf"},
-             ], "alt": True},
+             ]},
 
             {"type": "split", "img": "lesson_grip",
              "img_alt": "Will Painter, PGA Professional golf coach, teaching at Evolution Golf Academy",
@@ -161,7 +141,7 @@ PAGES = [
                  "<b>OnForm Coaching</b> - keep improving between lessons, not just during them",
                  "<b>Academy Director</b> - read the full story on our <a href=\"about.html\">about page</a>",
              ],
-             "btn2": ("Read about the academy", "about.html")},
+             "btn2": ("Read about the academy", "about.html"), "alt": True},
 
             {"type": "prices", "kick": "Coaching prices",
              "h2": "How Much Do Golf Lessons Cost Near <em>Derby and Nottingham?</em>",
@@ -173,6 +153,48 @@ PAGES = [
                   "p": "Continuous coaching every month, including 1 hour PGA coaching, the OnForm platform, a playing lesson, TPI screening and lesson range balls. See the <a href=\"monthly-programme.html\">monthly programme</a>."},
                  {"amt": "£75", "per": "one off", "h": "TPI Screening",
                   "p": "Sixteen tests plus Trackman analysis, showing the connection between your swing and your body and what to do about it. More on <a href=\"tpi-screening.html\">TPI screening</a>."},
+             ]},
+
+            {"type": "prose", "kick": "A golf academy for Derby, Nottingham and Derbyshire",
+             "h2": "What Is a Golf Academy and How Is It Different From a <em>Golf Club?</em>",
+             "blocks": [
+                 ("p", "A golf club sells you access to a course. A <strong>golf academy sells you improvement</strong>. Evolution Golf Academy sits on the grounds of Ormonde Fields Golf Club on Nottingham Road in Codnor, Ripley, and everything on the site exists for a single purpose: to send you home a better golfer than you arrived. Everything here is open to the public, so you do not need to be a member to book anything. Membership exists if you want it, and it gives you priority booking and better rates, but nothing on the site is locked behind it."),
+                 ("p", "That matters around Derby and Nottingham because serious coaching and serious practice technology have traditionally been locked behind private clubs. If you wanted <a href=\"1-1-lessons.html\">one to one golf lessons</a> with an Advanced PGA Professional and a launch monitor pointed at your swing, you generally had to know somebody, join something, or drive for the best part of an hour. We built this academy so that the drive is fifteen minutes from Derby and twenty five from Nottingham, the parking is free, and the answer to \"can I come tomorrow\" is usually yes."),
+                 ("h3", "Who Is the Golf Academy For?"),
+                 ("p", "This <strong>golf academy in Derbyshire</strong> is for complete beginners who have never held a club. Children aged six to sixteen in the <a href=\"junior-academy.html\">junior academy</a>. Women starting out or coming back through the <a href=\"ladies-academy.html\">ladies academy</a>. Mid handicappers who have shot the same score for three seasons and cannot work out why. Single figure players chasing the last two shots before a club championship. The facilities are identical for all of them. What changes is what the coach does with them once you are in the bay."),
+                 ("h3", "What Is Actually on the Site?"),
+                 ("p", "Seven Trackman-equipped bays on the <a href=\"trackman-range.html\">Trackman driving range</a>, two or more indoor <a href=\"trackman-simulator.html\">golf simulators</a>, a private <a href=\"trackman-teaching-bay.html\">Trackman teaching bay</a> for lessons and video analysis, a <a href=\"grass-range.html\">grass driving range</a> for the drier months, a <a href=\"short-game.html\">short game area</a> covering chipping, pitching, bunker play and putting, and a <a href=\"golf-fitness.html\">golf fitness suite</a> for mobility, strength and speed work. Custom club fitting runs on Trackman data and our fittings are brand neutral, so you can buy from us or anywhere you like."),
+                 ("h3", "Do I Need to Be Any Good Before I Come?"),
+                 ("p", "No, and the most common thing we hear from first-time callers on 07710 582036 is that they want to get a bit better before they book a lesson. That is roughly equivalent to tidying the house before the cleaner arrives. <a href=\"get-into-golf.html\">Get Into Golf</a> and structured <a href=\"beginner-coaching.html\">beginner coaching</a> exist precisely for golfers who feel that way, and nobody here has ever raised an eyebrow at a bad swing. We have all made them. You do not need your own clubs either: we can lend you a set for lessons, and the range and simulators include club hire at no extra cost."),
+                 ("ul", [
+                     "Open to the public, with no membership needed to book anything",
+                     "Membership is optional and adds priority booking and better rates",
+                     "Club hire included at no extra cost on the range and simulators",
+                     "Open 7am to 8pm, seven days a week, all year round",
+                     "Free parking on site at Ormonde Fields Golf Club",
+                     "Fifteen minutes from Derby, twenty five from Nottingham on the A610",
+                 ]),
+             ], "alt": True},
+
+            {"type": "accred", "kick": "Accreditations",
+             "h2": "What Backs Up the Coaching at This <em>Golf Academy?</em>",
+             "p": "Three accreditations sit behind everything taught here, and all three are visible in an ordinary hour on the range.",
+             "items": [
+                 ("Trackman", "Official Performance Centre", "Radar-tracked range and sim suites"),
+                 ("PGA", "PGA Qualified Coaches", "Members of The Professional Golfers' Association"),
+                 ("TPI", "Titleist Performance Institute", "Movement and biomechanics specialists"),
+             ]},
+
+            {"type": "tgrid", "kick": "Reviews",
+             "h2": "What Do Golfers Say About Evolution <em>Golf Academy?</em>",
+             "p": "Genuine Google reviews from golfers who practise and take lessons at the academy in Codnor.",
+             "items": [
+                 ("The practice facilities here are second to none. I couldn't of been more impressed, the grass range is an amazing touch and the track man bays are top notch as well, mats are perfect not worn, balls aren't battered, great value for money, definitely my go to practice facility now.", "Ciaran W."),
+                 ("Great range, balls are in very good nick, Trackman too, plus a nice little chipping area.", "Steve G."),
+                 ("Great place to start your golfing journey. The Trackman facilities are excellent.", "Lisa H."),
+                 ("I had a lesson with Will. He was attentive and planned an approach to how I could improve. After some practice the planned improvements paid off. Highly recommended.", "Ian L."),
+                 ("Golf coaching with Will was a great experience. He helped progress my game using their Trackman technology and the driving range facilities to practice what I had been taught.", "Irene B."),
+                 ("Will gave me good advice and made adjustments to my swing. Huge improvement in just one lesson, best £50 I have ever spent.", "Reece F."),
              ], "alt": True},
 
             {"type": "prose", "kick": "How the coaching works",
@@ -188,45 +210,6 @@ PAGES = [
                  ("p", "Improvement is cumulative and coaching relationships take a few sessions to find their rhythm. You work with Will Painter, an Advanced PGA Professional, from your first enquiry onward, so nobody is re-reading your swing from scratch every time you arrive. What changes between sessions is not the person in the bay, it is what the session is aimed at, because the plan is matched to your goals rather than to whoever has a gap in the diary. You can read how Will works on the <a href=\"meet-team.html\">meet the team page</a> before you book your first <a href=\"1-1-lessons.html\">1:1 golf lesson</a> at £55."),
                  ("h3", "Equipment That Is Not Quietly Working Against You"),
                  ("p", "A surprising number of stubborn faults turn out to be a shaft that is too soft, a lie angle that is two degrees out, or a driver with more loft than the swing needs. Custom fitting here runs on Trackman numbers rather than a chart on the wall, and our fittings are brand neutral, so you can buy from us or anywhere you like. Because the fitting sits alongside the coaching, the specification accounts for where your swing is heading rather than only where it is today. <a href=\"contact.html\">Ask us about a fitting</a> if your clubs have never been checked."),
-             ], "alt": True},
-
-            {"type": "rel", "kick": "Explore the academy",
-             "h2": "What Golf Coaching Is <em>Available Near Me?</em>",
-             "p": "Every programme below runs at the same site in Codnor, Ripley, with the same coach and the same Trackman technology.",
-             "links": [
-                 ("1-1-lessons.html", "1:1 Golf Lessons",
-                  "Sixty minutes with an Advanced PGA Professional in the Trackman teaching bay. £55, and the fastest way to fix something specific.", "Golf lessons"),
-                 ("monthly-programme.html", "Monthly Programme",
-                  "£60 a month for continuous coaching, a rolling practice plan and progress tracked on Trackman across the season.", "Monthly coaching"),
-                 ("junior-academy.html", "Junior Academy",
-                  "Group coaching for ages six to sixteen, led by Will Painter, Advanced PGA Professional. Structured, patient and good fun.", "Junior golf"),
-                 ("ladies-academy.html", "Ladies Academy",
-                  "Women-only group coaching for beginners and improvers, with no pressure to already know what a hybrid is.", "Ladies golf"),
-                 ("golf-lessons-derby.html", "Golf Lessons Derby",
-                  "What the academy offers golfers travelling the fifteen minutes out of Derby, and how to get here.", "Derby lessons"),
-                 ("golf-lessons-nottingham.html", "Golf Lessons Nottingham",
-                  "Directions, timings and coaching options for golfers coming from Nottingham on the A610.", "Nottingham lessons"),
-             ]},
-
-            {"type": "accred", "kick": "Accreditations",
-             "h2": "What Backs Up the Coaching at This <em>Golf Academy?</em>",
-             "p": "Three accreditations sit behind everything taught here, and all three are visible in an ordinary hour on the range.",
-             "items": [
-                 ("Trackman", "Official Performance Centre", "Radar-tracked range and sim suites"),
-                 ("PGA", "PGA Qualified Coaches", "Members of The Professional Golfers' Association"),
-                 ("TPI", "Titleist Performance Institute", "Movement and biomechanics specialists"),
-             ], "alt": True},
-
-            {"type": "tgrid", "kick": "Reviews",
-             "h2": "What Do Golfers Say About Evolution <em>Golf Academy?</em>",
-             "p": "Genuine Google reviews from golfers who practise and take lessons at the academy in Codnor.",
-             "items": [
-                 ("The practice facilities here are second to none. I couldn't of been more impressed, the grass range is an amazing touch and the track man bays are top notch as well, mats are perfect not worn, balls aren't battered, great value for money, definitely my go to practice facility now.", "Ciaran W."),
-                 ("Great range, balls are in very good nick, Trackman too, plus a nice little chipping area.", "Steve G."),
-                 ("Great place to start your golfing journey. The Trackman facilities are excellent.", "Lisa H."),
-                 ("I had a lesson with Will. He was attentive and planned an approach to how I could improve. After some practice the planned improvements paid off. Highly recommended.", "Ian L."),
-                 ("Golf coaching with Will was a great experience. He helped progress my game using their Trackman technology and the driving range facilities to practice what I had been taught.", "Irene B."),
-                 ("Will gave me good advice and made adjustments to my swing. Huge improvement in just one lesson, best £50 I have ever spent.", "Reece F."),
              ]},
 
             {"type": "lead", "kick": "Free practice guide",
@@ -254,7 +237,25 @@ PAGES = [
                   "Yes to both. The <a href=\"junior-academy.html\">junior academy</a> covers ages six to sixteen in structured group sessions led by Will Painter, Advanced PGA Professional, and the <a href=\"ladies-academy.html\">ladies academy</a> runs women-only groups for beginners and improvers. Both feed into individual coaching later if a player wants it, and both are popular with families from Ripley, Heanor and Belper."),
                  ("How do I book a lesson or ask a question?",
                   "Book online, which is the quickest route, or ring 07710 582036 during opening hours. If you would rather write it down, the enquiry form on our <a href=\"contact.html\">contact page</a> reaches the coaching team directly and we answer within a working day. There is also a longer list of answers on our <a href=\"faqs.html\">FAQs page</a>."),
-             ]},
+             ], "alt": True},
+
+            {"type": "rel", "kick": "Explore the academy",
+             "h2": "What Golf Coaching Is <em>Available Near Me?</em>",
+             "p": "Every programme below runs at the same site in Codnor, Ripley, with the same coach and the same Trackman technology.",
+             "links": [
+                 ("1-1-lessons.html", "1:1 Golf Lessons",
+                  "Sixty minutes with an Advanced PGA Professional in the Trackman teaching bay. £55, and the fastest way to fix something specific.", "Golf lessons"),
+                 ("monthly-programme.html", "Monthly Programme",
+                  "£60 a month for continuous coaching, a rolling practice plan and progress tracked on Trackman across the season.", "Monthly coaching"),
+                 ("junior-academy.html", "Junior Academy",
+                  "Group coaching for ages six to sixteen, led by Will Painter, Advanced PGA Professional. Structured, patient and good fun.", "Junior golf"),
+                 ("ladies-academy.html", "Ladies Academy",
+                  "Women-only group coaching for beginners and improvers, with no pressure to already know what a hybrid is.", "Ladies golf"),
+                 ("golf-lessons-derby.html", "Golf Lessons Derby",
+                  "What the academy offers golfers travelling the fifteen minutes out of Derby, and how to get here.", "Derby lessons"),
+                 ("golf-lessons-nottingham.html", "Golf Lessons Nottingham",
+                  "Directions, timings and coaching options for golfers coming from Nottingham on the A610.", "Nottingham lessons"),
+             ]}
         ],
     },
 
@@ -277,7 +278,6 @@ PAGES = [
         "marq": ["About Evolution Golf Academy", "Ripley, Derbyshire", "Trackman Official Performance Centre",
                  "Advanced PGA Professional", "TPI Certified", "Open To The Public"],
         "sections": [
-
             {"type": "prose", "kick": "The turning point",
              "h2": "Our <em>story.</em>",
              "blocks": [
@@ -290,6 +290,9 @@ PAGES = [
                  ("h3", "What Has the Academy Become Since 2023?"),
                  ("p", "A site with seven <a href=\"trackman-range.html\">Trackman range bays</a>, two or more indoor <a href=\"trackman-simulator.html\">simulators</a>, a private <a href=\"trackman-teaching-bay.html\">teaching bay</a>, a <a href=\"grass-range.html\">grass driving range</a>, a <a href=\"short-game.html\">short game area</a> and a fitness suite, open seven days a week from 7am to 8pm and open to the public. Membership exists and brings priority booking and better rates, but nothing on the site is withheld from anyone who has not joined."),
              ]},
+
+            {"type": "stats", "items": [("2023", "Founded"), ("15 yrs", "Elite Level"),
+                                        ("7", "Days a Week")], "alt": True},
 
             {"type": "prose", "kick": "Why we are here",
              "h2": "Why Was Evolution Golf Academy Set Up in <em>Ripley, Derbyshire?</em>",
@@ -328,9 +331,6 @@ PAGES = [
                  {"img": "lesson_grip", "name": "Will Painter", "role": "Academy Director and Advanced PGA Professional",
                   "bio": "Will founded Evolution Golf Academy in 2023 after 15 years playing at an elite level, a spell representing England Golf and multiple professional wins. He leads on technique, swing mechanics and long term player development, working with everyone from complete beginners to advanced players chasing their last two shots. Will combines over 10 years experience of golf coaching with Trackman Technology and Titleist Performance certification to understand your golf swing and body so Will can support and build a personalised pathway to better golf. He runs the <a href=\"junior-academy.html\">junior academy</a> and the <a href=\"ladies-academy.html\">ladies academy</a> alongside individual coaching, and keeps every golfer's data from one session to the next so progress is measured rather than remembered."},
              ]},
-
-            {"type": "stats", "items": [("2023", "Founded"), ("15 yrs", "Elite Level"),
-                                        ("7", "Days a Week")]},
 
             {"type": "prose", "kick": "How we assess a golfer",
              "h2": "What Happens in the <em>Two-Step Assessment?</em>",
@@ -488,7 +488,7 @@ PAGES = [
                   "Yes. The <a href=\"junior-academy.html\">junior academy</a> takes ages six to sixteen in structured groups led by Will Painter, Advanced PGA Professional, and the <a href=\"ladies-academy.html\">ladies academy</a> runs women-only sessions for beginners and improvers. Both are popular with families across Ripley, Heanor, Belper and Alfreton, and both lead into individual coaching for anyone who wants to take it further."),
                  ("Can I visit and look round before booking anything?",
                   "Of course. The <a href=\"trackman-range.html\">driving range</a> is walk-in, so the simplest thing is to turn up, buy a basket and see the place while you hit balls. Club hire is included at no extra cost, so you can do that with nothing in the boot. If you would rather speak to someone first, ring 07710 582036 or send an enquiry through the <a href=\"contact.html\">contact page</a> and we answer within a working day."),
-             ]},
+             ]}
         ],
     },
 
@@ -821,7 +821,6 @@ PAGES = [
         "marq": ["Book Golf Lessons Derby", "Golf Lessons Nottingham", "07710 582036",
                  "Open 7am to 8pm", "Ripley DE5 9RJ", "Advanced PGA Professional"],
         "sections": [
-
             {"type": "form",
              "kick": "Book golf lessons near Derby and Nottingham",
              "h2": "How Do You Book a Golf Lesson at <em>Evolution Golf Academy?</em>",
@@ -865,6 +864,27 @@ PAGES = [
                  ("p", "The <a href=\"junior-academy.html\">junior academy</a> covers ages six to sixteen, and the <a href=\"ladies-academy.html\">ladies academy</a> runs women-only groups for beginners and improvers. Both work on blocks of sessions, so ring 07710 582036 or send an enquiry to find out when the next block starts and whether there is space in it."),
              ], "alt": True},
 
+            {"type": "stats", "items": [
+                ("7", "Days a Week"), ("7am", "Open From"), ("8pm", "Open Until"), ("1", "Working Day Reply")]},
+
+            {"type": "steps", "kick": "What happens next",
+             "h2": "What Happens After You <em>Get in Touch?</em>",
+             "p": "No hard sell and no obligation. We would rather put you in the right session than any session.",
+             "steps": [
+                 ("We come back to you", "Within a working day, by email or phone, whichever you used. If you would rather not wait, call 07710 582036 and you can usually get booked in there and then."),
+                 ("We ask what you want from your golf", "Getting round a course for the first time is a different job from breaking a handicap barrier. It changes what we recommend, so it is worth two minutes."),
+                 ("We suggest the right starting point", "That might be a <a href=\"1-1-lessons.html\">1:1 lesson</a>, <a href=\"get-into-golf.html\">Get Into Golf</a>, a <a href=\"tpi-screening.html\">TPI screen</a> or simply a basket on the <a href=\"trackman-range.html\">range</a> to see how you get on."),
+                 ("You book, or you do not", "There is no pressure either way. Plenty of people ask a question, go away and think about it, and come back months later. That is completely fine."),
+             ], "alt": True},
+
+            {"type": "accred", "kick": "Accreditations",
+             "h2": "Who Are You <em>Booking With?</em>",
+             "items": [
+                 ("Trackman", "Official Performance Centre", "Radar-tracked range and simulator suites, the same technology used on the PGA Tour."),
+                 ("PGA", "PGA Qualified", "Coaching from a member of The Professional Golfers' Association."),
+                 ("TPI", "Titleist Performance Institute", "Movement and biomechanics screening, so coaching works with your body."),
+             ]},
+
             {"type": "rel", "kick": "Before you get in touch",
              "h2": "What Else Might You Want to <em>Check First?</em>",
              "p": "A few pages that answer most of what people ask us on the phone.",
@@ -881,7 +901,7 @@ PAGES = [
                   "Sixty minutes with an Advanced PGA Professional in the private Trackman teaching bay, £55.", "Golf lessons"),
                  ("trackman-range.html", "Trackman Driving Range",
                   "Walk-in practice with live ball data, seven covered floodlit bays, baskets from £4.", "The range"),
-             ]},
+             ], "alt": True},
 
             {"type": "faq", "kick": "Common questions",
              "h2": "Booking Golf Lessons Near Derby &amp; Nottingham - <em>FAQs.</em>",
@@ -902,7 +922,7 @@ PAGES = [
                   "No. We can lend you a set for lessons, and the range and simulators include club hire at no extra cost, which is why <a href=\"get-into-golf.html\">Get Into Golf</a> and <a href=\"beginner-coaching.html\">beginner coaching</a> work for people who own nothing at all. If you do have clubs, bring them, because a coach seeing your actual equipment sometimes explains a fault faster than anything on the screen does."),
                  ("Where are you and how far is it from Derby or Nottingham?",
                   "Ormonde Fields Golf Club, Nottingham Road, Codnor, Ripley DE5 9RJ. About fifteen minutes from Derby and twenty five from Nottingham, both on the A610, with free parking on site. Detailed routes, including from the M1 at Junction 26 and from Belper, Alfreton and Heanor, are on our <a href=\"location.html\">location page</a>."),
-             ]},
+             ]}
         ],
     },
 ]

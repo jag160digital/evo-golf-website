@@ -46,7 +46,6 @@ PAGES = [
         "marq": ["Golf Coach Derby", "Advanced PGA Professional", "Golf Coach Nottingham",
                  "TPI Certified Coaching", "Trackman Experts", "Golf Coaching Derbyshire"],
         "sections": [
-
             {"type": "prose", "kick": "Why the academy exists",
              "h2": "What Makes a Good <em>Golf Coach?</em>",
              "blocks": [
@@ -64,7 +63,7 @@ PAGES = [
              "people": [
                  {"img": "coach_feedback", "name": "Will Painter",
                   "role": "PGA Professional · TPI Certified · Trackman Expert", "bio": WILL_BIO},
-             ]},
+             ], "alt": True},
 
             {"type": "prose", "kick": "How Will coaches",
              "h2": "What Makes His Coaching <em>Different?</em>",
@@ -94,7 +93,7 @@ PAGES = [
                   "h": "OnForm Coaching",
                   "p": "Keep improving between lessons, not just during them. Swing videos and feedback carry on through the OnForm platform once you leave the bay.",
                   "href": "monthly-programme.html", "cta": "Monthly programme"},
-             ]},
+             ], "alt": True},
 
             {"type": "cards", "kick": "How the academy assesses your game",
              "h2": "How Do You Coach Golfers in <em>Derby and Nottingham?</em>",
@@ -116,7 +115,7 @@ PAGES = [
                   "h": "04 · Trackman Experts",
                   "p": "Trackman on every bay, read by someone who knows what the numbers mean. Data on its own is noise. Data plus an Advanced PGA Professional is a plan.",
                   "href": "trackman-range.html", "cta": "Trackman range"},
-             ], "alt": True},
+             ]},
 
             {"type": "split", "img": "lesson_grip",
              "img_alt": "Golf lesson with an Advanced PGA Professional near Derby",
@@ -133,7 +132,7 @@ PAGES = [
                  "<b>Plain English</b> - no jargon, and the reasoning explained",
                  "<b>Clubs available</b> - lent for lessons, and <a href=\"beginner-coaching.html\">beginners</a> need bring nothing",
              ],
-             "btn2": ("See lesson prices", "1-1-lessons.html")},
+             "btn2": ("See lesson prices", "1-1-lessons.html"), "alt": True},
 
             {"type": "steps", "kick": "Booking",
              "h2": "How Do You Book a Lesson With <em>Will?</em>",
@@ -186,7 +185,7 @@ PAGES = [
                   "Within a working day. If you would rather not wait, call 07710 582036 and you can usually get booked in there and then."),
                  ("Where are you based?",
                   "Ormonde Fields Golf Club, Nottingham Road, Codnor, Ripley DE5 9RJ. Around 20 minutes from <a href=\"golf-lessons-derby.html\">Derby</a> and 25 from <a href=\"golf-lessons-nottingham.html\">Nottingham</a>, with free parking on site."),
-             ]},
+             ], "alt": True}
         ],
     },
 
@@ -295,6 +294,17 @@ PAGES = [
                   "Yes, but only once you know that is the problem. If you physically cannot make a turn, no coaching will give you one. <a href=\"tpi-screening.html\">TPI screening</a> identifies the restriction and the <a href=\"golf-fitness.html\">golf fitness suite</a> is where you address it."),
                  ("Do I need to play on a course to improve?",
                   "Eventually, yes. Range practice builds the swing, but course management, nerves and awkward lies only get tested in a round. The <a href=\"trackman-simulator.html\">simulator</a> bridges the gap in winter by making you pick a target and a club on every shot."),
+             ], "alt": True},
+
+            {"type": "stats", "items": [
+                ("7", "Days a Week"), ("7", "Trackman Range Bays"), ("2+", "Simulators"), ("1", "Working Day Reply")]},
+
+            {"type": "accred", "kick": "Accreditations",
+             "h2": "Who Are You <em>Booking With?</em>",
+             "items": [
+                 ("Trackman", "Official Performance Centre", "Radar-tracked range and simulator suites, the same technology used on the PGA Tour."),
+                 ("PGA", "PGA Qualified", "Coaching from a member of The Professional Golfers' Association."),
+                 ("TPI", "Titleist Performance Institute", "Movement and biomechanics screening, so coaching works with your body."),
              ], "alt": True},
 
             {"type": "rel", "kick": "Where to next",

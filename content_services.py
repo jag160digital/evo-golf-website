@@ -109,6 +109,19 @@ PAGES = [
              ],
              "btn2": ("Ask a question", "contact.html"), "alt": True},
 
+            {"type": "stats", "items": [
+                ("7", "Days a Week"), ("7", "Trackman Range Bays"), ("2+", "Simulators")]},
+
+            {"type": "steps", "kick": "Working it out",
+             "h2": "How Do You Decide Whether to <em>Join?</em>",
+             "p": "Four steps, and the first two matter far more than the last two.",
+             "steps": [
+                 ("Count what you actually did", "Look back at the last three months rather than forward at your intentions. This is the step people skip and it is the one that decides the answer."),
+                 ("Work out what you use", "Range baskets, simulator hours and coaching are separate spends. Two <a href=\"trackman-simulator.html\">simulator</a> hours a week is a very different sum from a Sunday basket."),
+                 ("Ask whether booking frustrates you", "If you have tried for an indoor bay on a wet January evening and found them gone, priority booking may matter more to you than the rate."),
+                 ("Call and check the maths", "Ring 07710 582036 and we will run it against how you actually play. If joining would not save you money we will say so."),
+             ], "alt": True},
+
             {"type": "faq", "kick": "Common questions",
              "h2": "Golf Academy Membership Derby &amp; Nottingham - <em>FAQs.</em>",
              "qs": [
@@ -223,6 +236,9 @@ PAGES = [
                  ("h3", "Where Is the Academy?"),
                  ("p", "Ormonde Fields Golf Club, Nottingham Road, Codnor, Ripley DE5 9RJ. Around 15 minutes from <a href=\"golf-lessons-derby.html\">Derby</a> and 25 from <a href=\"golf-lessons-nottingham.html\">Nottingham</a>, with free parking on site and the range open 7am to 8pm every day."),
              ], "alt": True},
+
+            {"type": "stats", "items": [
+                ("2", "Simulator Bays"), ("550+", "Courses"), ("40+", "Data Parameters")]},
 
             {"type": "faq", "kick": "Common questions",
              "h2": "Trackman Tournaments Derby &amp; Nottingham - <em>FAQs.</em>",

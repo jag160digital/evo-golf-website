@@ -370,6 +370,21 @@ def s_form(kick, h2, intro_p, right_html, alt=False):
 </div>''', alt)
 
 
+PMARQ_A = ["impact", "bay_night", "putting", "trackman_screen", "lesson_grip",
+           "fitting_data", "fitting_face", "bay_indoor", "bunker", "bay_screen"]
+PMARQ_B = ["range_night", "range_sil", "coach_feedback", "driver_balls", "over_shoulder",
+           "student_swing", "ball_tee", "launch_data", "on_course", "team"]
+
+
+def s_pmarq():
+    """Scrolling photo band. Two rows, opposite directions."""
+    def row(keys, cls):
+        imgs = "".join(f'<img src="{IMG[k]}" alt="" loading="lazy">' for k in keys * 2)
+        return f'<div class="prow {cls}">{imgs}</div>'
+    return ('<div class="pmarq" aria-hidden="true">\n'
+            + row(PMARQ_A, "a") + "\n" + row(PMARQ_B, "b") + "\n</div>")
+
+
 def s_accred(kick, h2, items, p=None, alt=False):
     """Partners and accreditations band. items = [(tag, name, desc)]"""
     body = "\n".join(
@@ -419,7 +434,7 @@ BUILDERS = {"intro": s_intro, "prose": s_prose, "cards": s_cards, "split": s_spl
             "steps": s_steps, "stats": s_stats, "prices": s_prices, "faq": s_faq,
             "rel": s_rel, "areas": s_areas, "tgrid": s_tgrid, "team": s_team,
             "form": s_form, "accred": s_accred, "ctable": s_ctable,
-            "ptable": s_ptable, "lead": s_lead}
+            "ptable": s_ptable, "lead": s_lead, "pmarq": s_pmarq}
 
 
 def hero(kick, l1, l2, para, img, img_alt):
@@ -435,6 +450,8 @@ def hero(kick, l1, l2, para, img, img_alt):
 </div>
 </div>
 </div>'''
+
+
 
 
 def marquee(phrases):
