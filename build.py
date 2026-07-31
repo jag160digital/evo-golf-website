@@ -28,7 +28,11 @@ print(f"\n{len(built)} pages built")
 # ------------------------------------------------------------- verify
 def body_words(t):
     for pat in [r'<div class="nav">.*?(?=<div class="hero">)', r'<footer class="footer">.*?</footer>',
-                r'<div class="marq".*?</div>\s*</div>', r'<script.*?</script>', r'<head>.*?</head>',
+                r'<div class="marq".*?</div>\s*</div>',
+                # decorative trust marquee on facility pages - repeated on
+                # every one of them, so it must not prop up the word floor
+                r'<div class="trustbar".*?</div>\s*</div>',
+                r'<script.*?</script>', r'<head>.*?</head>',
                 r'<section class="visit">.*?</section>',
                 r'<section class="sec alt">\s*<div class="container">\s*<div class="fac-head">.*?</section>',
                 r'<div class="ctabox-wrap">.*?</div>\s*</div>\s*</div>']:

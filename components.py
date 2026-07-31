@@ -164,13 +164,13 @@ FOOTER = f'''<footer class="footer">
 </footer>'''
 
 
-def visit(kick="Golf academy near Derby &amp; Nottingham"):
+def visit(kick="Golf academy near Derby &amp; Nottingham", h2=None):
     return f'''<section class="visit">
 <div class="container">
 <div class="panel">
 <div>
 <span class="kick">● {kick}</span>
-<h2>Nottingham Rd, <em>Codnor, Ripley.</em></h2>
+<h2>{h2 or "Nottingham Rd, <em>Codnor, Ripley.</em>"}</h2>
 <div class="line">{PIN}Ormonde Fields Golf Club, Nottingham Road, Codnor, DE5 9RJ</div>
 <div class="line">{CLOCK}Mon to Sun · 7:00am to 8:00pm</div>
 <div class="line">{TEL}{PHONE}</div>
@@ -212,15 +212,21 @@ def faccar(skip=None):
 
 
 def ctabox(h2="Book your golf lesson <em>today.</em>",
-           p="PGA Professional coaching, Trackman data and every facility you need to improve - at Evolution Golf Academy, Ripley. Seven days a week."):
+           p="PGA Professional coaching, Trackman data and every facility you need to improve - at Evolution Golf Academy, Ripley. Seven days a week.",
+           btn1=None, btn2=None, note=None):
+    b1 = (_btn(btn1, "btn dark") if btn1 else
+          f'<a class="btn dark" href="{BOOK}" target="_blank" rel="noopener">Book a lesson</a>')
+    b2 = (_btn(btn2, "btn cream") if btn2 else
+          '<a class="btn cream" href="contact.html">Ask a question</a>')
+    nt = f'\n<p class="note">{note}</p>' if note else ""
     return f'''<div class="ctabox-wrap">
 <div class="container">
 <div class="ctabox">
 <div>
 <h2>{h2}</h2>
-<p>{p}</p>
+<p>{p}</p>{nt}
 </div>
-<div class="row"><a class="btn dark" href="{BOOK}" target="_blank" rel="noopener">Book a lesson</a><a class="btn cream" href="contact.html">Ask a question</a></div>
+<div class="row">{b1}{b2}</div>
 </div>
 </div>
 </div>'''
@@ -627,38 +633,275 @@ def s_priceband(kick, h2, rows, th2, trows, p=None, tp=None, note=None, alt=Fals
 BUILDERS.update({"datachips": s_datachips, "priceband": s_priceband})
 
 
+# ══════════════════════════════════════════════════════════════════════
+# FACILITY CMS TEMPLATE
+# One layout shared by all six facility pages. Every function below maps
+# to one field group on the Webflow "Facilities" collection, so porting
+# this to the CMS is a field-for-field exercise rather than a rebuild.
+# Field names match the collection: wisCopy, chk, fboxes, pricing, steps.
+# ══════════════════════════════════════════════════════════════════════
+TRUST = ["Trackman on every shot", "PGA Professional coaching", "5-star rated",
+         "Covered &amp; floodlit bays", "Open 7 days, 7am to 8pm", "One academy, everything"]
+
+# Real Google reviews supplied by the client. Keyed so each facility can
+# pick the three that mention it.
+REVIEWS = {
+    "ciaran": ("Ciaran W.", "The practice facilities here are second to none. The grass range is an amazing touch and the Trackman bays are top notch as well. Great value for money, definitely my go-to practice facility now."),
+    "steve": ("Steve G.", "Great range, balls are in very good nick, Trackman too, plus a nice little chipping area."),
+    "lisa": ("Lisa H.", "Great place to start your golfing journey. The Trackman facilities are excellent."),
+    "ian": ("Ian L.", "I had a lesson with Will. He was attentive and planned an approach to how I could improve. After some practice the planned improvements paid off. Highly recommended."),
+    "irene": ("Irene B.", "Golf coaching with Will was a great experience. He helped progress my game using their Trackman technology and the driving range facilities to practice what I had been taught."),
+    "reece": ("Reece F.", "Will gave me good advice and made adjustments to my swing. Huge improvement in just one lesson, best £50 I have ever spent."),
+}
+
+TICK = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" '
+        'stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>')
+
+
+def trustbar():
+    """Decorative trust marquee under the hero. Excluded from the word
+    count in build.py --verify, same as the keyword marquee."""
+    items = "".join(f'<div class="it"><i></i>{t}</div>' for t in TRUST)
+    return f'<div class="trustbar" aria-hidden="true">\n<div class="track">{items}{items}</div>\n</div>'
+
+
+def _btn(cta, cls="btn"):
+    ext = ' target="_blank" rel="noopener"' if cta["href"].startswith("http") else ""
+    return f'<a class="{cls}" href="{cta["href"]}"{ext}>{cta["label"]}</a>'
+
+
+def f_wis(eyebrow, h2, img, img_alt, copy, chk_title, chk, cta_a, cta_b):
+    """What-is split: photo, long-form copy, and the 'this is for you if'
+    checklist. copy accepts ("p", str) and ("h3", str) tuples."""
+    body = []
+    for kind, val in copy:
+        body.append(f"<h3>{val}</h3>" if kind == "h3" else f"<p>{val}</p>")
+    rows = "\n".join(f'<div class="r">{TICK}<span>{c}</span></div>' for c in chk)
+    return f'''<section class="sec">
+<div class="container">
+<span class="eyebrow">{eyebrow}</span>
+<h2 class="h2c">{h2}</h2>
+<div class="wis">
+<div class="ph"><img src="{IMG[img]}" alt="{img_alt}" loading="lazy"></div>
+<div>
+{chr(10).join(body)}
+<div class="chk">
+<span class="k">{chk_title}</span>
+<div class="rows">
+{rows}
+</div>
+</div>
+<div class="cline" style="justify-content:flex-start">{_btn(cta_a)}{_btn(cta_b, "btn ink")}</div>
+</div>
+</div>
+</div>
+</section>'''
+
+
+def f_boxes(eyebrow, h2, sub, boxes, closer, cta):
+    """Four bordered fact boxes: what this facility actually gives you."""
+    bs = "\n".join(
+        f'<div class="fbox"><div class="ph"><img src="{IMG[b["img"]]}" alt="{b["t"]} at Evolution Golf Academy" loading="lazy"></div>'
+        f'<div class="tx"><b>{b["t"]}</b><p>{b["b"]}</p></div></div>' for b in boxes)
+    return f'''<section class="sec alt">
+<div class="container">
+<span class="eyebrow">{eyebrow}</span>
+<h2 class="h2c">{h2}</h2>
+<p class="subc">{sub}</p>
+<div class="fboxes">
+{bs}
+</div>
+<p class="closer">{closer}</p>
+<div class="cline">{_btn(cta)}</div>
+</div>
+</section>'''
+
+
+def f_pricing(kick, h2, h2b, p, panels):
+    """Pricing panels. Cells are the price grid; a single cell renders
+    full width. Omitted entirely for facilities with no standalone price."""
+    out = []
+    for pn in panels:
+        cells = "".join(
+            f'<div class="pcell"><span class="lb">{c["lb"]}</span><span class="pv">{c["pv"]}</span>'
+            + (f'<span class="per">{c["per"]}</span>' if c.get("per") else "")
+            + (f'<span class="pp">{c["pp"]}</span>' if c.get("pp") else "")
+            + (f'<p class="body">{c["body"]}</p>' if c.get("body") else "")
+            + "</div>" for c in pn["cells"])
+        one = " one" if len(pn["cells"]) == 1 else ""
+        ft = f'<div class="ft">{pn["footnote"]}</div>' if pn.get("footnote") else ""
+        out.append(f'<div class="ppanel"><div class="hd"><h3>{pn["title"]}</h3>'
+                   f'<span class="badge">{pn["badge"]}</span></div>'
+                   f'<div class="cells{one}">{cells}</div>{ft}</div>')
+    return f'''<section class="sec" id="pricing">
+<div class="container">
+<span class="eyebrow">{kick}</span>
+<h2 class="h2c">{h2}<br><em>{h2b}</em></h2>
+<p class="subc">{p}</p>
+<div class="ppanels">
+{chr(10).join(out)}
+</div>
+</div>
+</section>'''
+
+
+def f_proc(kick, h2, sub, img, img_alt, steps, cta):
+    """Orange process band: numbered steps beside a photo."""
+    ss = "\n".join(
+        f'<div class="pstep"><span class="n">0{i}</span><div><b>{s["t"]}</b><p>{s["b"]}</p></div></div>'
+        for i, s in enumerate(steps, 1))
+    return f'''<section class="proc">
+<div class="container">
+<span class="eyebrow">{kick}</span>
+<h2 class="h2c">{h2}</h2>
+<p class="subc">{sub}</p>
+<div class="grid">
+<div class="steps">
+{ss}
+</div>
+<div class="ph"><img src="{IMG[img]}" alt="{img_alt}" loading="lazy"></div>
+</div>
+<div class="cline">{_btn(cta)}</div>
+</div>
+</section>'''
+
+
+COACHING_PILLS = [("1:1 Golf Lessons", "1-1-lessons.html"), ("Junior Academy", "junior-academy.html"),
+                  ("Ladies Academy", "ladies-academy.html"), ("Monthly Programme", "monthly-programme.html")]
+
+
+def f_pills(skip=None):
+    """Internal linking block: the other facilities plus the coaching
+    pages. Carries most of this page's internal link budget."""
+    ps = [(t, h) for h, _, t in FAC if h != skip] + COACHING_PILLS
+    items = "\n".join(f'<a class="pill" href="{h}">{t}</a>' for t, h in ps)
+    return f'''<section class="sec">
+<div class="container">
+<span class="eyebrow">● What else is here</span>
+<h2 class="h2c">Facilities you can <em>use with it</em></h2>
+<div class="pills">
+{items}
+</div>
+<div class="cline"><a class="btn" href="{BOOK}" target="_blank" rel="noopener">Book a lesson</a></div>
+</div>
+</section>'''
+
+
+WHY = [("Coaching that fits you", "Every golfer is different. Your body, your goals and your golf swing shape the plan, never a template."),
+       ("Tour proven technology", "Trackman on every shot, so changes are backed by real numbers rather than opinion or feel alone."),
+       ("One academy, everything", "Range, simulator, teaching bay, short game and golf fitness on one site in Ripley."),
+       ("Open all year round", "Covered, floodlit bays seven days a week, 7am to 8pm, whatever the weather is doing.")]
+
+
+def f_why():
+    ws = "\n".join(f'<div class="w"><b>{t}</b><p>{p}</p></div>' for t, p in WHY)
+    return f'''<section class="sec alt">
+<div class="container">
+<span class="eyebrow">● Why golfers choose us</span>
+<h2 class="h2c">Why golfers choose <em>Evolution</em></h2>
+<div class="why">
+{ws}
+</div>
+</div>
+</section>'''
+
+
+def f_tst(keys):
+    cards = "\n".join(
+        f'<div class="tcard"><div class="top">5.0 <span>Google</span></div>'
+        f'<div class="bd"><div class="stars">★★★★★</div><p>{REVIEWS[k][1]}</p>'
+        f'<span class="who">{REVIEWS[k][0]}</span></div></div>' for k in keys)
+    return f'''<section class="sec">
+<div class="container">
+<span class="eyebrow">● Success stories</span>
+<h2 class="h2c">Don't just take <em>our word for it</em></h2>
+<div class="tst">
+{cards}
+</div>
+<div class="cline"><a class="btn ink" href="location.html">Read more reviews</a></div>
+</div>
+</section>'''
+
+
+def f_faqs(kick, h2, qs):
+    items = "\n".join(
+        f'<details class="faq"><summary>{q}<span class="pm">+</span></summary>'
+        f'<div class="a">{a}</div></details>' for q, a in qs)
+    return f'''<section class="sec alt">
+<div class="container">
+<span class="eyebrow">{kick}</span>
+<h2 class="h2c">{h2}</h2>
+<div class="faqs">
+{items}
+</div>
+</div>
+</section>'''
+
+
 def marquee(phrases):
     items = "\n".join(f'<div class="it">{p} {DOT}</div>' for p in phrases)
     return f'<div class="marq" aria-hidden="true">\n<div class="track">\n{items}\n</div>\n</div>'
 
 
+def facility_sections(f):
+    """The fixed section order every facility page shares. This IS the
+    CMS template: same order, same blocks, only the field values differ.
+    """
+    secs = [
+        f_wis(f["eyebrow1"], f["secH2"], f["wisImg"], f["name"], f["wisCopy"],
+              f["chkTitle"], f["chk"], f["cta2"], f["cta3"]),
+        f_boxes(f["eyebrow2"], f["boxH2c"], f["boxSub"], f["fboxes"], f["closer"], f["cta4"]),
+    ]
+    # Not every facility is sold separately - the ones included with a
+    # lesson or a basket have no pricing panel at all.
+    if f.get("pricing"):
+        p = f["pricing"]
+        secs.append(f_pricing(p["kick"], p["h2"], p["h2b"], p["p"], p["panels"]))
+    secs += [
+        f_proc(f["procKick"], f["procH2"], f["procSub"], f["procImg"], f["name"],
+               f["steps"], f["cta5"]),
+        f_pills(skip=f["file"]),
+        f_why(),
+        f_tst(f["reviews"]),
+        f_faqs(f["faqKick"], f["faqH2"], f["faqs"]),
+    ]
+    return secs
+
+
 def build(spec):
     """Render one page spec to disk."""
     h = spec["hero"]
-    secs = []
-    for s in spec["sections"]:
-        s = dict(s)
-        fn = BUILDERS[s.pop("type")]
-        secs.append(fn(**s))
+    if spec.get("template") == "facility":
+        secs = facility_sections(spec)
+    else:
+        secs = []
+        for s in spec["sections"]:
+            s = dict(s)
+            fn = BUILDERS[s.pop("type")]
+            secs.append(fn(**s))
     parts = ["<!DOCTYPE html>", '<html lang="en">', "<head>", '<meta charset="utf-8">',
              '<meta name="viewport" content="width=device-width,initial-scale=1">',
              f'<title>{spec["title"]}</title>',
              f'<meta name="description" content="{spec["desc"]}">',
              f'<link rel="canonical" href="https://jag160digital.github.io/evo-golf-website/{spec["file"]}">',
              FONTS, '<link rel="stylesheet" href="./css/style.css">',
-             schema(spec, spec["sections"]), "</head>",
+             schema(spec, spec.get("sections") or
+                    [{"type": "faq", "qs": spec.get("faqs", [])}]), "</head>",
              f'<body class="{spec.get("cls", "v2")}">', "",
              nav(spec.get("cur")), "",
              hero(h["kick"], h["l1"], h["l2"], h["p"], h["img"], h["alt"],
                   h.get("chips"), h.get("chips_head")), "",
              (quickbar(spec["quickbar"]) if spec.get("quickbar") else ""), "",
-             marquee(spec["marq"]), ""]
+             (trustbar() if spec.get("template") == "facility" else marquee(spec["marq"])), ""]
     parts += secs
-    parts += ["", visit(spec.get("visit_kick", "Golf academy near Derby &amp; Nottingham")), "",
+    parts += ["", visit(spec.get("visit_kick", "Golf academy near Derby &amp; Nottingham"),
+                        spec.get("visitH2")), "",
               # a page that already lists the facilities as cards does not
               # need the carousel repeating them underneath
               (faccar(skip=spec["file"]) if spec.get("faccar", True) else ""), "",
-              ctabox(*spec["cta"]) if spec.get("cta") else ctabox(), "",
+              (ctabox(spec["boxH2"], spec["boxP"], spec["boxBtn1"], spec["boxBtn2"], spec["boxNote"])
+               if spec.get("template") == "facility"
+               else (ctabox(*spec["cta"]) if spec.get("cta") else ctabox())), "",
               FOOTER, "", '<script src="./js/main.js"></script>', "</body>", "</html>", ""]
     (ROOT / spec["file"]).write_text("\n".join(parts))
     return spec["file"]

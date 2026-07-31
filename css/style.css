@@ -496,3 +496,125 @@ img{display:block;max-width:100%}
   .v2 .hero .h .l1,.v2 .hero .h .l2{font-size:clamp(40px,11.5vw,60px)}
   .v2 .sec h2{font-size:clamp(32px,7.5vw,44px)}
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   FACILITY CMS TEMPLATE
+   One layout, six facilities. Mirrors the Webflow CMS template page so
+   the eventual migration is field-for-field. Selectors are scoped to
+   their wrappers (.tst .tcard, .faqs .faq) because the older testimonial
+   and FAQ blocks on the other pages use the same bare class names.
+   ══════════════════════════════════════════════════════════════════════ */
+.trustbar{background:var(--ink);overflow:hidden;padding:15px 0}
+.trustbar .track{display:flex;width:max-content;animation:marq 34s linear infinite}
+.trustbar .it{display:flex;align-items:center;gap:12px;padding:0 30px;white-space:nowrap;font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.03em;color:var(--cream)}
+.trustbar .it i{width:7px;height:7px;border-radius:50%;background:var(--orange);flex-shrink:0;display:block}
+
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:block;text-align:center;margin-bottom:14px}
+.h2c{font-family:var(--disp);font-weight:500;font-size:clamp(34px,4.2vw,54px);line-height:1.08;letter-spacing:.01em;text-align:center;text-transform:uppercase}
+.h2c em{font-style:italic;color:var(--orange);text-transform:none}
+.subc{text-align:center;max-width:760px;margin:20px auto 0;font-size:16px;line-height:1.7;color:var(--muted)}
+
+/* what-is split */
+.wis{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:56px}
+.wis .ph{border-radius:18px;overflow:hidden;height:520px}
+.wis .ph img{width:100%;height:100%;object-fit:cover}
+.wis p{font-size:16px;line-height:1.75;color:var(--muted);margin-bottom:18px}
+.wis p a{font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.wis h3{font-family:var(--disp);font-weight:500;font-size:clamp(22px,2.2vw,27px);letter-spacing:.01em;line-height:1.15;margin:26px 0 14px}
+
+/* checklist */
+.chk{border:1.5px solid var(--orange);border-radius:16px;padding:26px 28px;margin-top:34px}
+.chk .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:18px}
+.chk .rows{display:grid;grid-template-columns:1fr 1fr;gap:14px 30px}
+.chk .r{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.55;font-weight:500}
+.chk .r svg{flex-shrink:0;margin-top:2px;width:16px;height:16px;color:var(--orange)}
+
+/* bordered fact boxes */
+.fboxes{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:52px}
+.fbox{border:1px solid rgba(31,31,31,.14);border-radius:16px;overflow:hidden;background:#fff}
+.fbox .ph{height:290px;overflow:hidden}
+.fbox .ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.fbox:hover .ph img{transform:scale(1.04)}
+.fbox .tx{padding:26px 28px 30px}
+.fbox b{font-family:var(--disp);font-weight:500;font-size:23px;letter-spacing:.01em;color:var(--ink);display:block;margin-bottom:11px}
+.fbox p{font-size:14.5px;line-height:1.7;color:var(--muted)}
+.closer{text-align:center;max-width:820px;margin:44px auto 0;font-size:16px;line-height:1.7;color:var(--muted)}
+.cline{display:flex;justify-content:center;margin-top:30px;gap:14px;flex-wrap:wrap}
+
+/* pricing panels */
+.ppanels{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:52px}
+.ppanel{border:1.5px solid var(--ink);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#fff}
+.ppanel .hd{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 26px;flex-wrap:wrap}
+.ppanel .hd h3{font-family:var(--disp);font-weight:500;font-size:28px;letter-spacing:.01em;white-space:nowrap;flex-shrink:0}
+.ppanel .hd .badge{background:var(--ink);color:var(--cream);font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;padding:9px 15px;border-radius:999px;white-space:normal;text-align:center;line-height:1.4;min-width:0}
+.ppanel .cells{display:grid;grid-template-columns:1fr 1fr;border-top:1.5px solid var(--ink)}
+.ppanel .cells.one{grid-template-columns:1fr}
+.pcell{padding:26px 20px;text-align:center;border-bottom:1px solid rgba(31,31,31,.14);border-right:1px solid rgba(31,31,31,.14)}
+.pcell:nth-child(2n),.ppanel .cells.one .pcell{border-right:0}
+.pcell .lb{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:12px}
+.pcell .pv{font-family:var(--disp);font-weight:500;font-size:44px;line-height:1;letter-spacing:.01em;display:block}
+.pcell .per{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--muted);display:block;margin-top:10px}
+.pcell .pp{font-size:12.5px;font-weight:600;color:var(--orange);display:block;margin-top:10px}
+.pcell .body{font-size:14.5px;line-height:1.7;color:var(--muted);margin-top:16px;max-width:380px;margin-left:auto;margin-right:auto}
+.ppanel .ft{padding:22px 28px;text-align:center;font-size:14px;font-style:italic;color:var(--muted);margin-top:auto}
+
+/* orange process band */
+.proc{background:var(--orange);padding:110px 0}
+.proc .eyebrow{color:rgba(31,31,31,.7)}
+.proc .h2c{color:var(--ink)}
+.proc .h2c em{color:var(--cream)}
+.proc .subc{color:rgba(31,31,31,.8)}
+.proc .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;margin-top:52px}
+.proc .steps{display:flex;flex-direction:column;gap:14px}
+.pstep{background:#fff;border-radius:14px;padding:22px 24px;display:flex;gap:20px;align-items:flex-start}
+.pstep .n{font-family:var(--disp);font-weight:600;font-size:30px;line-height:1;color:var(--orange);flex-shrink:0;min-width:42px}
+.pstep b{font-family:var(--disp);font-weight:500;font-style:italic;font-size:17px;letter-spacing:.01em;display:block;margin-bottom:6px}
+.pstep p{font-size:14px;line-height:1.6;color:var(--muted)}
+.proc .ph{border-radius:18px;overflow:hidden;height:560px}
+.proc .ph img{width:100%;height:100%;object-fit:cover}
+.proc .cline .btn{background:var(--ink);border-color:var(--ink)}
+
+/* pill grid */
+.pills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.pill{border:1.5px solid var(--orange);border-radius:12px;padding:20px 18px;text-align:center;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);transition:all .25s;display:block}
+.pill:hover{background:var(--orange);color:var(--ink)}
+
+/* why-choose 2x2 */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+.why .w{border:1.5px solid rgba(31,31,31,.2);border-radius:16px;padding:32px 34px;text-align:center}
+.why .w b{font-family:var(--disp);font-weight:500;font-size:19px;letter-spacing:.01em;color:var(--orange);display:block;margin-bottom:12px;text-transform:uppercase}
+.why .w p{font-size:14.5px;line-height:1.7;color:var(--muted)}
+
+/* testimonials (facility template variant) */
+.tst{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.tst .tcard{background:var(--cream);border:0;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;padding:0}
+.tst .tcard .top{background:var(--orange);padding:16px 22px;font-family:var(--disp);font-weight:500;font-size:20px;color:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.tst .tcard .top span{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase}
+.tst .tcard .bd{padding:26px 24px}
+.tst .tcard .stars{color:var(--orange);font-size:14px;letter-spacing:2px;margin-bottom:12px}
+.tst .tcard p{font-size:14.5px;line-height:1.7;color:var(--muted)}
+.tst .tcard .who{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);margin-top:16px;display:block}
+
+/* FAQs (details/summary variant) */
+.faqs{max-width:900px;margin:48px auto 0;display:flex;flex-direction:column;gap:10px}
+.faqs .faq{border:1.5px solid rgba(31,31,31,.18);border-radius:12px;overflow:hidden;background:#fff;max-width:none;margin:0}
+.faqs .faq summary{list-style:none;cursor:pointer;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:var(--sans);font-size:15.5px;font-weight:600}
+.faqs .faq summary::-webkit-details-marker{display:none}
+.faqs .faq summary .pm{color:var(--orange);font-size:22px;line-height:1;flex-shrink:0;transition:transform .2s}
+.faqs .faq[open] summary{background:var(--cream)}
+.faqs .faq[open] summary .pm{transform:rotate(45deg)}
+.faqs .faq .a{padding:2px 24px 24px;font-size:15px;line-height:1.75;color:var(--muted)}
+
+/* ctabox note */
+.ctabox .note{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(31,31,31,.65);margin-top:18px}
+
+@media(max-width:900px){
+ .wis,.proc .grid,.why,.tst{grid-template-columns:1fr}
+ .wis .ph,.proc .ph{height:320px}
+ .fboxes,.ppanels{grid-template-columns:1fr}
+ .ppanel .cells{grid-template-columns:1fr}
+ .pcell{border-right:0}
+ .pills{grid-template-columns:1fr 1fr}
+ .chk .rows{grid-template-columns:1fr}
+ .proc{padding:64px 0}
+}
